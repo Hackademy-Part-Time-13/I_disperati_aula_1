@@ -16,5 +16,6 @@ use App\Http\Controllers\AnnouncementController;
 */
 
 Route::get('/',[PageController::class,'home'])->name('home');
-Route::resource('announcements', AnnouncementController::class);
+
+
 

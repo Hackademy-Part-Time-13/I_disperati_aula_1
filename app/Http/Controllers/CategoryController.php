@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Announcement;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class AnnouncementController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-
+        //
     }
 
     /**
@@ -20,7 +20,7 @@ class AnnouncementController extends Controller
      */
     public function create()
     {
-        return view('announcement.create');
+        //
     }
 
     /**
@@ -34,7 +34,7 @@ class AnnouncementController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Announcement $announcement)
+    public function show(Category $category)
     {
         //
     }
@@ -42,7 +42,7 @@ class AnnouncementController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Announcement $announcement)
+    public function edit(Category $category)
     {
         //
     }
@@ -50,7 +50,7 @@ class AnnouncementController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Announcement $announcement)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -58,7 +58,7 @@ class AnnouncementController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Announcement $announcement)
+    public function destroy(Category $category)
     {
         //
     }
