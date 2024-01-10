@@ -4,15 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        if(!Auth::user()->is_admin){
+           abort(403); 
+        }
+        $categories=Category::all();
+        // dd($categories);
+        return view('categories.index', compact('categories'));
+
     }
 
     /**
@@ -20,7 +32,10 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        if(!Auth::user()->is_admin){
+           abort(403); 
+        }
+        return view('categories.create');
     }
 
     /**
@@ -28,7 +43,18 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+     if(!Auth::user()->is_admin){
+           abort(403); 
+        }
+       $request->validate([
+            'name' =>'required|max:50|unique:categories',
+        ]);
+
+        Category::create([
+            'name' => $request->name
+        ]);
+
+        return redirect()->route('categories.index')->with(['success' => 'Categoria creata con successo']);
     }
 
     /**
@@ -36,7 +62,10 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+         if(!Auth::user()->is_admin){
+           abort(403); 
+        }
+        return view('categories.show', compact('category'));
     }
 
     /**
@@ -44,7 +73,10 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+     if(!Auth::user()->is_admin){
+           abort(403); 
+        }
+        return view('categories.edit', compact('category'));
     }
 
     /**
@@ -52,7 +84,17 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+     if(!Auth::user()->is_admin){
+           abort(403); 
+        }
+         $request->validate([
+            'name' =>'required|max:50|unique:categories',
+        ]);
+        $category->update([
+            'name' => $request->name
+        ]);
+
+        return redirect()->route('categories.index')->with(['success'=>'Categoria aggiornata correttamente']);
     }
 
     /**
@@ -60,6 +102,11 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+     if(!Auth::user()->is_admin){
+           abort(403); 
+        }
+         $category->delete();
+
+        return redirect()->route('categories.index')->with(['success'=>'Categoria eliminata correttamente']);
     }
 }

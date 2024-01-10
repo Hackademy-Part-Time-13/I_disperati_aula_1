@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AnnouncementController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +19,7 @@ use App\Http\Controllers\AnnouncementController;
 
 Route::get('/',[PageController::class,'home'])->name('home');
 
+Route::resource('categories', CategoryController::class);
 
+Route::get('/announcements', [AnnouncementController::class, 'index'])->name('announcements');
 

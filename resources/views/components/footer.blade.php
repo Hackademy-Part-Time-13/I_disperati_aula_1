@@ -10,7 +10,7 @@
           <div class="col-md-6 col-lg-4 col-xl-3 mx-auto mb-2">
             <!-- Content -->
             <h5 class="text-uppercase fw-bold mb-3">
-                <i class="fa-brands fa-pagelines"></i> EVERGREEN STORE
+                 Presto.it
             </h5>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit praesentium voluptatibus officia repellendus molestiae sequi libero tenetur deserunt.
@@ -25,7 +25,7 @@
             <p><i class="fas fa-home me-3"></i>Oderzo, 31046 TV, Italy</p>
             <p>
               <i class="fas fa-envelope me-3"></i>
-              {{env('APP_EMAIL')}}
+              example@email.it
             </p>
             <p><i class="fas fa-phone me-3"></i>+39 123 45 6789</p>
 
@@ -74,7 +74,7 @@
 
                 </div>
                 <div >
-                    Â© 2024 Copyright:
+                    © 2024 Copyright:
                     <a class="text-reset fw-bold" href="">Presto.it</a>
                 </div>
             </div>
