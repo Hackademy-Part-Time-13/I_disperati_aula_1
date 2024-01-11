@@ -30,7 +30,7 @@ class CategorySeeder extends Seeder
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'casa',
+            'name' => 'arredamento',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([

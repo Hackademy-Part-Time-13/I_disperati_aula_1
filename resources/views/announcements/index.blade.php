@@ -10,7 +10,7 @@
             </div>
             <div class="col-8">
                 {{-- lista degli annunci --}}
-                {{-- <livewire:announcements.index/> --}}
+                <livewire:announcements.index/>
             </div>
         </div>
     </div>
