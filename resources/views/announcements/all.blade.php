@@ -1,11 +1,10 @@
 <x-main>
     <div class="container my-4">
-        <h1>{{$category->name}}</h1>
+        <h1>Annunci</h1>
         <div class="row">
             
-            {{-- @if($announcements->category_id == $category->id) --}}
             @foreach(App\Models\Announcement::all() as $announcement)
-            @if($announcement->category->id == $category->id)
+
             <div class="col-4">
                 <div class="card mb-4" style="width: 18rem;">
                     {{-- carosello --}}
@@ -48,9 +47,9 @@
                     </div>
                 </div>
             </div>
-            @endif
+
             @endforeach
-            {{-- @endif --}}
+
         </div>
     </div>
 </x-main>

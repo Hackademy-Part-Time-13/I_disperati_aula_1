@@ -21,5 +21,7 @@ Route::get('/',[PageController::class,'home'])->name('home');
 
 Route::resource('categories', CategoryController::class);
 
-Route::get('/announcements', [AnnouncementController::class, 'index'])->name('announcements');
+Route::get('/announcements', [AnnouncementController::class, 'index'])->middleware('auth','verified')->name('announcements');
+
+Route::get('/all/announcements', [PageController::class, 'all'])->name('all.announcements');
 

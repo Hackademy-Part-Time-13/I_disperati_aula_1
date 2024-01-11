@@ -25,7 +25,7 @@
                
                 <th scope="row">{{$announcement->id}}</th>
                 <td>{{$announcement->title}}</td>
-                <td><a href="" class="text-black"><em>{{$announcement->category->name}}</em></a></td>
+                <td><a href="{{route('categories.show', $announcement->category)}}" class="text-black a-category"><em>{{$announcement->category->name}}</em></a></td>
                 <td>{{$announcement->description}}</td>
                 <td>€ {{number_format($announcement->price, 2)}}</td>
                 

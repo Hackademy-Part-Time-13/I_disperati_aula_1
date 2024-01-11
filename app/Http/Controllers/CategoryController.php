@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -62,10 +63,8 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-         if(!Auth::user()->is_admin){
-           abort(403); 
-        }
-        return view('categories.show', compact('category'));
+        $announcements = Announcement::all();
+        return view('categories.show', compact('category', 'announcements'));
     }
 
     /**
