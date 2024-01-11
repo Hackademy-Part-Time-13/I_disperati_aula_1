@@ -13,6 +13,7 @@
     @endif
 
     <form wire:submit.prevent="store">
+        @csrf
         <div class="mb-3">
             <input type="text" required placeholder="Titolo" class="form-control @error('title') is-invalid @enderror" wire:model.blur="title">
             @error('title')
@@ -31,7 +32,7 @@
             <option class="text-black" value="{{$category->id}}">{{$category->name}}</option>
             @endforeach
           </select>
-        
+
         <div class="mb-3">
             <div>
                 <div class="form-group">
@@ -39,7 +40,7 @@
                   <div class="input-group input-number input-number-currency">
                     <span class="input-group-text fw-semibold">€</span>
                     <input type="number" required class="form-control @error('price') is-invalid @enderror" data-bs-input id="inputNumber3" name="inputNumber3" step="any" value="0.00" min="0" wire:model.blur="price"/>
-                    
+
                   </div>
                 </div>
             </div>
