@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'administrator@gmail.com',
             'password' => Hash::make('1234abcd'),
             'is_admin' => true,
+            'is_revisor' => true,
         ]);
 
         \App\Models\User::create([
@@ -37,6 +38,15 @@ class DatabaseSeeder extends Seeder
             'email' => 'client@gmail.com',
             'password' => Hash::make('1234abcd'),
             'is_admin' => false,
+            'is_revisor' => false,
+        ]);
+
+        \App\Models\User::create([
+            'name' => 'revisor',
+            'email' => 'revisor@gmail.com',
+            'password' => Hash::make('1234abcd'),
+            'is_admin' => false,
+            'is_revisor' => true,
         ]);
 
     }

@@ -52,6 +52,10 @@
         @error('image')
             <span>{{$message}}</span>
         @enderror
+        {{-- <div class="col-4 d-none">
+            <label class="form-label">Autore</label>
+            <input wire:model.blur="author" type="text" class="form-control" value="{{auth()->user()->id}}">                
+        </div> --}}
           <br>
           <button type="submit" class="btn btn-outline-primary">Crea annuncio</button>
 

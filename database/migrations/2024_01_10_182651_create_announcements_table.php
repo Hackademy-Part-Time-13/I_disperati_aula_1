@@ -17,9 +17,14 @@ return new class extends Migration
             $table->string('title', 50);
             $table->text('description');
             $table->unsignedFloat('price')->default(0,00);
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('image', 50)->nullable();
 
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

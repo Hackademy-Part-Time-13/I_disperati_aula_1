@@ -11,7 +11,7 @@ class Announcement extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','category_id','description', 'price', 'image'];
+    protected $fillable = ['title','category_id','description', 'price', 'image','user_id'];
 
     public function category(){
         return $this->belongsTo(Category::class);

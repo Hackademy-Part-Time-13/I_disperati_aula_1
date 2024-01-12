@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -11,6 +12,12 @@ class PageController extends Controller
     }
 
     public function all(){
-        return view('announcements.all');
+        $announcements = Announcement::orderBy('created_at', 'DESC')->get();
+        return view('announcements.all', compact('announcements'));
+    }
+
+    public function show(Announcement $announcement){
+
+        return view('announcements.show', compact('announcement'));
     }
 }

@@ -24,6 +24,8 @@ class Create extends Component
     public $price;
 
     public $image;
+
+
     
 
     public function store(){
@@ -36,6 +38,7 @@ class Create extends Component
             'category_id' => $this->category_id,
             'price' => $this->price,
             'image' => $this->image,
+            'user_id' => auth()->user()->id,
         ]);
         session()->flash('success','Annuncio creato correttamente');
         $this->reset();
