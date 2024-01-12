@@ -2,7 +2,7 @@
     <div class="container my-4">
         <h1>{{$category->name}}</h1>
         <div class="row">
-            
+
             {{-- @if($announcements->category_id == $category->id) --}}
             @foreach(App\Models\Announcement::all() as $announcement)
             @if($announcement->category->id == $category->id)
@@ -43,7 +43,7 @@
                     <p class="card-text">{{$announcement->description}}</p>
                     <p class="card-text text-end"><em>€ {{number_format($announcement->price, 2)}}</em></p>
                     <div class="text-center">
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Visualizza annuncio</a>
                     </div>
                     </div>
                 </div>
