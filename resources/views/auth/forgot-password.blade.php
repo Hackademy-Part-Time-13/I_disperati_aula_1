@@ -1,6 +1,6 @@
 <x-main>
-
-    @if (session('status'))
+    <div class="container my-4">
+        @if (session('status'))
         <div class="mb-4 font-medium text-sm text-green-600">
             {{ session('status') }}
         </div>
@@ -17,4 +17,6 @@
           </div>
           <button type="submit" class="btn btn-primary">Reset Password</button>
     </form>
-    </x-main>
+    </div>
+    
+</x-main>

@@ -1,5 +1,5 @@
 <x-main title="Login">
-    <div class="container">
+    <div class="container my-4">
 
         <div class="row">
             <div class="col-12"></div>
@@ -8,7 +8,7 @@
                 @csrf
 
             </div>
-  <h1>Login</h1>
+  <h1>Accedi</h1>
   <div class="mb-3">
       <label  class="form-label">Email address</label>
       <input type="email" name="email" value="{{old('email')}} "class="form-control" >

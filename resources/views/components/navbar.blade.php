@@ -15,10 +15,6 @@
           </li>
 
           
-            {{-- @guest
-            <li class="nav-item"><a class="nav-link text-primary" href="{{route('login')}}">Log in</a></li>
-            <li class="nav-item"><a class="nav-link  " href="{{route('register')}}">Sign in</a></li>
-            @endguest --}}
         </ul>
         @guest
         <ul class="navbar-nav mb-2 mb-lg-0">
@@ -27,7 +23,7 @@
               Area personale
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+              <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
               <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
             </ul>
           </li>
