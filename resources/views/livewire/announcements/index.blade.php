@@ -21,15 +21,24 @@
         </thead>
         <tbody>
           @foreach ($announcements as $announcement)
+          @if(auth()->user()->id == $announcement->user_id)
             <tr>
-               
                 <th scope="row">{{$announcement->id}}</th>
                 <td>{{$announcement->title}}</td>
                 <td><a href="{{route('categories.show', $announcement->category)}}" class="text-black a-category"><em>{{$announcement->category->name}}</em></a></td>
                 <td>{{$announcement->description}}</td>
                 <td>€ {{number_format($announcement->price, 2)}}</td>
+            </tr>
+          @elseif(auth()->user()->is_admin)
+            <tr>
+                <th scope="row">{{$announcement->id}}</th>
+                <td>{{$announcement->title}}</td>
+                <td><a href="{{route('categories.show', $announcement->category)}}" class="text-black a-category"><em>{{$announcement->category->name}}</em></a></td>
+                <td>{{$announcement->description}}</td>
                 
-            </tr> 
+                <td>€ {{number_format($announcement->price, 2)}}</td>
+            </tr>
+          @endif
           @endforeach
         </tbody>
     </table>
