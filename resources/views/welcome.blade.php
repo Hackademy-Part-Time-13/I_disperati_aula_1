@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg" alt="..." /></div>
+                        <div class=" col-lg-4 col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg" alt="..." /></div>
                     </div>
                 </div>
             </header>
@@ -28,4 +28,4 @@
 
     </x-main>
 
-   
+
