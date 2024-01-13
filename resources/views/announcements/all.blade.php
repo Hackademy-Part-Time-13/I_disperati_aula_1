@@ -1,11 +1,12 @@
 <x-main>
-    <div class="container my-4">
+    <div class="container my-4 ">
         <h1>Annunci</h1>
         <div class="row">
 
             @foreach($announcements as $announcement)
 
-            <div class="col-4 p-3">
+
+            <div class=" col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 p-3">
             <div class="card" style="width: 18rem;">
                 <img src="https://picsum.photos/300/220" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -22,6 +23,8 @@
 
 
 
+
+
                     {{-- <div class="card-body">
                     <h5 class="card-title">{{$announcement->title}}</h5>
                     <p class="card-title "><a class="a-category text-black" href="">{{$announcement->category->name}}</a></p>
@@ -32,7 +35,7 @@
                     </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>--}}
 
             @endforeach
 
