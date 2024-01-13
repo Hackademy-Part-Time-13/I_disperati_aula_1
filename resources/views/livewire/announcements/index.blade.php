@@ -26,7 +26,7 @@
                 <th scope="row">{{$announcement->id}}</th>
                 <td>{{$announcement->title}}</td>
                 <td><a href="{{route('categories.show', $announcement->category)}}" class="text-black a-category"><em>{{$announcement->category->name}}</em></a></td>
-                <td>{{$announcement->description}}</td>
+                <td>{{Illuminate\Support\Str::limit($announcement->description, 30)}}</td>
                 <td>€ {{number_format($announcement->price, 2)}}</td>
             </tr>
           @elseif(auth()->user()->is_admin)
@@ -34,7 +34,7 @@
                 <th scope="row">{{$announcement->id}}</th>
                 <td>{{$announcement->title}}</td>
                 <td><a href="{{route('categories.show', $announcement->category)}}" class="text-black a-category"><em>{{$announcement->category->name}}</em></a></td>
-                <td>{{$announcement->description}}</td>
+                <td>{{Illuminate\Support\Str::limit($announcement->description, 30)}}</td>
                 
                 <td>€ {{number_format($announcement->price, 2)}}</td>
             </tr>

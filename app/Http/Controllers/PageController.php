@@ -12,7 +12,7 @@ class PageController extends Controller
     }
 
     public function all(){
-        $announcements = Announcement::orderBy('created_at', 'DESC')->get();
+        $announcements = Announcement::orderBy('created_at', 'DESC')->paginate(9);
         return view('announcements.all', compact('announcements'));
     }
 

@@ -63,7 +63,8 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        $announcements = Announcement::all();
+        $announcements = Announcement::all(); //TODO: aggiustare pagination!
+        
         return view('categories.show', compact('category', 'announcements'));
     }
 

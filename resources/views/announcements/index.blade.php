@@ -4,11 +4,11 @@
         <h1>Crea annuncio</h1>
     
         <div class="row">
-            <div class="col-4">
+            <div class="col-md-4 col-s-10">
                 {{-- form per aggiunta degli annunci --}}
                 <livewire:announcements.create/>
             </div>
-            <div class="col-8">
+            <div class="col-md-8 col-s-10">
                 {{-- lista degli annunci --}}
                 <livewire:announcements.index/>
             </div>
