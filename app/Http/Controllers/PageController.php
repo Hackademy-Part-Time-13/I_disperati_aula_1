@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function home(){
-        return view ('welcome');
+        $announcements = Announcement::all();
+        return view ('welcome', compact('announcements'));
     }
 
     public function all(){
