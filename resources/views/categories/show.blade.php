@@ -5,8 +5,8 @@
 
         {{-- @if($category->count() == 0)
         <h3>Non ci sono annunci disponibili</h3> --}}
-        
-     
+
+
             @foreach(App\Models\Announcement::all() as $announcement)
                 @if($announcement->category->id == $category->id)
                 <div class="col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 p-3">
@@ -19,9 +19,9 @@
                             <p class="card-title "><a class="a-category text-black" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
                             <p class="card-text"><em class="text-small">{{$announcement->user->name}}</em></p>
                         </div>
-                        
+
                         <p class="card-text">{{Illuminate\Support\Str::limit($announcement->description, 100)}}</p>
-                        
+
                         <p class="card-text text-end"><em>€ {{number_format($announcement->price, 2)}}</em></p>
                         <div class="text-center">
                             <a href="{{route('show.announcement', $announcement)}}" class="btn btn-primary">Visualizza annuncio</a>
@@ -30,13 +30,13 @@
                     </div>
                 </div>
                 @endif
-            
+
             @endforeach
-        
-            {{ $announcements->links() }}
-            
-        
-            
+
+            {{-- {{ $announcements->links() }} --}}
+
+
+
             {{-- <header class="bg-light py-5">
                 <div class="container px-5">
                     <div class="row gx-5 align-items-center justify-content-center">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </header> --}}
-        
+
 
         {{-- @endif --}}
         </div>
