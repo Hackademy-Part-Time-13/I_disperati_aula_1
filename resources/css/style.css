@@ -7,5 +7,108 @@
 .create-ann-band {
     background-color: #e3f2fd;
     padding: 50px;
-    
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+}
+
+.form-box {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 0 20px 10px rgba(173, 216, 230, 0.298);
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 10px 3px rgba(173, 216, 230, 0.298);
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: lightblue;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.social-icons {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.social-icons i {
+    width: 30px;
+    height: 10px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#box-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submit-btn {
+    padding: 0px 10px;
+    cursor: pointer;
+    width: 110px;
+    height: 40px;
+    border: 0;
+    background: lightblue;
+    border-radius: 30px;
+}
+
+.password-link {
+    font-size: smaller;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.password-link:hover {
+    color: lightblue;
+    transition: 0.5s all;
+
+}
+
+.form-check {
+    font-size: smaller;
 }
