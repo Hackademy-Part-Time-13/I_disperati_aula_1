@@ -22,13 +22,13 @@
             </div>
         </div>
     </header>
-    
+
     {{-- silvia mi dice di mettere un commento --}}
     {{-- aggiungo il commento serio, bisogna sistemare la rotta delle categorie --}}
-    
+
 
             <div class="d-flex justify-content-around">
-                <div class="col-lg-12 mb-5 mt-5 p-5" >
+                <div class="col-sm-4 col-md-6 col-lg-8 col-xl-10 col-xxl-12  mb-5 mt-5 p-5" >
                     <!-- xl circle buttons-->
                     <a href="/categories/1"><button class="btn btn-success btn-circle btn-circle-xl"><i class="fa-solid fa-book"></i></button></a>
                     <a href="/categories/2"><button class="btn btn-primary btn-circle btn-circle-xl"><i class="fa-solid fa-music"></i></button></a>
