@@ -49,6 +49,11 @@
                     <li>
                         <a class="dropdown-item" href="{{route('announcements')}}">I miei articoli</a>
                     </li>
+                    {{--------------------------- AGGIUNGERE ROTTA E VISTA --------------------------------}}
+                    <li>
+                        <a class="dropdown-item" href="#">Area Revisore</a>
+                    </li>
+                    {{-- ------------------------------------------------------------------------------- --}}
                     <li><a class="dropdown-item" href="{{route('logout')}}"class="nav-link text-primary" onclick="event.preventDefault();getElementById('form-logout').submit();">Logout</a>
                         <form action="/logout" method="POST" class="d_none" id="form-logout">
                             @csrf
