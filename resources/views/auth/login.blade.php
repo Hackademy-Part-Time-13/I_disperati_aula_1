@@ -55,25 +55,25 @@
 
 
     <div class="container hero">
-    
+
         <div class="form-box">
-            
-            
+
+
             <form action="/login" method="POST">
                 @csrf
-                
+
                 <div class="button-box">
                     <div id="btn"></div>
                     <button type="button" class="toggle-btn">Login</button>
                     <button type="button" class="toggle-btn">Register</button>
                 </div>
-                
+
                 <div class="social-icons">
                     <p>Accedi con:</p>
-                    <a href="/auth/github/redirect"><i class="fa-brands fa-github"></i></a>
-                    <a href="/auth/google/redirect"><i class="fa-brands fa-google"></i></a>
+                    <a href="/auth/github"><i class="fa-brands fa-github"></i></a>
+                    <a href="/auth/google"><i class="fa-brands fa-google"></i></a>
                 </div>
-                
+
                 <div class="mb-3">
                     <label  class="form-label">Email address</label>
                     <input type="email" name="email" value="{{old('email')}} "class="form-control" >
@@ -88,21 +88,21 @@
                     {{$message}}
                     @enderror
                 </div>
-                
+
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" name="remember">
                     <label class="form-check-label" for="exampleCheck1">Rimani connesso</label>
                 </div>
-                
+
                 <div id="box-bottom">
                     <a href="/forgot-password" class="password-link m-1">Password dimenticata?</a>
                     <button type="submit" class="submit-btn">Accedi</button>
                 </div>
-                
+
             </form>
-            
-            
+
+
         </div>
 
-        
+
 </x-main>
