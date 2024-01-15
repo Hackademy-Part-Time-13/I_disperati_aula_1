@@ -37,9 +37,7 @@
                     <div class="text-center">
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
-                    </div>
-                </div>
-            </div>--}}
+                    </div>--}}
 
             @endforeach
             {{ $announcements->links() }}

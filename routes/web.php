@@ -35,3 +35,6 @@ Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallb
 
 Route::get('/auth/github', [GithubController::class, 'redirectToGithub']);
 Route::get('/auth/github/callback', [GithubController::class, 'handleGithubCallback']);
+
+Route::get('/lavora-con-noi', [PageController::class, 'lavoraConNoi'])->name('lavoraConNoi');
+Route::post('/lavora-con-noi/save', [PageController::class, 'LavoraSave'])->name('lavora.save');

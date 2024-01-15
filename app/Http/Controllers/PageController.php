@@ -19,7 +19,16 @@ class PageController extends Controller
     }
 
     public function show(Announcement $announcement){
-
         return view('announcements.show', compact('announcement'));
+    }
+
+    //pagina Lavora con noi con form
+    public function lavoraConNoi(){
+        return view('lavora');
+    }
+
+    public function LavoraSave(Request $request){
+
+    
     }
 }
