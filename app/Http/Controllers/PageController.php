@@ -29,6 +29,5 @@ class PageController extends Controller
 
     public function LavoraSave(Request $request){
 
-    
     }
 }

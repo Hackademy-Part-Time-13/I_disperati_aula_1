@@ -23,14 +23,16 @@
         </div>
     </header>
 
-    {{-- silvia mi dice di mettere un commento --}}
-    {{-- aggiungo il commento serio, bisogna sistemare la rotta delle categorie --}}
+
+        {{-- silvia mi dice di mettere un commento --}}
+
+        {{-- aggiungo il commento serio, bisogna sistemare la rotta delle categorie --}}
 
 
-            <div class="d-flex justify-content-around">
-                <div class="col-sm-4 col-md-6 col-lg-8 col-xl-10 col-xxl-12  mb-5 mt-5 p-5" >
-                    <!-- xl circle buttons-->
-                    <a href="/categories/1"><button class="btn btn-success btn-circle btn-circle-xl"><i class="fa-solid fa-book"></i></button></a>
+        <div class="d-flex justify-content-around">
+            <div class="col-sm-4 col-md-6 col-lg-8 col-xl-10 col-xxl-12  mb-5 mt-5 p-5" >
+                <!-- xl circle buttons-->
+                <a href="/categories/1"><button class="btn btn-success btn-circle btn-circle-xl"><i class="fa-solid fa-book"></i></button></a>
                     <a href="/categories/2"><button class="btn btn-primary btn-circle btn-circle-xl"><i class="fa-solid fa-music"></i></button></a>
                     <a href="/categories/3"><button class="btn btn-info btn-circle btn-circle-xl"><i class="fa-solid fa-puzzle-piece"></i></button></a>
                     <a href="/categories/4"><button class="btn btn-warning btn-circle btn-circle-xl"><i class="fa-solid fa-computer"></i></button></a>
@@ -42,6 +44,28 @@
                     <a href="/categories/10"><button class="btn btn-light btn-circle btn-circle-xl"><i class="fa-solid fa-mug-saucer"></i></button></a>
                 </div>
             </div>
+
+            <div class="py-5 text-white" style="background-color: #0D3B66">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-start">
+                            <div class=" col-lg-4 col-xl-5 col-xxl-6 d-none d-xl-block text-start">
+                            <img class="img-fluid rounded-3 my-5" src="https://www.verdefacile.eu/img/cms/azienda-servizi/collabora-con-noi.jpg" alt="..." /></div>
+
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-end text-xl-end">
+                                <h2 class="fw-bolder display-5 mb-4">Collabora con noi</h2>
+                                <p class="lead fs-4 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis dolor neque, aspernatur commodi tempore.</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-end">
+                                    <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-4" href="{{route('lavoraConNoi')}}" style="background-color: #F3B61F">Diventa revisore</a>
+                                </div>
+                            </div>
+                        </div> </div>
+                </div>
+            </div>
+
+
+
+
 
 
 
