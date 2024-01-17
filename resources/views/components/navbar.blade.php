@@ -42,9 +42,15 @@
         @auth
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Ciao {{Auth::user()->name}}
-                </a>
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ciao {{Auth::user()->name}}
+                @if (Auth::user()->is_revisor)
+                <span class="badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
+                  <span class="visually-hidden">Unread messages
+                 </span>
+                  </span>
+                  @endif
+            </a>
 
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
@@ -55,7 +61,7 @@
                     @if (Auth::user()->is_revisor)
                      <li>
                         <a class="dropdown-item position-relative" href="{{ route('revisor.index') }}">Area Revisore
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
+                        <span class="badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
                         <span class="visually-hidden">Unread messages
                        </span>
                         </span>
