@@ -11,9 +11,9 @@
     {{-- fine immagine --}}
 
     {{--  main  --}}
-    @if(session()->has('success'))
+    @if(session()->has('message'))
         <div class="alert alert-success" role="alert">
-            {{session('success')}}
+            {{session('message')}}
         </div>
     @endif
 
@@ -22,13 +22,12 @@
             {{-- parte sx: contatti --}}
             <div class="col-md-5 col-lg-5 col-xl-5 mt-4 mx-auto p-5" style="background-color: #e3f2fd; border-radius:2%">
                 <div class="d-flex justify-contente-start align-items-center mb-4">
-                    <h4 class="text-uppercase fw-bold">guadagna in 4 semplici passi</h4>
+                    <h4 class="text-uppercase fw-bold">guadagna con presto.it</h4>
                 </div>
                 <div>
-                    <p class="mb-5 fs-5">1. Inserisci il tuo nome e cognome</p>
-                    <p class="mb-5 fs-5">2. Inserisci il tuo numero di telefono</p>
-                    <p class="mb-5 fs-5">3. Inserisci la tua email</p>
-                    <p class=" fs-5">4. Clicca su "Diventa revisore"</p>
+                    <p class="mb-3 fs-5">Unisciti al nostro team</p>
+                    <p class="mb-5 fs-5">Clicca ora su Diventa un revisore</p>
+                    
                 </div>
                
                
@@ -40,18 +39,26 @@
                 {{-- form contatti --}}
                 <form method="POST" action="{{route('lavora.save')}}">
                     @csrf
-                    <div class="mb-3">
+                    <ul>
+                        <li>{{auth()->user()->name}}</li>
+                        <li>{{auth()->user()->email}}</li>
+                    </ul>
+                    {{-- <div class="mb-3">
                       <label class="form-label">Nome</label>
                       <input type="text" required name="name" @error('name') is-invalid @enderror placeholder="Nome Cognome" class="form-control" value="{{old('name')}}">
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Telefono</label>
                       <input type="text" required  name="phone" @error('phone') is-invalid @enderror placeholder="+39 123 456 789" class="form-control" value="{{old('phone')}}">
-                    </div>
-                    <div class="mb-3">
+                    </div> --}}
+                    {{-- <div class="mb-3">
                       <label class="form-label">Email</label>
                       <input type="email" required  name="email" @error('email') is-invalid @enderror placeholder="email@example.it" class="form-control" value="{{old('email')}}">
-                    </div>
+                    </div> --}}
+                    {{-- <div class="col-4 d-none">
+                        <label class="form-label">Utente</label>
+                        <input name="user" type="text" class="form-control" value="{{auth()->user()->id}}">                
+                    </div> --}}
                     
                     <button type="submit" class="btn mt-4 fw-semibold fs-5" style="background-color: #F3B61F">Diventa un revisore</button>
                   </form>

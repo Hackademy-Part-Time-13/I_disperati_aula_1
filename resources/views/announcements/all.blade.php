@@ -15,7 +15,7 @@
                         <p class="card-title "><a class="a-category text-black" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
                         <p class="card-text"><em class="text-small">{{$announcement->user->name}}</em></p>
                     </div>
-                    <p class="card-text">{{Illuminate\Support\Str::limit($announcement->description, 100)}}</p>
+                    <p class="card-text">{{Illuminate\Support\Str::limit($announcement->description,50)}}</p>
                     <p class="card-text text-end"><em>€ {{number_format($announcement->price, 2)}}</em></p>
                     <div class="text-center">
                         <a href="{{route('show.announcement', $announcement)}}" class="btn btn-primary">Visualizza annuncio</a>

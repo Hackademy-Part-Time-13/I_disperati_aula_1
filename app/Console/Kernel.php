@@ -2,11 +2,17 @@
 
 namespace App\Console;
 
+use App\Console\Commands\MakeUserRevisor;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
+
+    //registrare il command creato
+    protected $commands = [
+        MakeUserRevisor::class,
+    ];
     /**
      * Define the application's command schedule.
      */

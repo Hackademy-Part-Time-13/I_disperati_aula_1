@@ -38,7 +38,7 @@ Route::get('/auth/github', [GithubController::class, 'redirectToGithub']);
 Route::get('/auth/github/callback', [GithubController::class, 'handleGithubCallback']);
 
 Route::get('/lavora-con-noi', [PageController::class, 'lavoraConNoi'])->name('lavoraConNoi');
-Route::post('/lavora-con-noi/save', [PageController::class, 'LavoraSave'])->name('lavora.save');
+Route::post('/lavora-con-noi/save', [RevisorController::class, 'lavoraSave'])->middleware('auth')->name('lavora.save');
 
 // Zona revisore //
 Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');

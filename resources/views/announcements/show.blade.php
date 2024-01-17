@@ -174,12 +174,12 @@
       
       <div class="col-6 my-5">
         <div class="card-body">
-          <h5 class="card-title fw-bold mt-5 mb-5 display-4 text-center text-uppercase">{{$announcement->title}}</h5>
-          <p class="card-text fs-5 my-4">{{$announcement->description}}</p>
-          <p class="card-title fs-6 btn btn-primary mb-5" style="background-color:#e3f2fd; border:none"><a class="text-black a-category" href="">{{$announcement->category->name}}</a></p>
+          <h5 class="card-title fw-bold  mb-5 display-5 text-center text-uppercase">{{$announcement->title}}</h5>
+          <p class="card-text fs-6 my-4">{{$announcement->description}}</p>
+          <p class="card-title fs-5 btn btn-primary mb-5" style="background-color:#e3f2fd; border:none"><a class="text-black a-category" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
 
           <div class="d-flex justify-content-between">
-            <p class="card-text text-start fw-bold fs-3"><em>€ {{number_format($announcement->price, 2)}}</em></p>
+            <p class="card-text text-start fw-bold fs-4"><em>€ {{number_format($announcement->price, 2)}}</em></p>
             <div>
               {{-- da aggiungere componente livewire preferiti --}}
               <button class="btn" style="background-color:#e3f2fd; border:none">

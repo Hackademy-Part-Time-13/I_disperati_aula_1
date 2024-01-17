@@ -5,21 +5,30 @@
     <section class="">
       <div class="container-fluid text-center text-md-start mt-3 pt-3">
         <!-- Grid row -->
-        <div class="row">
+        <div class="row justify-content-around">
           <!-- Right column -->
-          <div class="col-md-6 col-lg-4 col-xl-3 mx-auto mb-2">
+          <div class=" col-md-4 col-lg-3 col-xl-3  mb-md-0 mb-2 ">
             <!-- Content -->
-            <h5 class="text-uppercase fw-bold mb-3">
+            <h5 class="text-uppercase fw-bold mb-3 text-start">
                  Presto.it
             </h5>
-            <p>
+            <p style="text-align: justify">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit praesentium voluptatibus officia repellendus molestiae sequi libero tenetur deserunt.
             </p>
           </div>
 
 
+          {{-- Colonna centrale --}}
+          @auth
+          <div class="col-md-4 col-lg-3 col-xl-3  mb-md-0 mb-2 text-center">
+            <h6 class="text-uppercase fw-bold mb-3">Lavora con noi</h6>
+            <a class="btn" style="background-color: #F3B61F" href="{{route('become.revisor')}}">Diventa revisore</a>
+            <p>
+          </div>
+          @endauth
+
           <!-- Right column -->
-          <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-2">
+          <div class="col-md-4 col-lg-3 col-xl-3  mb-md-0 mb-2 text-end">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-3">Contatti</h6>
             <p><i class="fas fa-home me-3"></i>Oderzo, 31046 TV, Italy</p>

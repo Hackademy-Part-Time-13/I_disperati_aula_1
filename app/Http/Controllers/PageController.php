@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Mail\LavoraMail;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -27,7 +31,7 @@ class PageController extends Controller
         return view('lavora');
     }
 
-    public function LavoraSave(Request $request){
-
-    }
+    
+      
+   
 }

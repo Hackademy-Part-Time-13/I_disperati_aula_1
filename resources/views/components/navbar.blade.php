@@ -45,10 +45,12 @@
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Ciao {{Auth::user()->name}}
                 @if (Auth::user()->is_revisor)
+                @if(App\Models\Announcement::toBeRevisionedCount())
                 <span class="badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
                   <span class="visually-hidden">Unread messages
                  </span>
                   </span>
+                  @endif
                   @endif
             </a>
 
@@ -61,10 +63,12 @@
                     @if (Auth::user()->is_revisor)
                      <li>
                         <a class="dropdown-item position-relative" href="{{ route('revisor.index') }}">Area Revisore
+                          @if(App\Models\Announcement::toBeRevisionedCount())
                         <span class="badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
                         <span class="visually-hidden">Unread messages
                        </span>
                         </span>
+                        @endif
                         </a>
 
                     </li>

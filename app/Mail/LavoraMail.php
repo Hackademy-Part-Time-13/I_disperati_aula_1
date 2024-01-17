@@ -10,7 +10,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class becomeRevisor extends Mailable
+class LavoraMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -23,17 +23,13 @@ class becomeRevisor extends Mailable
         $this->user = $user;
     }
 
-    public function build(){
-        return $this->from('no-reply@presto.it')->view('mail.becomerevisor');
-    }
-
     /**
      * Get the message envelope.
      */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Become Revisor',
+            subject: 'Richiesta diventa revisore',
         );
     }
 
@@ -43,7 +39,7 @@ class becomeRevisor extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.becomerevisor',
+            view: 'mail.lavora-mail',
         );
     }
 

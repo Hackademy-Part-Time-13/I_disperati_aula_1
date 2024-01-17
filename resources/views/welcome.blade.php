@@ -2,6 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center my-5">
+                @if(session()->has('message'))
+                    <div class="alert alert-success" role="alert">
+                    {{session('message')}}
+                    </div>
+                @endif
                 <h1 class="text-center py-5">Benvenuto in Presto.it</h1>
             </div>
         </div>
@@ -11,10 +16,10 @@
             <div class="row gx-5 align-items-center justify-content-center">
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
-                        <h2 class="fw-bolder display-5 mb-4">Vendi presto ciò che vuoi</h2>
-                        <p class="lead fs-4 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis dolor neque, aspernatur commodi tempore.</p>
+                        <h2 class="fw-bolder display-6 mb-4">Vendi presto ciò che vuoi</h2>
+                        <p class="lead fs-5 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis dolor neque, aspernatur commodi tempore.</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                            <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-4" href="{{route('announcements')}}" style="background-color: #F3B61F">Crea annuncio</a>
+                            <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{route('announcements')}}" style="background-color: #F3B61F">Crea annuncio</a>
                         </div>
                     </div>
                 </div>
@@ -30,7 +35,7 @@
 
 
         <div class="d-flex justify-content-around">
-            <div class="col-sm-4 col-md-6 col-lg-8 col-xl-10 col-xxl-12  mb-5 mt-5 p-5" >
+            <div class="col-sm-4 col-md-6 col-lg-8 col-xl-10 col-xxl-12  mb-5 mt-5 p-5 text-center" >
                 <!-- xl circle buttons-->
                 <a href="/categories/1"><button class="btn btn-success btn-circle btn-circle-xl"><i class="fa-solid fa-book"></i></button></a>
                     <a href="/categories/2"><button class="btn btn-primary btn-circle btn-circle-xl"><i class="fa-solid fa-music"></i></button></a>
@@ -53,10 +58,10 @@
 
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-end text-xl-end">
-                                <h2 class="fw-bolder display-5 mb-4">Collabora con noi</h2>
-                                <p class="lead fs-4 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis dolor neque, aspernatur commodi tempore.</p>
+                                <h2 class="fw-bolder display-6 mb-4">Collabora con noi</h2>
+                                <p class="lead fs-5 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis dolor neque, aspernatur commodi tempore.</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-end">
-                                    <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-4" href="{{route('lavoraConNoi')}}" style="background-color: #F3B61F">Diventa revisore</a>
+                                    <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{route('lavoraConNoi')}}" style="background-color: #F3B61F">Diventa revisore</a>
                                 </div>
                             </div>
                         </div> </div>
