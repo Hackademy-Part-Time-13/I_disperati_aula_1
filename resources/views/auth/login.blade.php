@@ -65,7 +65,9 @@
                 <div class="button-box">
                     <div id="btn"></div>
                     <button type="button" class="toggle-btn">Login</button>
-                    <button type="button" class="toggle-btn">Register</button>
+                    <a href="{{ route('register') }}">
+                        <button type="button" class="toggle-btn">Register</button>
+                        </a>
                 </div>
 
                 <div class="social-icons">
