@@ -52,3 +52,6 @@ Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acc
 
 //Rifiuta annuncio//
 Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
+
+// ricerca annunci
+Route::get('/ricerca/annuncio', [PageController::class, 'searchAnnouncements'])->name('announcements.search');

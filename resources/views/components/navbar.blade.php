@@ -26,6 +26,16 @@
           </li>
 
         </ul>
+
+
+                {{-- barra ricerca annunci --}}
+
+                <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+                  <input name="searched" class="form-control me-2" type="search" placeholder="search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+
+                  
         @guest
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item dropdown">

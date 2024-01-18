@@ -31,7 +31,14 @@ class PageController extends Controller
         return view('lavora');
     }
 
+    public function searchAnnouncements(Request $request){
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
     
+        //mostra solo gli annunci revisionati ed accettati
+        
+        return view('announcements.all', compact('announcements'));
+    
+    }
       
    
 }
