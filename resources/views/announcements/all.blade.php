@@ -1,13 +1,14 @@
 <x-main>
     <div class="container my-4 ">
-        
+
         @if(Route::currentRouteName() == 'all.announcements')
         <h1 class="my-4">Annunci</h1>
         @elseif(Route::currentRouteName() == 'announcements.search')
-        @if($announcements)
+        @if($announcements->count() > 0)
+
         <h1 class="my-4">Annunci trovati</h1>
-        {{-- @else
-        <h1 class="my-4">Non ci sono annunci in questa ricerca. Riprova.</h1> --}}
+        @else
+        <h1 class="my-4">Non ci sono annunci in questa ricerca. Riprova.</h1>
 
         {{-- @elseif(!$announcements)
         <div class="col-12">
@@ -17,14 +18,14 @@
         </div> --}}
         @endif
         @endif
-    
 
- 
+
+
         <div class="row">
-            
+
             @forelse($announcements as $announcement)
-            
-            
+
+
             <div class=" col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 p-3">
                 <div class="card" style="width: 18rem;">
                     <img src="https://picsum.photos/300/220" class="card-img-top" alt="...">
@@ -42,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            
+
             @empty
             <div class="col-12">
                 {{-- <h1 class="my-4">Non ci sono annunci in questa ricerca. Riprova.</h1> --}}
@@ -50,7 +51,7 @@
                     <p class="lead fs-4 text-black">Non ci sono annunci in questa ricerca. Riprova.</p>
                 </div>
             </div>
-            
+
             {{-- <div class="card-body">
                 <h5 class="card-title">{{$announcement->title}}</h5>
                 <p class="card-title "><a class="a-category text-black" href="">{{$announcement->category->name}}</a></p>
@@ -60,7 +61,7 @@
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>--}}
-            
+
             @endforelse
             {{ $announcements->links() }}
         </div>

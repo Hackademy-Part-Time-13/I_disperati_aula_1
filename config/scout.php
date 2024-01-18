@@ -118,15 +118,15 @@ return [
     ],
 
     'tntsearch' => [
-        'storage' => storage_path(), 
+        'storage' => storage_path(),
         'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
         'fuzzy' => [
 
             // Questo mostra la ricerca anche se l'utente inserisce solo due o tre lettere della parola
 
-            'prefix_length' => 2,
-            'max_expansions' => 80,
-            'distance' => 2,
+            // 'prefix_length' => 2,
+            // 'max_expansions' => 80,
+            // 'distance' => 2,
 
             // Questo impedisce all'utente di commettere errori o di tagliare le parole per completare la ricerca
 

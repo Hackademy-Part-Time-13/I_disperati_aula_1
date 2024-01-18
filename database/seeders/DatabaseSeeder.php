@@ -3,9 +3,12 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Announcement;
 use Illuminate\Database\Seeder;
 use Database\Seeders\CategorySeeder;
 use Illuminate\Support\Facades\Hash;
+use Database\Seeders\AnnouncementSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,9 +24,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+
         $this->call([
-            CategorySeeder::class,
-            ]);
+            CategorySeeder::class
+        ]);
+
 
         \App\Models\User::create([
             'name' => 'administrator',
@@ -49,5 +54,9 @@ class DatabaseSeeder extends Seeder
             'is_revisor' => true,
         ]);
 
+        $this->call([
+            AnnouncementSeeder::class
+        ]);
+        
     }
 }
