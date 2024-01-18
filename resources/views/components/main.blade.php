@@ -17,6 +17,20 @@
             <x-navbar/>
         </div>
 
+        @if(session()->has('message'))
+        <div class="alert alert-success m-3" role="alert">
+        {{session('message')}}
+        </div>
+        @endif
+
+        @if(session()->has('access.denied'))
+        <div class="alert alert-danger m-3" role="alert">
+        {{session('access.denied')}}
+        </div>
+        @endif
+
+
+
 
         <div>
             {{ $slot }}

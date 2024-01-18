@@ -30,10 +30,10 @@
 
                 {{-- barra ricerca annunci --}}
 
-                <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+                {{-- <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
                   <input name="searched" class="form-control me-2" type="search"  aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Cerca</button>
-                  </form>
+                  </form> --}}
 
                   {{-- fine barra di ricerca --}}
 

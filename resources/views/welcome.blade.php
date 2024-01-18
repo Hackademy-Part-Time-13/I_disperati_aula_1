@@ -2,12 +2,19 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center my-5">
-                @if(session()->has('message'))
+
+                {{-- @if(session()->has('message'))
                     <div class="alert alert-success" role="alert">
                     {{session('message')}}
                     </div>
-                @endif
-                <h1 class="text-center py-5">Benvenuto in Presto.it</h1>
+                @endif --}}
+                <h1 class="text-center py-5 mb-4 display-3 fw-semibold" style="font-family:montserrat ">Benvenuto in Presto.it</h1>
+
+                <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+                    <input name="searched" class="form-control me-2" type="search"  aria-label="Search">
+                    <button class="btn" style="background-color:#F3B61F " type="submit">Cerca</button>
+                </form>
+
             </div>
         </div>
     </div>
