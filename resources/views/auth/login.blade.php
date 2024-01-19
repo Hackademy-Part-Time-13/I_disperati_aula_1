@@ -136,8 +136,8 @@
             <div class="col-md-6 right-box">
                 <div class="row align-items-center ms-2">
                     <div class="header-text mb-4">
-                        <h2>Eccoti qua!</h2>
-                        <p>Siamo felici che tu sia di nuovo qui.</p>
+                        <h2>Accedi</h2>
+                        {{-- <p>Siamo felici che tu sia di nuovo qui.</p> --}}
                     </div>
                     
                     {{-- Inizio form Login --}}
@@ -168,7 +168,7 @@
                             </div>
                             
                             <div class="forgot">
-                                <small><a href="/forgot-password">Forgot Password?</a></small>
+                                <small><a href="/forgot-password" style="text-decoration: none; color:black;">Password dimenticata?</a></small>
                             </div>
                             
                         </div>

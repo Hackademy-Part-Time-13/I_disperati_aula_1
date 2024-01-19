@@ -79,7 +79,7 @@
                 <div class="col-md-6 right-box">
                     <div class="row align-items-center ms-2">
                         <div class="header-text mb-4">
-                            <h2>Ti stavamo aspettando!</h2>
+                            <h2>Registrati</h2>
                             <p>Compila in form sottostante e salta a bordo.</p>
                         </div>
                         
