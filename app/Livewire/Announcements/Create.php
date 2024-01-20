@@ -71,6 +71,9 @@ class Create extends Component
         
         $this->dispatch('refreshAnnouncements')->to('announcements.index');
         $this->validate();
+        if($this->category_id == null){
+            return;
+        }else{
         Announcement::create([
             'title' => $this->title,
             'description' => $this->description,
@@ -79,6 +82,7 @@ class Create extends Component
             'image' => $this->image,
             'user_id' => auth()->user()->id,
         ]);
+        } 
         session()->flash('success','Annuncio creato correttamente');
         $this->reset();
     }

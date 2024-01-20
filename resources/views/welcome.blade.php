@@ -8,7 +8,7 @@
                     {{session('message')}}
                     </div>
                 @endif --}}
-                <h1 class="text-center py-5 mb-4 display-3 fw-semibold" style="font-family:montserrat ">Benvenuto in Presto.it</h1>
+                <h1 class="text-center py-5 mb-4 display-4 fw-semibold" style="font-family:montserrat ">Benvenuto in Presto.it</h1>
 
                 <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
                     <input name="searched" class="form-control me-2" type="search"  aria-label="Search">
@@ -42,7 +42,8 @@
 
 
         <div class="d-flex justify-content-around">
-            <div class="col-sm-4 col-md-6 col-lg-8 col-xl-10 col-xxl-12  mb-5 mt-5 p-5 text-center" >
+            {{-- <div class="col-sm-4 col-md-6 col-lg-8 col-xl-10   mb-5 mt-5 p-5 text-center" > --}}
+            <div class="col-lg-12 col-xl-12 col-xxl-12 d-none d-xl-block text-center  mb-5 mt-5 p-5 text-center" >
                 <!-- xl circle buttons-->
                 <a href="/categories/1"><button class="btn btn-success btn-circle btn-circle-xl"><i class="fa-solid fa-book"></i></button></a>
                     <a href="/categories/2"><button class="btn btn-primary btn-circle btn-circle-xl"><i class="fa-solid fa-music"></i></button></a>
@@ -59,19 +60,21 @@
 
             <div class="py-5 text-white" style="background-color: #0D3B66">
                 <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-start">
-                            <div class=" col-lg-4 col-xl-5 col-xxl-6 d-none d-xl-block text-start">
-                            <img class="img-fluid rounded-3 my-5" src="https://www.verdefacile.eu/img/cms/azienda-servizi/collabora-con-noi.jpg" alt="..." /></div>
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class=" col-lg-4 col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                            <img class="img-fluid rounded-3 my-5" src="https://www.verdefacile.eu/img/cms/azienda-servizi/collabora-con-noi.jpg" alt="..." />
+                        </div>
 
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-end text-xl-end">
-                                <h2 class="fw-bolder display-6 mb-4">Collabora con noi</h2>
+                            <div class="my-5 text-center text-xl-end">
+                                <h2 class="fw-bolder display-6 mb-4 text-center text-xl-end">Collabora con noi</h2>
                                 <p class="lead fs-5 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis dolor neque, aspernatur commodi tempore.</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-end">
                                     <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{route('lavoraConNoi')}}" style="background-color: #F3B61F">Diventa revisore</a>
                                 </div>
                             </div>
-                        </div> </div>
+                        </div> 
+                    </div>
                 </div>
             </div>
 

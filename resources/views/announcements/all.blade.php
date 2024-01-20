@@ -8,7 +8,7 @@
 
                 <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
                     <input name="searched" class="form-control me-2" type="search"  aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Cerca</button>
+                    <button class="btn text-white" style="background-color: #0D3B66;  " type="submit">Cerca</button>
                 </form>
 
                 {{-- <div class=" dropdown btn mt-2" style="background-color:#e3f2fd ">
@@ -92,14 +92,17 @@
                                 <img src="https://picsum.photos/300/220" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">{{$announcement->title}}</h5>
-                                    <div class="d-flex justify-content-between">
-                                        <p class="card-title "><a class="a-category text-black" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
-                                        <p class="card-text"><em class="text-small">{{$announcement->user->name}}</em></p>
-                                    </div>
+                                    
+                                    <p class="card-title "><a class="a-category text-black" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
+                                    
                                     <p class="card-text">{{Illuminate\Support\Str::limit($announcement->description, 100)}}</p>
-                                    <p class="card-text text-end"><em>€ {{number_format($announcement->price, 2)}}</em></p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="card-text"><em class="text-small">{{$announcement->user->name}}</em></p>
+                                        <p class="card-text">{{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y')}}</p>
+                                    </div>
+                                    <p class="card-text text-end fw-semibold"><em>€ {{number_format($announcement->price, 2)}}</em></p>
                                     <div class="text-center">
-                                        <a href="{{route('show.announcement', $announcement)}}" class="btn btn-primary">Visualizza annuncio</a>
+                                        <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
                                     </div>
                                 </div>
                             </div>

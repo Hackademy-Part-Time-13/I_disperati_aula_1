@@ -40,9 +40,15 @@
                 <form method="POST" action="{{route('lavora.save')}}">
                     @csrf
                     <ul>
+                        @auth
                         <li>{{auth()->user()->name}}</li>
                         <li>{{auth()->user()->email}}</li>
+                        @endauth
+                        
                     </ul>
+                    @guest
+                    <p>Accedi per diventare revisore</p>
+                    @endguest
                     {{-- <div class="mb-3">
                       <label class="form-label">Nome</label>
                       <input type="text" required name="name" @error('name') is-invalid @enderror placeholder="Nome Cognome" class="form-control" value="{{old('name')}}">

@@ -12,7 +12,7 @@ class CategoryController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('show');
     }
     /**
      * Display a listing of the resource.
@@ -63,8 +63,9 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        $announcements = Announcement::all(); //TODO: aggiustare pagination!
-        
+
+        $announcements = Announcement::orderBy('created_at', 'DESC')->get(); //TODO: aggiustare pagination!
+    
         return view('categories.show', compact('category', 'announcements'));
     }
 

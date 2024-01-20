@@ -33,7 +33,7 @@
           <div class="mb-4">
             <label  class="form-label text-uppercase fw-semibold">Categoria</label>
             <select class="form-select @error('category_id') is-invalid @enderror" wire:model.blur="category_id" required>
-              <option selected>Seleziona una categoria</option>
+              <p><option selected>Seleziona una categoria</option></p>
               @foreach (App\Models\Category::all() as $category)
               <option class="text-black text-uppercase" value="{{$category->id}}">{{$category->name}}</option>
               @endforeach

@@ -178,6 +178,7 @@
           <p class="card-text fs-6 my-4">{{$announcement->description}}</p>
           <p class="card-title fs-5 btn btn-primary mb-5" style="background-color:#e3f2fd; border:none"><a class="text-black a-category" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
 
+          
           <div class="d-flex justify-content-between">
             <p class="card-text text-start fw-bold fs-4"><em>€ {{number_format($announcement->price, 2)}}</em></p>
             <div>
