@@ -2,7 +2,7 @@
   
   <div class="container my-4">
     {{-- prima sezione --}}
-    <h1 class="display-5 text-center"> {{$announcement_to_check ? 'Ecco gli annunci da revisionare' : 'Non ci sono annunci da revisionare'}}</h1>
+    <h1 class="display-6 text-center"> {{$announcement_to_check ? 'Ecco gli annunci da revisionare' : 'Non ci sono annunci da revisionare per questo utente'}}</h1>
     {{-- <h1>{{$announcement->title}}</h1> --}}
     
     
@@ -113,18 +113,17 @@
       
       <div class="col-6 my-5">
         <div class="card-body">
-          <h5 class="card-title fw-bold mt-5 mb-5 display-6 text-center text-uppercase">{{ $announcement_to_check->title }}</h5>
-          <p class="card-title fs-6 btn btn-primary mb-5" style="background-color:#e3f2fd; border:none"><a class="text-black a-category" href="{{route('categories.show', $announcement_to_check->category)}}">{{$announcement_to_check->category->name}}</a></p>
+          <h5 class="card-title fw-bold mt-5 mb-5 fs-2 text-center text-uppercase">{{ $announcement_to_check->title }}</h5>
+          <p class="card-title fs-6 btn btn-primary mb-2" style="background-color:#e3f2fd; border:none"><a class="text-black a-category" href="{{route('categories.show', $announcement_to_check->category)}}">{{$announcement_to_check->category->name}}</a></p>
           <p class="card-text fs-6 my-4 " style="text-align: justify">{{  $announcement_to_check->description}}</p>
           
           <div class="d-flex justify-content-between">
             <p class="card-text text-start fw-bold fs-4"><em>€ {{number_format($announcement_to_check->price, 2)}}</em></p>
           </div>
           
-          <p class="card-text text-end mt-5">
-            Created at
-            {{\Carbon\Carbon::parse($announcement_to_check->created_at)->format('d/m/Y')}}
-            <br> by
+          <p class="card-text text-end mt-3">
+            Annuncio creato: {{\Carbon\Carbon::parse($announcement_to_check->created_at)->format('d/m/Y')}}
+            <br> da
             <span class="fw-bold">
               <em>
                 {{$announcement_to_check->user->name}}

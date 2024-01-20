@@ -21,7 +21,7 @@
                         <p class="card-title "><a class="a-category text-black" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
                         
                         
-                        <p class="card-text">{{Illuminate\Support\Str::limit($announcement->description, 30)}}</p>
+                        <p class="card-text">{{Illuminate\Support\Str::limit($announcement->description, 90)}}</p>
                         <div class="d-flex justify-content-between">
                             <p class="card-text"><em class="text-small">{{$announcement->user->name}}</em></p>
                             <p class="card-text">{{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y')}}</p>

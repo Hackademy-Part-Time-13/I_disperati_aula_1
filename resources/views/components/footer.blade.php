@@ -33,10 +33,10 @@
           <div class="col-md-4 col-lg-3 col-xl-3  mb-md-0 mb-2 text-center text-md-end">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-3">Contatti</h6>
-            <p><i class="fas fa-home me-3"></i>Oderzo, 31046 TV, Italy</p>
+            <p><i class="fas fa-home me-3"></i>Città, 01234 XX, Italy</p>
             <p>
               <i class="fas fa-envelope me-3"></i>
-              example@email.it
+              info@presto.it
             </p>
             <p><i class="fas fa-phone me-3"></i>+39 123 45 6789</p>
 

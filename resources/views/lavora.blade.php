@@ -15,6 +15,18 @@
         <div class="alert alert-success" role="alert">
             {{session('message')}}
         </div>
+   
+    @elseif ($errors->any())
+        @foreach ($errors->all() as $error) 
+        <div class="ms-auto me-auto text-center col-6 my-2 alert alert-danger">
+            <li>{{$error}}</li>
+        </div>
+        @endforeach            
+
+    @elseif (session('error'))
+    <div class="ms-auto me-auto text-center col-6 my-2 alert alert-danger">
+        {{ session('error') }}
+    </div>
     @endif
 
     <div class="container my-5">
@@ -49,7 +61,23 @@
                     @guest
                     <p>Accedi per diventare revisore</p>
                     @endguest
-                    {{-- <div class="mb-3">
+                    
+                    @auth
+                    <button type="submit" class="btn mt-4 fw-semibold fs-5" style="background-color: #F3B61F">Diventa un revisore</button>
+                    @endauth
+
+                    @guest
+                    <a href="{{route('login')}}" class="btn mt-4 fw-semibold fs-6" style="background-color: #F3B61F">Accedi</a>
+                    @endguest
+                  </form>
+            </div>
+        </div>
+
+    </div>
+
+        {{-- Vecchio form --}}
+
+                {{-- <div class="mb-3">
                       <label class="form-label">Nome</label>
                       <input type="text" required name="name" @error('name') is-invalid @enderror placeholder="Nome Cognome" class="form-control" value="{{old('name')}}">
                     </div>
@@ -65,13 +93,6 @@
                         <label class="form-label">Utente</label>
                         <input name="user" type="text" class="form-control" value="{{auth()->user()->id}}">                
                     </div> --}}
-                    
-                    <button type="submit" class="btn mt-4 fw-semibold fs-5" style="background-color: #F3B61F">Diventa un revisore</button>
-                  </form>
-            </div>
-        </div>
-
-    </div>
 
     
 </x-main>

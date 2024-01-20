@@ -12,7 +12,7 @@
     <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">ID</th>
+            {{-- <th scope="col">ID</th> --}}
             <th scope="col">Titolo</th>
             <th scope="col">Categoria</th>
             <th scope="col">Descrizione</th>
@@ -27,7 +27,7 @@
           {{-- mostra solo annunci dell'autore --}}
           @if(auth()->user()->id == $announcement->user_id)
             <tr>
-                <th scope="row">{{$announcement->id}}</th>
+                {{-- <th scope="row">{{$announcement->id}}</th> --}}
                 <td>{{$announcement->title}}</td>
                 <td><a href="{{route('categories.show', $announcement->category)}}" class="text-black a-category"><em>{{$announcement->category->name}}</em></a></td>
                 <td>{{Illuminate\Support\Str::limit($announcement->description, 30)}}</td>
@@ -36,7 +36,7 @@
             {{-- se ADMIN, mostra tutti gli annunci --}}
           @elseif(auth()->user()->is_admin)
             <tr>
-                <th scope="row">{{$announcement->id}}</th>
+                {{-- <th scope="row">{{$announcement->id}}</th> --}}
                 <td>{{$announcement->title}}</td>
                 <td><a href="{{route('categories.show', $announcement->category)}}" class="text-black a-category"><em>{{$announcement->category->name}}</em></a></td>
                 <td>{{Illuminate\Support\Str::limit($announcement->description, 30)}}</td>

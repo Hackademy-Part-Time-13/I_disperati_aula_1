@@ -174,9 +174,9 @@
       
       <div class="col-6 my-5">
         <div class="card-body">
-          <h5 class="card-title fw-bold  mb-5 display-5 text-center text-uppercase">{{$announcement->title}}</h5>
+          <h5 class="card-title fw-bold mt-3 mb-5 fs-2 text-center text-uppercase">{{$announcement->title}}</h5>
+          <p class="card-title fs-6 btn btn-primary " style="background-color:#e3f2fd; border:none"><a class="text-black a-category" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
           <p class="card-text fs-6 my-4">{{$announcement->description}}</p>
-          <p class="card-title fs-5 btn btn-primary mb-5" style="background-color:#e3f2fd; border:none"><a class="text-black a-category" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
 
           
           <div class="d-flex justify-content-between">
@@ -196,7 +196,7 @@
             
           </div>
 
-          <p class="card-text text-end mt-5">Created at {{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y')}} by <span class="fw-bold "><em>{{$announcement->user->name}}</em></span></p>
+          <p class="card-text text-end mt-5">Annuncio creato: {{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y')}} da <span class="fw-bold "><em>{{$announcement->user->name}}</em></span></p>
           {{-- <p class="card-text text-end">{{$announcement->user->name}}</p> --}}
         </div>
       </div>
