@@ -25,6 +25,12 @@
             <a class="nav-link" href="{{route('all.announcements')}}">Annunci</a>
           </li>
 
+          @auth
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('announcements')}}">Crea annuncio</a>
+          </li>
+          @endauth
+
         </ul>
 
 
@@ -67,8 +73,9 @@
             </a>
 
                 <ul class="dropdown-menu dropdown-menu-end">
+                  {{-- creare vista UTENTE con anche la lista degli annunci creatiE ACCETTATI --}}
                     <li>
-                        <a class="dropdown-item" href="{{route('announcements')}}">I miei articoli</a>
+                        <a class="dropdown-item" href="{{route('user.announcements')}}">I miei annunci</a>
                     </li>
                     {{--------------------------- AGGIUNGERE ROTTA E VISTA --------------------------------}}
 

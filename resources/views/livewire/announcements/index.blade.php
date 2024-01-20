@@ -21,6 +21,10 @@
         </thead>
         <tbody>
           @foreach ($announcements as $announcement)
+          {{-- if: mostra solo annunci approvati --}}
+          @if($announcement->is_accepted)
+
+          {{-- mostra solo annunci dell'autore --}}
           @if(auth()->user()->id == $announcement->user_id)
             <tr>
                 <th scope="row">{{$announcement->id}}</th>
@@ -29,6 +33,7 @@
                 <td>{{Illuminate\Support\Str::limit($announcement->description, 30)}}</td>
                 <td>€ {{number_format($announcement->price, 2)}}</td>
             </tr>
+            {{-- se ADMIN, mostra tutti gli annunci --}}
           @elseif(auth()->user()->is_admin)
             <tr>
                 <th scope="row">{{$announcement->id}}</th>
@@ -38,6 +43,7 @@
                 
                 <td>€ {{number_format($announcement->price, 2)}}</td>
             </tr>
+          @endif
           @endif
           @endforeach
         </tbody>

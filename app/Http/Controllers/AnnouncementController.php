@@ -9,4 +9,8 @@ class AnnouncementController extends Controller
     public function index(){
         return view('announcements.index');
     }
+
+    public function userAnn(){
+        return view('announcements.user-ann');
+    }
 }

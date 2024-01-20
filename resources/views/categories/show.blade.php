@@ -8,7 +8,8 @@
 
 
             @foreach(App\Models\Announcement::all() as $announcement)
-                @if($announcement->category->id == $category->id)
+                @if($announcement->category->id == $category->id || $announcement->is_accepted)
+               
                 <div class="col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 p-3">
                     <div class="card mb-4" style="width: 18rem;">
                     <img src="https://picsum.photos/300/220" class="card-img-top" alt="...">

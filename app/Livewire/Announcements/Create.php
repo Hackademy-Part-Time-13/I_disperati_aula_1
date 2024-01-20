@@ -20,7 +20,7 @@ class Create extends Component
     // }
     
     #[Validate('required', message: 'Inserisci un titolo valido')]
-    #[Validate('max:20', message: 'Titolo troppo lungo')]
+    #[Validate('max:60', message: 'Titolo troppo lungo')]
     #[Validate('min:3', message: 'Titolo troppo corto')]
     public $title;
     

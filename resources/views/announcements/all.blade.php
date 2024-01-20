@@ -85,7 +85,8 @@
                     <div class="row">
 
 
-                        @forelse($announcements as $announcement)
+                        @foreach($announcements as $announcement)
+                        @if($announcement->is_accepted)
                         <div class=" col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 p-3">
                             <div class="card" style="width: 18rem;">
                                 <img src="https://picsum.photos/300/220" class="card-img-top" alt="...">
@@ -103,26 +104,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        @empty
-                        <div class="col-12">
-                            {{-- <h1 class="my-4">Non ci sono annunci in questa ricerca. Riprova.</h1> --}}
-                            <div class="alert alert-danger mt-3">
-                                <p class="lead fs-4 text-black">Non ci sono annunci in questa ricerca. Riprova.</p>
-                            </div>
-                        </div>
-
-                        {{-- <div class="card-body">
-                            <h5 class="card-title">{{$announcement->title}}</h5>
-                            <p class="card-title "><a class="a-category text-black" href="">{{$announcement->category->name}}</a></p>
-                            <p class="card-text">{{$announcement->description}}</p>
-                            <p class="card-text text-end"><em>€ {{number_format($announcement->price, 2)}}</em></p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>--}}
-
-                        @endforelse
+                        @endif
+                        @endforeach
                         {{ $announcements->links() }}
                     </div>
                 </div>
