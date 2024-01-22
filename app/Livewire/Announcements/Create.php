@@ -30,6 +30,7 @@ class Create extends Component
     
     #[Validate('required', message: 'Inserisci una categoria valida')]
     // #[Validate('selected', message: 'Inserisci una categoria valido')]
+    #[Validate('gt:0', message: 'Seleziona una categoria valida')]
     public $category_id;
     
     #[Validate('required', message: 'Inserisci un prezzo valido')]
