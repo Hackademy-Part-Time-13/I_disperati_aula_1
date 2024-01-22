@@ -59,4 +59,6 @@ Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acc
 //Rifiuta annuncio
 Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
 
+// Cambio lingua
+Route::post('/lingua/{lang}', [PageController::class, 'setLanguage'])->name('set_language_locale');
 

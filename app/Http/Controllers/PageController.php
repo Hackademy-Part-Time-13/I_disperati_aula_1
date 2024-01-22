@@ -39,6 +39,12 @@ class PageController extends Controller
         return view('announcements.all', compact('announcements'));
     
     }
+
+    public function setLanguage($lang){
+		session()->put('locale', $lang);
+        dd($lang);
+		return redirect()->back();
+	}
       
    
 }

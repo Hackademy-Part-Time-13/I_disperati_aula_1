@@ -34,6 +34,25 @@
         </ul>
 
 
+        <div class="dropdown">
+          <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-earth-americas" style="background-color:#e3f2fd;"></i>
+          </a>
+        
+          <ul class="dropdown-menu">
+            <li class="nav-item">
+              <x-_locale lang='it' nation='it'/>
+            </li>
+            <li class="nav-item">
+              <x-_locale lang='en' nation='gb'/>
+            </li>
+            <li class="nav-item">
+              <x-_locale lang='es' nation='es'/>
+            </li>
+          </ul>
+
+        </div>
+
                 {{-- barra ricerca annunci --}}
 
                 {{-- <form action="{{route('announcements.search')}}" method="GET" class="d-flex">

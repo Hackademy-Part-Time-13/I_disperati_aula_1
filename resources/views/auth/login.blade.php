@@ -159,7 +159,7 @@
                                 </div>
                                 
                                 <div class="forgot">
-                                    <small><a href="/forgot-password">Forgot Password?</a></small>
+                                    <small><a href="/forgot-password">Password dimenticata?</a></small>
                                 </div>
                                 
                             </div>
