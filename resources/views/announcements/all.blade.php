@@ -1,8 +1,8 @@
     <x-main>
 
-        <div class="row ms-2 mt-4">
+        <div class="row ms-2 mt-4 mb-5">
 
-            <div class="col-2 mt-5 ">
+            <div class="col-12 col-md-3 mt-5">
 
                 <h3 class="mt-3 mb-4">Filtri di ricerca</h3>
 
@@ -21,11 +21,64 @@
                       @endforeach
                     </ul>
                   </div> --}}
+
+                  <div class="left">
+                    <div class="sidebar">
+                        {{-- tipologia --}}
+                        <h6>Tipologia</h6>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Nuovo</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Usato</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Spedizione gratis</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Consegna a mano</p> <span>(0)</span>
+                        </div>
+                        
+                        {{-- categorie --}}
+                        <h6>Categorie</h6>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Libri</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Musica</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>console</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Elettronica & Informatica</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Arredamento</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Giardino</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Bellezza & Salute</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Abbigliamento</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Auto & Moto</p> <span>(0)</span>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox"> <p>Oggettistica</p> <span>(0)</span>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
 
 
 
-            <div class="col-9 ms-4">
+            <div class="col-4 col-md-8 ms-4">
 
                 <div class="">
 
@@ -33,7 +86,7 @@
 
 
                 @if(Route::currentRouteName() == 'all.announcements')
-                <h1 class="">Annunci</h1>
+                <h1 class="mt-md-4">Annunci</h1>
                 @elseif(Route::currentRouteName() == 'announcements.search')
                 @if($announcements->count() > 0)
 
