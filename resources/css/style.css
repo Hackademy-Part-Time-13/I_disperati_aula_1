@@ -320,3 +320,9 @@ section {
     margin-right: 15px;
     cursor: pointer;
 }
+
+/* pre view immagini*/
+.img-preview{
+    width: 150px;
+    height: 150px;
+}

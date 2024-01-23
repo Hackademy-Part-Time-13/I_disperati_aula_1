@@ -2,5 +2,7 @@
 
 return [
 	'welcome' => 'Benvenuto Presto.it',
-    'caption' => 'Vendi presto quello che vuoi',
+    'caption' => 'Vendi presto cio che vuoi',
+    'collabora' => 'Collabora con noi'
+
 ];

@@ -32,19 +32,22 @@ class PageController extends Controller
     }
 
     public function searchAnnouncements(Request $request){
-        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
-    
+        $announcements = Announcement::search($request->searched)->orderBy('created_at', 'DESC')->where('is_accepted', true)->paginate(10);
+
         //mostra solo gli annunci revisionati ed accettati
-        
+
         return view('announcements.all', compact('announcements'));
-    
+
     }
 
     public function setLanguage($lang){
+
+
 		session()->put('locale', $lang);
-        dd($lang);
-		return redirect()->back();
+
+		 return redirect()->back();
 	}
-      
-   
+
+
+
 }

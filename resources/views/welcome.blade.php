@@ -10,6 +10,7 @@
                 @endif --}}
                 <h1 class="text-center py-5 mb-4 display-4 fw-semibold" style="font-family:montserrat ">{{__('ui.welcome')}}</h1>
 
+
                 <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
                     <input name="searched" class="form-control me-2" type="search"  aria-label="Search">
                     <button class="btn" style="background-color:#F3B61F " type="submit">Cerca</button>
@@ -67,13 +68,13 @@
 
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-center text-xl-end">
-                                <h2 class="fw-bolder display-6 mb-4 text-center text-xl-end">Collabora con noi</h2>
+                                <h2 class="fw-bolder display-6 mb-4 text-center text-xl-end">{{__('ui.collabora')}}</h2>
                                 <p class="lead fs-5 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis dolor neque, aspernatur commodi tempore.</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-end">
                                     <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{route('lavoraConNoi')}}" style="background-color: #F3B61F">Diventa revisore</a>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedFloat('price')->default(0,00);
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('user_id');
-            $table->string('image', 50)->nullable();
+            
 
             $table->timestamps();
 
