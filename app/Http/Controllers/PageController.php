@@ -9,6 +9,7 @@ use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\App;
 
 class PageController extends Controller
 {
@@ -42,8 +43,16 @@ class PageController extends Controller
 
     public function setLanguage($lang){
 
+        $language = App::setLocale($lang);
+
+        // dd(App::getLocale());
+
+        
+
 
 		session()->put('locale', $lang);
+
+        // dd(session('locale'));
 
 		 return redirect()->back();
 	}
