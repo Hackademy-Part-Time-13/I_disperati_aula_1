@@ -3,7 +3,7 @@
 
 return [
 
-	'welcome' => 'Bienvenidə a Presto.it',
+	'welcome' => 'Bienvenidə a',
     'caption' => 'Vende lo que quieras rápidamente',
     'collabora' => 'Colabora con nosotros',
 

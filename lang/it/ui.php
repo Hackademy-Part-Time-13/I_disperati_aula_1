@@ -3,7 +3,7 @@
 
 return [
 
-	'welcome' => 'Benvenuto in presto.it ',
+	'welcome' => 'Benvenuto in',
     'caption' => 'Vendi presto ciò che vuoi',
     'collabora' => 'Collabora con noi',
 

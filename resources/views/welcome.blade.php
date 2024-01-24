@@ -8,7 +8,7 @@
                     {{session('message')}}
                     </div>
                 @endif --}}
-                <h1 class="text-center py-5 mb-4 display-4 fw-semibold" style="font-family:montserrat ">{{__('ui.welcome')}}</h1>
+                <h1 class="text-center py-5 mb-4 display-4 fw-semibold" style="font-family:montserrat ">{{__('ui.welcome')}} <span style="color: #F3B61F">Presto.it</span></h1>
 
 
                 <form action="{{route('announcements.search')}}" method="GET" class="d-flex">

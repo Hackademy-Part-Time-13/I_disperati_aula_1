@@ -2,7 +2,7 @@
 
 return [
 
-	'welcome' => 'Welcome in presto.it ',
+	'welcome' => 'Welcome in ',
     'caption' => 'Sell ​​quickly what you want',
     'collabora' => 'Collaborate with us',
 
