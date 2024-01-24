@@ -13,7 +13,7 @@
 
                 <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
                     <input name="searched" class="form-control me-2" type="search"  aria-label="Search">
-                    <button class="btn" style="background-color:#F3B61F " type="submit">Cerca</button>
+                    <button class="btn" style="background-color:#F3B61F " type="submit">{{__('ui.cerca') }}</button>
                 </form>
 
             </div>
@@ -27,7 +27,7 @@
                         <h2 class="fw-bolder display-6 mb-4">{{__('ui.caption')}}</h2>
                         <p class="lead fs-5 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis dolor neque, aspernatur commodi tempore.</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                            <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{route('announcements')}}" style="background-color: #F3B61F">Crea annuncio</a>
+                            <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{route('announcements')}}" style="background-color: #F3B61F">{{__('ui.crea_il_tuo_annuncio')}}</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                                 <h2 class="fw-bolder display-6 mb-4 text-center text-xl-end">{{__('ui.collabora')}}</h2>
                                 <p class="lead fs-5 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis dolor neque, aspernatur commodi tempore.</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-end">
-                                    <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{route('lavoraConNoi')}}" style="background-color: #F3B61F">Diventa revisore</a>
+                                    <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{route('lavoraConNoi')}}" style="background-color: #F3B61F">{{__('ui.diventa_revisore')}}</a>
                                 </div>
                             </div>
                         </div>

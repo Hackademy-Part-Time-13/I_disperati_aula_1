@@ -7,12 +7,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
+            <a class="nav-link" aria-current="page" href="{{ route('home') }}">{{__('ui.home')}}</a>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorie
+                {{__('ui.categorie')}}
             </a>
             <ul class="dropdown-menu">
               @foreach(App\Models\Category::all() as $category)
@@ -22,12 +22,12 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route('all.announcements')}}">Annunci</a>
+            <a class="nav-link" href="{{route('all.announcements')}}">{{__('ui.annunci')}}</a>
           </li>
 
           @auth
           <li class="nav-item">
-            <a class="nav-link" href="{{route('announcements')}}">Crea annuncio</a>
+            <a class="nav-link" href="{{route('announcements')}}">{{__('ui.crea_il_tuo_annuncio')}}</a>
           </li>
           @endauth
 
@@ -38,7 +38,7 @@
           <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa-solid fa-earth-americas" style="background-color:#e3f2fd;"></i>
           </a>
-        
+
           <ul class="dropdown-menu">
             <li class="nav-item">
               <x-_locale lang='it' nation='it'/>
@@ -67,11 +67,11 @@
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Area personale
+                {{__('ui.area_personale')}}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
-              <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+              <li><a class="dropdown-item" href="{{route('login')}}">{{__('ui.accedi')}}</a></li>
+              <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.registrati')}}</a></li>
             </ul>
           </li>
         </ul>
@@ -80,7 +80,7 @@
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Ciao {{Auth::user()->name}}
+                {{__('ui.ciao')}} {{Auth::user()->name}}
                 @if (Auth::user()->is_revisor)
                 @if(App\Models\Announcement::toBeRevisionedCount())
                 <span class="badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
@@ -94,13 +94,13 @@
                 <ul class="dropdown-menu dropdown-menu-end">
                   {{-- creare vista UTENTE con anche la lista degli annunci creatiE ACCETTATI --}}
                     <li>
-                        <a class="dropdown-item" href="{{route('user.announcements')}}">I miei annunci</a>
+                        <a class="dropdown-item" href="{{route('user.announcements')}}">{{__('ui.i_miei_annunci')}}</a>
                     </li>
                     {{--------------------------- AGGIUNGERE ROTTA E VISTA --------------------------------}}
 
                     @if (Auth::user()->is_revisor)
                      <li>
-                        <a class="dropdown-item position-relative" href="{{ route('revisor.index') }}">Area Revisore
+                        <a class="dropdown-item position-relative" href="{{ route('revisor.index') }}">{{__('ui.area_revisore')}}
                           @if(App\Models\Announcement::toBeRevisionedCount())
                         <span class="badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
                         <span class="visually-hidden">Unread messages
@@ -114,7 +114,7 @@
 
 
                     {{-- ------------------------------------------------------------------------------- --}}
-                    <li><a class="dropdown-item" href="{{route('logout')}}"class="nav-link text-primary" onclick="event.preventDefault();getElementById('form-logout').submit();">Logout</a>
+                    <li><a class="dropdown-item" href="{{route('logout')}}"class="nav-link text-primary" onclick="event.preventDefault();getElementById('form-logout').submit();">{{__('ui.esci')}}</a>
                         <form action="/logout" method="POST" class="d_none" id="form-logout">
                             @csrf
                         </form>

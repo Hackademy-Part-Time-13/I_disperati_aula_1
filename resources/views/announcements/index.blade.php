@@ -1,8 +1,8 @@
 <x-main>
 
     <div class="container my-4">
-        <h1>Crea un nuovo annuncio</h1>
-    
+        <h1>{{__('ui.crea_il_tuo_annuncio')}}</h1>
+
         {{-- <div class="row">
             <div class="col-12"> --}}
                 {{-- form per aggiunta degli annunci --}}

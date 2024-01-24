@@ -22,8 +22,8 @@
           @auth
           @if (!Auth::user()->is_revisor)
           <div class="col-md-4 col-lg-3 col-xl-3  mb-md-0 mb-2 text-center">
-            <h6 class="text-uppercase fw-bold mb-3">Lavora con noi</h6>
-            <a class="btn" style="background-color: #F3B61F" href="{{route('become.revisor')}}">Diventa revisore</a>
+            <h6 class="text-uppercase fw-bold mb-3">{{__('ui.lavora_con_noi')}}</h6>
+            <a class="btn" style="background-color: #F3B61F" href="{{route('become.revisor')}}">{{__('ui.diventa_revisore')}}</a>
             <p>
           </div>
           @endif
@@ -32,7 +32,7 @@
           <!-- Right column -->
           <div class="col-md-4 col-lg-3 col-xl-3  mb-md-0 mb-2 text-center text-md-end">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-3">Contatti</h6>
+            <h6 class="text-uppercase fw-bold mb-3">{{__('ui.contatti')}}</h6>
             <p><i class="fas fa-home me-3"></i>Città, 01234 XX, Italy</p>
             <p>
               <i class="fas fa-envelope me-3"></i>
