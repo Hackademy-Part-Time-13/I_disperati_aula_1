@@ -85,11 +85,14 @@
                 {{__('ui.ciao')}} {{Auth::user()->name}}
                 @if (Auth::user()->is_revisor)
                 @if(App\Models\Announcement::toBeRevisionedCount())
+                {{-- @dd(App\Models\Announcement::all()->id) --}}
+                {{-- @if(App\Models\Announcement::all() != Auth::user()->id) --}}
                 <span class="badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
                   <span class="visually-hidden">Unread messages
                  </span>
                   </span>
                   @endif
+                  {{-- @endif --}}
                   @endif
             </a>
 

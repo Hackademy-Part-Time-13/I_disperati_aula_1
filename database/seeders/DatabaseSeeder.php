@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'administrator',
             'email' => 'administrator@gmail.com',
             'password' => Hash::make('1234abcd'),
+            'email_verified_at' => now(),
             'is_admin' => true,
             'is_revisor' => true,
         ]);
@@ -42,6 +43,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'client',
             'email' => 'client@gmail.com',
             'password' => Hash::make('1234abcd'),
+            'email_verified_at' => now(),
             'is_admin' => false,
             'is_revisor' => false,
         ]);
@@ -50,6 +52,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'revisor',
             'email' => 'revisor@gmail.com',
             'password' => Hash::make('1234abcd'),
+            'email_verified_at' => now(),
             'is_admin' => false,
             'is_revisor' => true,
         ]);

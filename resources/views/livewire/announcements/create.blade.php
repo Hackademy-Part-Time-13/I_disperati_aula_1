@@ -17,39 +17,16 @@
             @csrf
 
             {{-- colonna con l'inserimento dell'immagine, scelta categoria e select da implementare NUOVO/USATO --}}
-            <div class="col-md-6">
-
-                {{-- TODO: implementazione immagine con livewire US-05 --}}
+            <div class="col-md-12">
 
                 <div class="mb-4">
-                    <label  class="form-label text-uppercase fw-semibold">{{__('ui.immagini_prodotto')}}</label>
-
-                    {{-- <div class="mb-2">
-                        <img src="https://demos.creative-tim.com/paper-kit-2-pro/assets/img/image_placeholder.jpg" style="max-width: 500px; max-height: 250px;" alt="">
-                    </div> --}}
-
-                    @if(!empty($images))
-                    <div class="row">
-                        <div class="col-12">
-                        <p>{{__('ui.anteprima')}}:</p>
-                        <div class="row border  border-info rounded shadow py-4">
-                                @foreach ($images as $key => $image)
-                                <div class="col my-3">
-                                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
-                                    <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.cacella')}}</button>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                        @endif
-
-                    <input class="form-control @error('temporary_images.*') is-invalid @enderror" name='image' wire:model.blur="temporary_images" multiple type="file" id="formFile">
-
-
-                    </div>
-                    @error('temporary_images.*')
+                    <label  class="form-label text-uppercase fw-semibold">{{__('ui.titolo')}}</label>
+                    <input type="text" required placeholder="Inserisci un titolo..." class="form-control @error('title') is-invalid @enderror" wire:model.blur="title">
+                    @error('title')
                     {{$message}}
                     @enderror
+                </div>
+
 
                     <div class="mb-4">
                         <label  class="form-label text-uppercase fw-semibold">{{__('ui.categoria')}}</label>
@@ -64,18 +41,12 @@
                         @enderror
                     </div>
                     {{-- select da implementare NUOVO/USATO --}}
-                </div>
+                
+     
 
-
-                {{-- colonna con titolo, prezzo e descrizione --}}
-                <div class="col-md-6">
-                    <div class="mb-4">
-                        <label  class="form-label text-uppercase fw-semibold">{{__('ui.titolo')}}</label>
-                        <input type="text" required placeholder="Inserisci un titolo..." class="form-control @error('title') is-invalid @enderror" wire:model.blur="title">
-                        @error('title')
-                        {{$message}}
-                        @enderror
-                    </div>
+                
+                <div class="col-md-12">
+                    
                     <div class="mb-4">
                         <label  class="form-label text-uppercase fw-semibold">{{__('ui.descrizione')}}</label>
                         <textarea class="form-control  @error('description') is-invalid @enderror" required placeholder="Inserisci una descrizione..." wire:model.blur="description" style="height: 200px"></textarea>
@@ -97,6 +68,31 @@
                         {{$message}}
                         @enderror
                     </div>
+                    <label  class="form-label text-uppercase fw-semibold">{{__('ui.immagini_prodotto')}}</label>
+
+                    {{-- <div class="mb-2">
+                        <img src="https://demos.creative-tim.com/paper-kit-2-pro/assets/img/image_placeholder.jpg" style="max-width: 500px; max-height: 250px;" alt="">
+                    </div> --}}
+
+                    @if(!empty($images))
+                    <div class="row">
+                        <div class="col-12">
+                        <p>{{__('ui.anteprima')}}:</p>
+                        <div class="row border  border-info rounded shadow py-4">
+                                @foreach ($images as $key => $image)
+                                <div class="col my-3">
+                                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}}); background-position:center; background-size:cover;"></div>
+                                    <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.cancella')}}</button>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
+                    <input class="form-control @error('temporary_images.*') is-invalid @enderror" name='image' wire:model.blur="temporary_images" multiple type="file" id="formFile">
+                    </div>
+                    @error('temporary_images.*')
+                    {{$message}}
+                    @enderror
                 </div>
 
 

@@ -102,7 +102,7 @@
                         <div class=" col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 p-3 announcement">
                             <div class="card" style="width: 18rem;">
                                 <div>
-                                    <img style="max-height:210px; object-fit:cover" src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/300/220' }}" class="card-img-top" alt="...">
+                                    <img style="max-height:210px; object-fit:cover" src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) /* $announcement->images()->first()->getUrl(300,300) */ : 'https://picsum.photos/300/220' }}" class="card-img-top" alt="...">                                
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">{{$announcement->title}}</h5>

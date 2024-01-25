@@ -64,7 +64,7 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
 
-        $announcements = Announcement::orderBy('created_at', 'DESC')->get(); //TODO: aggiustare pagination!
+        $announcements = Announcement::orderBy('created_at', 'DESC')->where('is_accepted', true)->get(); //TODO: aggiustare pagination!
     
         return view('categories.show', compact('category', 'announcements'));
     }
