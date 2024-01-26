@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-6">
                 
-                @if ($announcement->images)
+                @if (!$announcement->images->isEmpty())
                 {{-- carosello --}}
                 <div class="my-5">
                     <div id="carouselExampleIndicators" class="carousel slide">
@@ -33,7 +33,30 @@
                 </div>
                 {{-- fine carosello --}}
                 @else
-                <section>
+                <div class="my-5">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://picsum.photos/300/300" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://picsum.photos/300/301" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://picsum.photos/300/299" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+                {{-- <section>
                     <div class="container-carousel">
                         <div class="carousel-01">
                             <input type="radio" name="slides" checked="checked" id="slide-1">
@@ -113,7 +136,7 @@
                             </ul>
                         </div>
                     </div>
-                </section>
+                </section> --}}
                 @endif
             </div>
             

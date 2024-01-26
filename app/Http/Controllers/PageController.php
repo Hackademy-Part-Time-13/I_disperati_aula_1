@@ -15,7 +15,9 @@ class PageController extends Controller
 {
     public function home(){
         $announcements = Announcement::all();
-        return view ('welcome', compact('announcements'));
+        // ultimi 6 annunci
+        $last_announcements = Announcement::where('is_accepted',true)->latest()->take(6)->get();
+        return view ('welcome', compact('announcements','last_announcements'));
     }
 
     public function all(){

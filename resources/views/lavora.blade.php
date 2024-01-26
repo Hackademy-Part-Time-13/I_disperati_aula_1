@@ -11,23 +11,23 @@
     {{-- fine immagine --}}
 
     {{--  main  --}}
-    @if(session()->has('message'))
+    {{-- @if(session()->has('message'))
         <div class="alert alert-success" role="alert">
             {{session('message')}}
-        </div>
+        </div> --}}
    
-    @elseif ($errors->any())
+    {{-- @elseif ($errors->any())
         @foreach ($errors->all() as $error) 
         <div class="ms-auto me-auto text-center col-6 my-2 alert alert-danger">
             <li>{{$error}}</li>
         </div>
-        @endforeach            
+        @endforeach             --}}
 
-    @elseif (session('error'))
+    {{-- @elseif (session('error'))
     <div class="ms-auto me-auto text-center col-6 my-2 alert alert-danger">
         {{ session('error') }}
     </div>
-    @endif
+    @endif --}}
 
     <div class="container my-5">
         <div class="row">

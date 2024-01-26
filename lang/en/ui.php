@@ -2,9 +2,22 @@
 
 return [
 
+    // home //
+
 	'welcome' => 'Welcome in ',
     'caption' => 'Sell ​​quickly what you want',
+    'sottotitolo' => 'Online shopping has never been so fun.',
     'collabora' => 'Collaborate with us',
+    'cosa_cerchi' => 'What are you looking for?',
+    'caption' => 'Sell ​​quickly what you want',
+    'venditore' => 'Upload your ad, the best photos of the items you no longer use and let the Presto.it team do everything else.',
+    'collabora' => 'Collaborate with us',
+
+    // elenco servizi //
+    'affidati_a_noi' => 'Why trust us',
+    'spedizione_veloce' => 'Fast shipping',
+    'assistenza' => '24h assistance',
+    'qualità' => 'Quality service',
 
     // navbar//
 

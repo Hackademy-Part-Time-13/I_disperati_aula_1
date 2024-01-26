@@ -3,9 +3,22 @@
 
 return [
 
+    // home //
+
 	'welcome' => 'Bienvenidə a',
     'caption' => 'Vende lo que quieras rápidamente',
+    'sottotitolo' => 'Comprar online nunca ha sido tan divertido.',
     'collabora' => 'Colabora con nosotros',
+    'cosa_cerchi' => '¿Qué estás buscando?',
+    'caption' => 'Vende lo que quieras rápidamente',
+    'venditore' => 'Sube tu anuncio, las mejores fotos de los artículos que ya no utilizas y deja que el equipo de Presto.it haga todo lo demás.',
+    'collabora' => 'Colabora con nosotros',
+
+    // elenco servizi //
+    'affidati_a_noi' => 'Por qué confiar en nosotros',
+    'spedizione_veloce' => 'Envío rápido',
+    'assistenza' => 'Asistencia las 24h',
+    'qualità' => 'Servicio de calidad',
 
     // navbar//
 

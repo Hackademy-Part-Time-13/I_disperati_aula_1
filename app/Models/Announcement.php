@@ -8,6 +8,7 @@ use App\Models\Category;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Auth;
 
 class Announcement extends Model
 {
@@ -44,7 +45,7 @@ class Announcement extends Model
     }
 
     public static function toBeRevisionedCount(){
-        return Announcement::where('is_accepted', null)->count();
+        return Announcement::where('is_accepted', null)->where('user_id', '!=', Auth::id())->count();
    }
 
    public function images(){

@@ -3,9 +3,20 @@
 
 return [
 
+    // home //
 	'welcome' => 'Benvenuto in',
     'caption' => 'Vendi presto ciò che vuoi',
+    'sottotitolo' => 'Lo shopping online non è mai stato così divertente.',
     'collabora' => 'Collabora con noi',
+    'cosa_cerchi' => 'Cosa stai cercando?',
+    'venditore' =>'Carica il tuo annuncio, le foto migliori degli articoli che non usi più e lascia che il team di Presto.it faccia tutto il resto.',
+    'collabora' => 'Collabora con noi',
+
+    // elenco servizi //
+    'affidati_a_noi' => 'Perché affidarti a noi',
+    'spedizione_veloce' => 'Spedizione veloce',
+    'assistenza' => 'Assistenza 24h',
+    'qualità' => 'Servizio di qualità',
 
     // navbar//
 

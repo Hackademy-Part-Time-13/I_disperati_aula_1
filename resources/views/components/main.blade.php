@@ -18,8 +18,19 @@
         </div>
 
         @if(session()->has('message'))
-        <div class="alert alert-success m-3" role="alert">
+        <div class="alert m-3" role="alert">
         {{session('message')}}
+        </div>
+        @endif
+        @if(session()->has('success'))
+        <div class="alert alert-success m-3" role="alert">
+        {{session('success')}}
+        </div>
+        @endif
+        
+        @if(session()->has('error'))
+        <div class="alert alert-danger m-3" role="alert">
+        {{session('error')}}
         </div>
         @endif
 

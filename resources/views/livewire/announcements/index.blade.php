@@ -17,6 +17,7 @@
             <th scope="col">Categoria</th>
             <th scope="col">Descrizione</th>
             <th scope="col">Prezzo</th>
+            <th scope="col">Azioni</th>
           </tr>
         </thead>
         <tbody>
@@ -32,6 +33,16 @@
                 <td><a href="{{route('categories.show', $announcement->category)}}" class="text-black a-category"><em>{{$announcement->category->name}}</em></a></td>
                 <td>{{Illuminate\Support\Str::limit($announcement->description, 30)}}</td>
                 <td>€ {{number_format($announcement->price, 2)}}</td>
+                <td>
+                  <div class="d-flex gap-2">
+                    <a href="{{-- {{route('announcements.edit',$announcement)}} --}}" class="btn btn-primary">Modifica</a>
+                    <form action="{{-- {{route('categories.destroy', $announcement)}} --}}" method="POST">
+                    @method('DELETE')
+                      @csrf
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                  </div>
+                </td>
             </tr>
             {{-- se ADMIN, mostra tutti gli annunci --}}
           @elseif(auth()->user()->is_admin)

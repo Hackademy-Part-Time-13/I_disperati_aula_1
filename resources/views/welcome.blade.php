@@ -1,24 +1,34 @@
 <x-main>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center my-5">
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center my-5">
 
-                {{-- @if(session()->has('message'))
-                    <div class="alert alert-success" role="alert">
-                    {{session('message')}}
+                    {{-- Immagine in copertina e Presentazione con barra di ricerca --}}
+                    <div class="text-box">
+                        <h1>{{__('ui.welcome')}} <span style="color:#F3B61F">Presto.it</span></h1>
+                        <p>{{__('ui.sottotitolo')}}</p>
+
+                        <div class="form-search">
+
+                            <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+                                <input name="searched" class="form-control me-2" type="search"  aria-label="Search" placeholder="{{__('ui.cosa_cerchi')}}">
+                                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+
+
+
+                        </div>
+
+
                     </div>
-                @endif --}}
-                <h1 class="text-center py-5 mb-4 display-4 fw-semibold" style="font-family:montserrat ">{{__('ui.welcome')}} <span style="color: #F3B61F">Presto.it</span></h1>
-
-
-                <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-                    <input name="searched" class="form-control me-2" type="search"  aria-label="Search">
-                    <button class="btn" style="background-color:#F3B61F " type="submit">{{__('ui.cerca') }}</button>
-                </form>
-
+                </div>
             </div>
         </div>
+
     </div>
+
+   {{-- sezione crea annuncio --}}
     <header class="py-5 text-white" style="background-color: #0D3B66">
         <div class="container px-5">
             <div class="row gx-5 align-items-center justify-content-center">
@@ -36,16 +46,56 @@
         </div>
     </header>
 
-
-        {{-- silvia mi dice di mettere un commento --}}
-
-        {{-- aggiungo il commento serio, bisogna sistemare la rotta delle categorie --}}
+    {{-- sezione Services --}}
+    <x-services/>
 
 
-        <div class="d-flex justify-content-around">
-            {{-- <div class="col-sm-4 col-md-6 col-lg-8 col-xl-10   mb-5 mt-5 p-5 text-center" > --}}
+    {{-- sezione categorie: DA SISTEMARE --}}
+
+     {{-- ------------------------------------ Carosello categorie ----------------------------------  --}}
+     
+    <section class="categories">
+        
+        <h1 class="text-center mb-5">Sfoglia le nostre categorie</h1>
+        
+        <div class="categories-cards">
+            
+            
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="carousel-cards">
+                    
+                    <a href="/categories/1"><img src="https://images.pexels.com/photos/4841166/pexels-photo-4841166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+                    <a href="/categories/2"><img src="https://images.pexels.com/photos/8170126/pexels-photo-8170126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+                    
+                    <a href="/categories/3"><img src="https://images.pexels.com/photos/9704415/pexels-photo-9704415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+                    
+                    <a href="/categories/4"><img src="https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+                    
+                    <a href="/categories/5"><img src="https://images.pexels.com/photos/17264276/pexels-photo-17264276/free-photo-of-legno-casa-modello-finestra.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false">
+                        
+                    <a href="/categories/6"><img src="https://images.pexels.com/photos/212185/pexels-photo-212185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+                        
+                    <a href="/categories/7"><img src="https://images.pexels.com/photos/11118765/pexels-photo-11118765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+                        
+                    <a href="/categories/8"><img src="https://images.pexels.com/photos/5693891/pexels-photo-5693891.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+                        
+                    <a href="/categories/9"><img src="https://images.pexels.com/photos/4147623/pexels-photo-4147623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+                        
+                    <a href="/categories/10"><img src="https://images.pexels.com/photos/1983037/pexels-photo-1983037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+                </div>
+                    
+                    <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+                
+        </div>
+            
+    </section>
+        
+
+    {{-- parte vecchia e brutta --}}
+        {{-- <div class="d-flex justify-content-around">
             <div class="col-lg-12 col-xl-12 col-xxl-12 d-none d-xl-block text-center  mb-5 mt-5 p-5 text-center" >
-                <!-- xl circle buttons-->
                 <a href="/categories/1"><button class="btn btn-success btn-circle btn-circle-xl"><i class="fa-solid fa-book"></i></button></a>
                     <a href="/categories/2"><button class="btn btn-primary btn-circle btn-circle-xl"><i class="fa-solid fa-music"></i></button></a>
                     <a href="/categories/3"><button class="btn btn-info btn-circle btn-circle-xl"><i class="fa-solid fa-puzzle-piece"></i></button></a>
@@ -57,8 +107,50 @@
                     <a href="/categories/9"><button class="btn btn-light btn-circle btn-circle-xl"><i class="fa-solid fa-car"></i></button></a>
                     <a href="/categories/10"><button class="btn btn-light btn-circle btn-circle-xl"><i class="fa-solid fa-mug-saucer"></i></button></a>
                 </div>
+            </div> --}}
+
+
+            {{-- sezione ultimi annunci --}}
+            <div class="text-center my-4 py-4" style="background-color:#e3f2fd;">
+                <h2>Ultimi annunci</h2>
+
+                <div class="container">
+                    <div class="col-12 col-md-12 ms-4 p-1">
+                        <div class="row">
+                            {{-- DA SISTEMARE!!! --}}
+                            
+                            @foreach($last_announcements as $announcement)
+                            @if($announcement->is_accepted)
+                            <div class=" col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 p-3 ">
+                                <div class="card" style="width: 18rem;">
+                                    <div>
+                                        <img style="max-height:210px; object-fit:cover" src="{{!$announcement->images()->get()->isEmpty() ?  $announcement->images()->first()->getUrl(300,300) : 'https://picsum.photos/300/220' }}" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{$announcement->title}}</h5>
+                                        
+                                        <p class="card-title "><a class="a-category text-black" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
+                                        
+                                        <p class="card-text">{{Illuminate\Support\Str::limit($announcement->description, 90)}}</p>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="card-text"><em class="text-small">{{$announcement->user->name}}</em></p>
+                                            <p class="card-text">{{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y')}}</p>
+                                        </div>
+                                        <p class="card-text text-end fw-semibold"><em>€ {{number_format($announcement->price, 2)}}</em></p>
+                                        <div class="text-center">
+                                            <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color:#0D3B66; color:white">Visualizza annuncio</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            {{-- sezione lavora con noi --}}
             <div class="py-5 text-white" style="background-color: #0D3B66">
                 <div class="container px-5">
                     <div class="row gx-5 align-items-center justify-content-center">
