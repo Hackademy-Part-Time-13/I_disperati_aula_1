@@ -56,4 +56,32 @@ return [
      'consegna' => 'Hand delivery',
      'spedizione' => 'Free shipping',
 
+     // login //
+     'unisciti_a_noi' => 'Join us!',
+    'esperienza' => 'Get ready for a memorable shopping experience.',
+    'eccoti' => 'Here you are',
+    'siamo_felici' => 'We are happy that you are here again.',
+    'accedi_con' => 'Login with',
+    'no_account' => 'Don\'t have an account?',
+    'ricordami' => 'Remember me',
+    'password_dimenticata' => 'Forgot password?',
+
+    // register //
+
+    'registrati_ora' =>'Register now.',
+    'non_perdere_offerte' => 'You don\'t want to miss out on the most exciting offers.',
+    'ti_aspettavo' => 'We were waiting for you!',
+    'compila_form' => 'Fill out the form below and jump on board.',
+    'registrati_con' => 'Register with',
+    'si_account' => 'Do you already have an account?',
+
+    // show annunci //
+
+    'creazione' => 'created on',
+    'da' => 'by',
+    'aggiungi_carrello' => 'Add to Cart',
+    'aggiungi_preferiti' => 'Add to favourites',
+    'prodotti_correlati' => 'Related products',
+
+
 ];

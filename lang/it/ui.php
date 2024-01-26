@@ -55,4 +55,31 @@ return [
     'consegna' => 'Consegna a mano',
     'spedizione' => 'Spedizione gratis',
 
+    // login //
+
+    'unisciti_a_noi' => 'Unisciti a noi!',
+    'esperienza' => 'Preparati per un\'esperienza di acquisto memorabile.',
+    'eccoti' => 'Eccoti qua!',
+    'siamo_felici' => 'Siamo felici che tu sia di nuovo qui.',
+    'accedi_con' => 'Accedi con',
+    'no_account' => 'Non hai un account?',
+    'ricordami' => 'Ricordami',
+    'password_dimenticata' => 'Password dimenticata?',
+
+    //register//
+
+    'registrati_ora' =>'Registrati subito.',
+    'non_perdere_offerte' => 'Non vorrai perderti le offerte più emozionanti.',
+    'ti_aspettavo' => 'Ti stavamo aspettando!',
+    'compila_form' => 'Compila il form sottostante e salta a bordo.',
+    'registrati_con' => 'Registrati con',
+    'si_account' => 'Hai già un account?',
+
+    //show annunci//
+    'creazione' => 'Creato il',
+    'da' => 'da',
+    'aggiungi_carrello' => 'Aggiungi al carrello',
+    'aggiungi_preferiti' => 'Aggiungi ai preferiti',
+    'prodotti_correlati' => 'Prodotti correlati',
+
 ];

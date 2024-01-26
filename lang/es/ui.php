@@ -56,4 +56,32 @@ return [
      'consegna' => 'Entrega en mano',
      'spedizione' => 'Envío gratis',
 
+     // login //
+
+    'unisciti_a_noi' => 'Únete a nosotros!',
+    'esperienza' => 'Prepárese para una experiencia de compras memorable.',
+    'eccoti' => 'Aquí estás',
+    'siamo_felici' => 'Estamos felices de que estés aquí de nuevo.',
+    'accedi_con' => 'Inicia con',
+    'no_account' => '¿No tienes una cuenta?',
+    'ricordami' => 'Acuérdate de mí',
+    'password_dimenticata' => '¿Has olvidado tu contraseña?',
+
+    //register//
+
+    'registrati_ora' =>'Regístrate ahora.',
+    'non_perdere_offerte' => 'No querrás perderte las ofertas más interesantes.',
+    'ti_aspettavo' => '¡Te estábamos esperando!',
+    'compila_form' => 'Complete el siguiente formulario y suba a bordo.',
+    'registrati_con' => 'Registrar con',
+    'si_account' => 'Ya tienes una cuenta?',
+
+    // show annunci //
+
+    'creazione' => 'Creado el',
+    'da' => 'por',
+    'aggiungi_carrello' => 'Añadir a la cesta',
+    'aggiungi_preferiti' => 'Agregar a favoritos',
+    'prodotti_correlati' => 'Productos relacionados',
+
 ];
