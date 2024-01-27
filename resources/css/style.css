@@ -326,3 +326,26 @@ section {
     width: 150px;
     height: 150px;
 }
+
+.menus[data-bs-popper]{
+    width: 100%;
+    left: -110%;
+
+}
+
+.dropdown-menu{
+    width: auto;
+    background-color: #e3f2fd;
+}
+
+.dropdown-item{
+
+    color: #0D3B66;
+
+}
+
+.dropdown-item:hover{
+    font-size: 20px;
+    color: #F3B61F;
+    background-color: #e3f2fd;
+}

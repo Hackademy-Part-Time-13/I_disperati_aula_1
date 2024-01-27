@@ -78,7 +78,7 @@
 .features-icons .features-icons-item {
     max-width: 20rem;
     align-items: center;
-    border: 2px solid #0D3B66;
+    border: 2px solid full-width;
     border-radius: 5%;
     background-color: #0D3B66;
     padding: 30px;
@@ -197,6 +197,16 @@
     /* filter: opacity(#660d48, 0.5%); */
 }
 
+.bho:hover{
+    height: 256px;
+    color: #F3B61F;
+}
+
+.features-icons-item:hover .bhi:hover{
+    height: 290px;
+    color: #F3B61F;
+}
+
 /* .features-icons-item:hover{
     height: 300px;
     height: 300px;
@@ -217,8 +227,16 @@
 
 } */
 
-.bho:hover{
 
-    width: 305px;
-    height: 300px;
-}
+
+/* .features-icons .features-icons-item .features-icons-icon i:hover{
+    color: #F3B61F;
+    transform:;
+
+} */
+
+/* .bhi:hover{
+/* width: 150px; */
+/* transition: 1s ease; */
+
+

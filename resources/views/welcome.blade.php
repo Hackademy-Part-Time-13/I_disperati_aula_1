@@ -53,45 +53,45 @@
     {{-- sezione categorie: DA SISTEMARE --}}
 
      {{-- ------------------------------------ Carosello categorie ----------------------------------  --}}
-     
+
     <section class="categories">
-        
+
         <h1 class="text-center mb-5">Sfoglia le nostre categorie</h1>
-        
+
         <div class="categories-cards">
-            
-            
+
+
             <div class="wrapper">
                 <i id="left" class="fa-solid fa-angle-left"></i>
                 <div class="carousel-cards">
-                    
+
                     <a href="/categories/1"><img src="https://images.pexels.com/photos/4841166/pexels-photo-4841166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
                     <a href="/categories/2"><img src="https://images.pexels.com/photos/8170126/pexels-photo-8170126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
-                    
+
                     <a href="/categories/3"><img src="https://images.pexels.com/photos/9704415/pexels-photo-9704415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
-                    
+
                     <a href="/categories/4"><img src="https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
-                    
+
                     <a href="/categories/5"><img src="https://images.pexels.com/photos/17264276/pexels-photo-17264276/free-photo-of-legno-casa-modello-finestra.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false">
-                        
+
                     <a href="/categories/6"><img src="https://images.pexels.com/photos/212185/pexels-photo-212185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
-                        
+
                     <a href="/categories/7"><img src="https://images.pexels.com/photos/11118765/pexels-photo-11118765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
-                        
+
                     <a href="/categories/8"><img src="https://images.pexels.com/photos/5693891/pexels-photo-5693891.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
-                        
+
                     <a href="/categories/9"><img src="https://images.pexels.com/photos/4147623/pexels-photo-4147623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
-                        
+
                     <a href="/categories/10"><img src="https://images.pexels.com/photos/1983037/pexels-photo-1983037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
                 </div>
-                    
+
                     <i id="right" class="fa-solid fa-angle-right"></i>
             </div>
-                
+
         </div>
-            
+
     </section>
-        
+
 
     {{-- parte vecchia e brutta --}}
         {{-- <div class="d-flex justify-content-around">
@@ -118,7 +118,7 @@
                     <div class="col-12 col-md-12 ms-4 p-1">
                         <div class="row">
                             {{-- DA SISTEMARE!!! --}}
-                            
+
                             @foreach($last_announcements as $announcement)
                             @if($announcement->is_accepted)
                             <div class=" col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 p-3 ">
@@ -128,9 +128,9 @@
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">{{$announcement->title}}</h5>
-                                        
+
                                         <p class="card-title "><a class="a-category text-black" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
-                                        
+
                                         <p class="card-text">{{Illuminate\Support\Str::limit($announcement->description, 90)}}</p>
                                         <div class="d-flex justify-content-between">
                                             <p class="card-text"><em class="text-small">{{$announcement->user->name}}</em></p>

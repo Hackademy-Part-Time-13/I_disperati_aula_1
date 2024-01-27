@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 bho">
-                        <div class="features-icons-icon mt-3 text-car"><i class="fa-solid fa-comments"></i></div>
+                        <div class="features-icons-icon mt-3 text-ca "><i class="fa-solid fa-comments"></i></div>
                         <h3 class="mt-5">{{__('ui.assistenza')}}</h3>
                         <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>

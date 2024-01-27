@@ -16,7 +16,7 @@ class PageController extends Controller
     public function home(){
         $announcements = Announcement::all();
         // ultimi 6 annunci
-        $last_announcements = Announcement::where('is_accepted',true)->latest()->take(6)->get();
+        $last_announcements = Announcement::where('is_accepted',true)->latest()->take(4)->get();
         return view ('welcome', compact('announcements','last_announcements'));
     }
 
@@ -49,7 +49,7 @@ class PageController extends Controller
 
         // dd(App::getLocale());
 
-        
+
 
 
 		session()->put('locale', $lang);

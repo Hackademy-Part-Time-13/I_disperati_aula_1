@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg px-4 py-3" style="background-color: #e3f2fd;">
   <div class="container-fluid">
-      <a class="navbar-brand" href="{{ route('home') }}">Presto.it</a>
+      <a class="navbar-brand" style="color:#F3B61F " href="{{ route('home') }}"><img src="https://i.imgur.com/ztIDLYc.png" alt="">Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -36,24 +36,7 @@
         </ul>
 
 
-        <div class="dropdown">
-          <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-earth-americas" style="background-color:#e3f2fd;"></i>
-          </a>
 
-          <ul class="dropdown-menu text-center">
-            <li class="nav-item">
-              <x-_locale lang='it' nation='it'/>
-            </li>
-            <li class="nav-item">
-              <x-_locale lang='en' nation='gb'/>
-            </li>
-            <li class="nav-item">
-              <x-_locale lang='es' nation='es'/>
-            </li>
-          </ul>
-
-        </div>
 
                 {{-- barra ricerca annunci --}}
 
@@ -128,6 +111,27 @@
             </li>
           </ul>
         @endauth
+
+        <div class="dropdown">
+          <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-earth-americas" style="background-color:#e3f2fd;"></i>
+          </a>
+
+          <ul class="dropdown-menu text-center menus ">
+            <li class="nav-item ">
+              <x-_locale lang='it' nation='it'/>
+            </li>
+            <li class="nav-item">
+              <x-_locale lang='en' nation='gb'/>
+            </li>
+            <li class="nav-item">
+              <x-_locale lang='es' nation='es'/>
+            </li>
+          </ul>
+
+        </div>
+
+
     </div>
 </div>
 </nav>

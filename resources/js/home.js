@@ -99,15 +99,12 @@ autoSlide();
  }
 
 
-// Da desktop
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("mousemove", dragging);
-carousel.addEventListener("mouseup", dragStop);
-carousel.addEventListener("mouseleave", dragStop);
+ carousel.addEventListener("mousedown", dragStart);
+ carousel.addEventListener("touchstart", dragStart);
+ document.addEventListener("mousemove", dragging);
+ carousel.addEventListener("touchmove", dragging);
+ document.addEventListener("mouseup", dragStop);
+ carousel.addEventListener("touchend", dragStop);
 
-carousel.addEventListener("scroll", showHideIcons);
 
-// Mobile Friendly
-carousel.addEventListener("touchstart", dragStart);
-carousel.addEventListener("touchmove", dragging);
-carousel.addEventListener("touchend", dragStop);
+
