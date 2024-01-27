@@ -191,8 +191,34 @@
 
 .carousel-cards a:hover{
     height: 300px;
-    width: 300px; 
+    width: 300px;
     background-color: #660d48 !important;
     opacity: 0.5;
     /* filter: opacity(#660d48, 0.5%); */
+}
+
+/* .features-icons-item:hover{
+    height: 300px;
+    height: 300px;
+    font-size: 100px;
+
+}
+.features-icons-item h3:hover{
+    height: 100px;
+    height: 100px;
+    font-size: 50px;
+} */
+
+/* .features-icons-icon:hover{
+
+    height: 300px;
+    height: 300px;
+    font-size: 100px;
+
+} */
+
+.bho:hover{
+
+    width: 500px;
+    height: 293px;
 }

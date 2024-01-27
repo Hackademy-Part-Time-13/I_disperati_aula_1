@@ -9,8 +9,8 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{ route('home') }}">{{__('ui.home')}}</a>
           </li>
-           
-           
+
+
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,7 +41,7 @@
             <i class="fa-solid fa-earth-americas" style="background-color:#e3f2fd;"></i>
           </a>
 
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu text-center">
             <li class="nav-item">
               <x-_locale lang='it' nation='it'/>
             </li>

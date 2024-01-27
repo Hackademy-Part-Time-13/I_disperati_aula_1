@@ -52,7 +52,7 @@ varDifference = positionDiff > firstImgWidth ? firstImgWidth * imagesToScroll - 
 // se positionDiff è maggiore del 33 % della larghezza dell'immagine, aggiunge il valore della differenza allo scrollLeft, altrimenti lo riduce
 
 // se l'utente scorre verso destra
-if (carousel.scrollLeft > prevScrollLeft) { 
+if (carousel.scrollLeft > prevScrollLeft) {
 return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? varDifference : -positionDiff;
 }
 
@@ -62,11 +62,11 @@ carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? varDifference : -posit
 
 
 
-if (positionDiff > firstImgWidth / 3) {
-carousel.scrollLeft += VarDifference;
-} else {
-carousel.scrollLeft -= positionDiff;
-}
+// if (positionDiff > firstImgWidth / 3) {
+// carousel.scrollLeft += VarDifference;
+// } else {
+// carousel.scrollLeft -= positionDiff;
+// }
 
 
 
