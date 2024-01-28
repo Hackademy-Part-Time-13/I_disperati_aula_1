@@ -31,9 +31,21 @@
                             </div>
 
                             <p class="card-text text-end fw-semibold"><em>€ {{number_format($announcement->price, 2)}}</em></p>
-                            <div class="text-center">
-                                <a href="{{route('show.announcement', $announcement)}}" class="btn  fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
-                            </div>
+                                    @guest
+                                    <div class="text-center">
+                                        <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
+                                        
+                                    </div>
+                                    @endguest
+                                    @auth
+                                    <div class="text-center d-flex justify-content-between align-items-center">
+
+                                        <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
+                                        {{-- Like --}}
+                                        <livewire:likes :announcement="$announcement"/>
+                                           
+                                    </div>
+                                    @endauth
                         </div>
                     </div>
                 </div>

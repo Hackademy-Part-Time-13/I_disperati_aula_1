@@ -1,13 +1,13 @@
-<x-main title="{{$announcement->title}}">
+{{-- <x-main title="{{$announcement->title}}">
     
     <div class="container my-4">
         
         <div class="row">
             <div class="col-6">
                 
-                @if (!$announcement->images->isEmpty())
+                @if (!$announcement->images->isEmpty()) --}}
                 {{-- carosello --}}
-                <div class="my-5">
+                {{-- <div class="my-5">
                     <div id="carouselExampleIndicators" class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -30,9 +30,9 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                </div>
+                </div> --}}
                 {{-- fine carosello --}}
-                @else
+                {{-- @else
                 <div class="my-5">
                     <div id="carouselExample" class="carousel slide">
                         <div class="carousel-inner">
@@ -56,87 +56,7 @@
                         </button>
                       </div>
                 </div>
-                {{-- <section>
-                    <div class="container-carousel">
-                        <div class="carousel-01">
-                            <input type="radio" name="slides" checked="checked" id="slide-1">
-                            <input type="radio" name="slides" id="slide-2">
-                            <input type="radio" name="slides" id="slide-3">
-                            <input type="radio" name="slides" id="slide-4">
-                            <input type="radio" name="slides" id="slide-5">
-                            <input type="radio" name="slides" id="slide-6">
-                            <ul class="carousel__slides">
-                                <li class="carousel__slide">
-                                    <figure>
-                                        <div>
-                                            <img src="https://picsum.photos/id/1041/800/450" alt="">
-                                        </div>
-                                        
-                                    </figure>
-                                </li>
-                                <li class="carousel__slide">
-                                    <figure>
-                                        <div>
-                                            <img src="https://picsum.photos/id/1043/800/450" alt="">
-                                        </div>
-                                        
-                                    </figure>
-                                </li>
-                                <li class="carousel__slide">
-                                    <figure>
-                                        <div>
-                                            <img src="https://picsum.photos/id/1044/800/450" alt="">
-                                        </div>
-                                        
-                                    </figure>
-                                </li>
-                                <li class="carousel__slide">
-                                    <figure>
-                                        <div>
-                                            <img src="https://picsum.photos/id/1045/800/450" alt="">
-                                        </div>
-                                    </figure>
-                                </li>
-                                <li class="carousel__slide">
-                                    <figure>
-                                        <div>
-                                            <img src="https://picsum.photos/id/1049/800/450" alt="">
-                                        </div>
-                                        
-                                    </figure>
-                                </li>
-                                <li class="carousel__slide">
-                                    <figure>
-                                        <div>
-                                            <img src="https://picsum.photos/id/1052/800/450" alt="">
-                                        </div>
-                                        
-                                    </figure>
-                                </li>
-                            </ul>
-                            <ul class="carousel__thumbnails">
-                                <li>
-                                    <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt=""></label>
-                                </li>
-                                <li>
-                                    <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt=""></label>
-                                </li>
-                                <li>
-                                    <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt=""></label>
-                                </li>
-                                <li>
-                                    <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
-                                </li>
-                                <li>
-                                    <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
-                                </li>
-                                <li>
-                                    <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section> --}}
+                
                 @endif
             </div>
             
@@ -151,9 +71,9 @@
                     
                     <div class="d-flex justify-content-between">
                         <p class="card-text text-start fw-bold fs-4"><em>€ {{number_format($announcement->price, 2)}}</em></p>
-                        <div>
+                        <div> --}}
                             {{-- da aggiungere componente livewire preferiti --}}
-                            <button class="btn" style="background-color:#e3f2fd; border:none">
+                            {{-- <button class="btn" style="background-color:#e3f2fd; border:none">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
                                     <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
@@ -167,13 +87,147 @@
                     </div>
                     
                     <p class="card-text text-end mt-5">Annuncio creato: {{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y')}} da <span class="fw-bold "><em>{{$announcement->user->name}}</em></span></p>
-                    {{-- <p class="card-text text-end">{{$announcement->user->name}}</p> --}}
+                    
                 </div>
             </div>
         </div>
     </div>
+
+</x-main> --}}
+
+{{-- versione 2 --}}
+<x-main>
+
+    <div class="container box-product">
+    
+      <!-- Dettaglio prodotto -->
+      <h1 class="my-5">{{$announcement->title}}
+      </h1>
+    
+      <!-- Inizio row dettaglio prodotto -->
+      <div class="row">
+    
+        <div class="col-md-4" >
+          {{-- immagine principale --}}
+          <img class="img" src="" alt="" id="productImg" onclick()>
+    
+          {{-- immagini piccole da selezionare --}}
+          <div class= "img-select">
+            @foreach ($announcement->images()->get() as $image)
+            <div class= "img-item">
+                <img src = "{{$image->getUrl(300,300)}}" alt = "..." class="small-img" onclick()>
+            </div>
+            @endforeach
+          
+    
+          </div>
+    
+        </div>
+    
+        {{-- colonna destra --}}
+        <div class="col-md-6 ms-2">
+    
+          <h3 class="my-3">{{$announcement->title}}</h3>
     
     
+          <div class="box-details">
+            {{-- rating --}}
+            <div class= "product-rating mb-2">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class= "fas fa-star-half-alt"></i>
+            </div>
     
+            {{-- data di creazione --}}
+            <p class="card-text">{{__('ui.creazione')}} {{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y')}} {{__('ui.da')}} <span class="fw-bold "><em>{{$announcement->user->name}}</em></span></p>
+    
+          
+          </div>
+    
+          {{-- prezzo --}}
+          <p class="card-text text-start fw-bold fs-4">€ {{number_format($announcement->price, 2)}}</p>
+    
+          <span class="badge rounded-pill mb-3" style="background-color: #0D3B66;"><a class="text-white a-category" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></span>
+    
+          {{-- descrizione del prodotto  --}}
+          <p>{{$announcement->description}}</p>
+          
+          {{-- sezione acquisti --}}
+          <div class="product-purchase">
+    
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+              <label class="form-check-label" for="flexRadioDefault1">
+                {{__('ui.nuovo')}}
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                {{__('ui.usato')}}
+              </label>
+            </div>
+            
+            <div class="purchase-info">
+              <input type="number" min="0" value="1">
+    
+              <button type="button" class ="btn">
+                {{__('ui.aggiungi_carrello')}} <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+    
+              <button type="button" class="btn">{{__('ui.aggiungi_preferiti')}} <i class="fa-regular fa-heart"></i></button>
+    
+            </div>
+    
+          </div>
+          {{-- fine sezione acquisti --}}
+    
+        </div>
+        {{-- fine colonna destra  --}}
+    
+        
+    
+      </div>
+      {{-- fine row dettaglio prodotto --}}
+    
+    
+      <!-- Prodotti correlati -->
+      <div class="related-products">
+        <h3 class="mb-5">{{__('ui.prodotti_correlati')}}</h3>
+        
+        <div class="row">
+          
+          <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+              <img class="img-fluid" src="https://fakeimg.pl/300x300?font=bebas" alt="">
+            </a>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+              <img class="img-fluid" src="https://fakeimg.pl/300x300?font=bebas" alt="">
+            </a>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+              <img class="img-fluid" src="https://fakeimg.pl/300x300?font=bebas" alt="">
+            </a>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+              <img class="img-fluid" src="https://fakeimg.pl/300x300?font=bebas" alt="">
+            </a>
+          </div>
+        </div>
+    
+      </div>
+      <!-- fine row -->
+    
+    </div>
+    <!-- fine container -->
     
 </x-main>

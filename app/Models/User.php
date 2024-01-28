@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Like;
 use App\Models\Announcement;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -15,6 +16,10 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function announcements(){
         return $this->hasMany(Announcement::class);
+    }
+
+    public function likes() {
+        return $this->hasMany(Like::class);
     }
     /**
      * The attributes that are mass assignable.

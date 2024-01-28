@@ -52,9 +52,27 @@
 
     {{-- sezione categorie: DA SISTEMARE --}}
 
+    <!-- Swiper -->
+  <div class="ciao">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+  </div>
+
      {{-- ------------------------------------ Carosello categorie ----------------------------------  --}}
 
-    <section class="categories">
+    {{-- <section class="categories">
 
         <h1 class="text-center mb-5">Sfoglia le nostre categorie</h1>
 
@@ -90,24 +108,10 @@
 
         </div>
 
-    </section>
+    </section> --}}
 
 
-    {{-- parte vecchia e brutta --}}
-        {{-- <div class="d-flex justify-content-around">
-            <div class="col-lg-12 col-xl-12 col-xxl-12 d-none d-xl-block text-center  mb-5 mt-5 p-5 text-center" >
-                <a href="/categories/1"><button class="btn btn-success btn-circle btn-circle-xl"><i class="fa-solid fa-book"></i></button></a>
-                    <a href="/categories/2"><button class="btn btn-primary btn-circle btn-circle-xl"><i class="fa-solid fa-music"></i></button></a>
-                    <a href="/categories/3"><button class="btn btn-info btn-circle btn-circle-xl"><i class="fa-solid fa-puzzle-piece"></i></button></a>
-                    <a href="/categories/4"><button class="btn btn-warning btn-circle btn-circle-xl"><i class="fa-solid fa-computer"></i></button></a>
-                    <a href="/categories/5"><button class="btn btn-danger btn-circle btn-circle-xl"><i class="fa-solid fa-couch"></i></button></a>
-                    <a href="/categories/6"><button class="btn btn-dark btn-circle btn-circle-xl"><i class="fa-brands fa-pagelines"></i></button></a>
-                    <a href="/categories/7"><button class="btn btn-secondary btn-circle btn-circle-xl"><i class="fa-solid fa-vial"></i></button></a>
-                    <a href="/categories/8"><button class="btn btn-light btn-circle btn-circle-xl"><i class="fa-solid fa-shirt"></i></button></a>
-                    <a href="/categories/9"><button class="btn btn-light btn-circle btn-circle-xl"><i class="fa-solid fa-car"></i></button></a>
-                    <a href="/categories/10"><button class="btn btn-light btn-circle btn-circle-xl"><i class="fa-solid fa-mug-saucer"></i></button></a>
-                </div>
-            </div> --}}
+
 
 
             {{-- sezione ultimi annunci --}}
@@ -137,9 +141,21 @@
                                             <p class="card-text">{{\Carbon\Carbon::parse($announcement->created_at)->format('d/m/Y')}}</p>
                                         </div>
                                         <p class="card-text text-end fw-semibold"><em>€ {{number_format($announcement->price, 2)}}</em></p>
-                                        <div class="text-center">
-                                            <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color:#0D3B66; color:white">Visualizza annuncio</a>
-                                        </div>
+                                        @guest
+                                    <div class="text-center">
+                                        <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
+                                        
+                                    </div>
+                                    @endguest
+                                    @auth
+                                    <div class="text-center d-flex justify-content-between align-items-center">
+
+                                        <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
+                                        {{-- Like --}}
+                                        <livewire:likes :announcement="$announcement"/>
+                                           
+                                    </div>
+                                    @endauth
                                     </div>
                                 </div>
                             </div>

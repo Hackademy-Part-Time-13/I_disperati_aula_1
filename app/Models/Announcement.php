@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use Auth;
+use App\Models\Like;
 use App\Models\User;
 use App\Models\Image;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Auth;
 
 class Announcement extends Model
 {
@@ -36,6 +37,10 @@ class Announcement extends Model
 
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    public function likes() {
+        return $this->hasMany(Like::class);
     }
 
     public function SetAccepted($value){
