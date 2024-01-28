@@ -53,7 +53,7 @@
     {{-- sezione categorie: DA SISTEMARE --}}
 
     <!-- Swiper -->
-  <div class="ciao">
+  {{-- <div class="ciao">
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">Slide 1</div>
@@ -68,11 +68,11 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-  </div>
+  </div> --}}
 
      {{-- ------------------------------------ Carosello categorie ----------------------------------  --}}
 
-    {{-- <section class="categories">
+    <section class="categories">
 
         <h1 class="text-center mb-5">Sfoglia le nostre categorie</h1>
 
@@ -108,7 +108,7 @@
 
         </div>
 
-    </section> --}}
+    </section>
 
 
 
@@ -144,7 +144,7 @@
                                         @guest
                                     <div class="text-center">
                                         <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
-                                        
+
                                     </div>
                                     @endguest
                                     @auth
@@ -153,7 +153,7 @@
                                         <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
                                         {{-- Like --}}
                                         <livewire:likes :announcement="$announcement"/>
-                                           
+
                                     </div>
                                     @endauth
                                     </div>

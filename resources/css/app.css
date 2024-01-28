@@ -6,6 +6,4 @@
 @import './carosello-img.css';
 /* @import 'flag-icons'; */
 @import '/node_modules/flag-icons/css/flag-icons.min.css';
-/* @import 'swiper/css'; */
-@import 'swiper/css/bundle';
-@import './swiper.css';
+

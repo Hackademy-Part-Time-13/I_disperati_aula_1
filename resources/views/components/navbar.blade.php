@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg px-4 py-3" style="background-color: #e3f2fd;">
   <div class="container-fluid">
-      <a class="navbar-brand" style="color:#F3B61F " href="{{ route('home') }}"><img src="https://i.imgur.com/ztIDLYc.png" alt="">Presto.it</a>
+      <a class="navbar-brand" style="color:#F3B61F " href="{{ route('home') }}">Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -81,6 +81,9 @@
 
                 <ul class="dropdown-menu dropdown-menu-end">
                   {{-- creare vista UTENTE con anche la lista degli annunci creatiE ACCETTATI --}}
+                  <li>
+                      <a class="dropdown-item" href="{{route('user.announcements')}}">Profilo</a>
+                  </li>
                     <li>
                         <a class="dropdown-item" href="{{route('user.announcements')}}">{{__('ui.i_miei_annunci')}}</a>
                     </li>
