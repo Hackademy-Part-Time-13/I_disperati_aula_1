@@ -1,5 +1,3 @@
-// Script per Cards Categorie nella welcome
-
 const carousel = document.querySelector(".carousel-cards"),
 firstImg = carousel.querySelectorAll("img")[0],
 arrowIcons = document.querySelectorAll(".wrapper i");
@@ -45,9 +43,9 @@ let firstImgWidth = firstImg.clientWidth + 14;
 let imagesToScroll = Math.round(positionDiff / firstImgWidth);
 
 // ottiene il valore della differenza che deve essere aggiunto o ridotto dal carosello a sinistra per portare l'immagine centrale
-let varDifference = firstImgWidth - positionDiff;
+// let varDifference = firstImgWidth - positionDiff;
 
-varDifference = positionDiff > firstImgWidth ? firstImgWidth * imagesToScroll - positionDiff : firstImgWidth - positionDiff;
+let varDifference = positionDiff > firstImgWidth ? firstImgWidth * imagesToScroll - positionDiff : firstImgWidth - positionDiff;
 
 // se positionDiff è maggiore del 33 % della larghezza dell'immagine, aggiunge il valore della differenza allo scrollLeft, altrimenti lo riduce
 
@@ -63,7 +61,7 @@ carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? varDifference : -posit
 
 
 // if (positionDiff > firstImgWidth / 3) {
-// carousel.scrollLeft += VarDifference;
+// carousel.scrollLeft += ValDifference;
 // } else {
 // carousel.scrollLeft -= positionDiff;
 // }
@@ -99,12 +97,15 @@ autoSlide();
  }
 
 
- carousel.addEventListener("mousedown", dragStart);
- carousel.addEventListener("touchstart", dragStart);
- document.addEventListener("mousemove", dragging);
- carousel.addEventListener("touchmove", dragging);
- document.addEventListener("mouseup", dragStop);
- carousel.addEventListener("touchend", dragStop);
+// Da desktop
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("mouseup", dragStop);
+carousel.addEventListener("mouseleave", dragStop);
 
+carousel.addEventListener("scroll", showHideIcons);
 
-
+// Mobile Friendly
+carousel.addEventListener("touchstart", dragStart);
+carousel.addEventListener("touchmove", dragging);
+carousel.addEventListener("touchend", dragStop);

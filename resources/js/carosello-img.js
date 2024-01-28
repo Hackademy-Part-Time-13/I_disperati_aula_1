@@ -1,5 +1,5 @@
 // // javascript per la galleria immagini //
-
+if(location.href.includes('http://127.0.0.1:8000/announcement/')){
 let productImg = document.getElementById("productImg");
 let smallImg = document.getElementsByClassName("small-img");
 
@@ -19,6 +19,8 @@ smallImg[2].onclick = function () {
 smallImg[3].onclick = function () {
     productImg.src = smallImg[3].src;
 }
+}
+
 // foreach(smallImg){
 //     smallImg[i].onclick = function () {
 //         productImg.src = smallImg[i].src;

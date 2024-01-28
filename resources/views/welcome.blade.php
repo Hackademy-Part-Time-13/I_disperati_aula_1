@@ -72,7 +72,7 @@
 
      {{-- ------------------------------------ Carosello categorie ----------------------------------  --}}
 
-    <section class="categories">
+    {{-- <section class="categories">
 
         <h1 class="text-center mb-5">Sfoglia le nostre categorie</h1>
 
@@ -83,32 +83,86 @@
                 <i id="left" class="fa-solid fa-angle-left"></i>
                 <div class="carousel-cards">
 
-                    <a href="/categories/1"><img src="https://images.pexels.com/photos/4841166/pexels-photo-4841166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
-                    <a href="/categories/2"><img src="https://images.pexels.com/photos/8170126/pexels-photo-8170126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
 
-                    <a href="/categories/3"><img src="https://images.pexels.com/photos/9704415/pexels-photo-9704415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
 
-                    <a href="/categories/4"><img src="https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
 
-                    <a href="/categories/5"><img src="https://images.pexels.com/photos/17264276/pexels-photo-17264276/free-photo-of-legno-casa-modello-finestra.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false">
 
-                    <a href="/categories/6"><img src="https://images.pexels.com/photos/212185/pexels-photo-212185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
 
-                    <a href="/categories/7"><img src="https://images.pexels.com/photos/11118765/pexels-photo-11118765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
 
-                    <a href="/categories/8"><img src="https://images.pexels.com/photos/5693891/pexels-photo-5693891.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
 
-                    <a href="/categories/9"><img src="https://images.pexels.com/photos/4147623/pexels-photo-4147623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
 
-                    <a href="/categories/10"><img src="https://images.pexels.com/photos/1983037/pexels-photo-1983037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img" draggable="false"></a>
+
                 </div>
 
-                    <i id="right" class="fa-solid fa-angle-right"></i>
+                <i id="right" class="fa-solid fa-angle-right"></i>
             </div>
 
         </div>
 
-    </section>
+    </section> --}}
+
+    <div class="swiper mySwiper" style="background-color: #e3f2fd;;">
+        <div class="swiper-wrapper" >
+
+            <div class="swiper-slide">
+                <a href="/categories/1"><img class="image-bho p-1" src="https://images.pexels.com/photos/4841166/pexels-photo-4841166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/categories/2"><img class="image-bho p-1" src="https://images.pexels.com/photos/8170126/pexels-photo-8170126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/categories/3"><img class="image-bho p-1" src="https://images.pexels.com/photos/9704415/pexels-photo-9704415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+
+            <div class="swiper-slide">
+                <a href="/categories/4"><img class="image-bho p-1" src="https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/categories/5"><img class="image-bho p-1" src="https://images.pexels.com/photos/17264276/pexels-photo-17264276/free-photo-of-legno-casa-modello-finestra.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/categories/6"><img class="image-bho p-1" src="https://images.pexels.com/photos/212185/pexels-photo-212185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/categories/7"><img class="image-bho p-1" src="https://images.pexels.com/photos/11118765/pexels-photo-11118765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/categories/8"><img class="image-bho p-1" src="https://images.pexels.com/photos/5693891/pexels-photo-5693891.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/categories/9"><img class="image-bho p-1" src="https://images.pexels.com/photos/4147623/pexels-photo-4147623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/categories/10"><img class="image-bho p-1" src="https://images.pexels.com/photos/1983037/pexels-photo-1983037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="img"></a>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        </div>
+
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
+
 
 
 

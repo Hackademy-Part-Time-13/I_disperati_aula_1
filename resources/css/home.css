@@ -96,16 +96,26 @@
 }
 
 
+.image-bho{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    
+    box-sizing:border-box;
+    margin:auto;
+    padding: 50px;
+
+}
+
 /* categorie */
 /* SLIDER CATEGORIE PARTE 1 */
 
-.categories-cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 35vh;
-    box-sizing: border-box;
-    padding: 0 35px;
+/* .categories-cards {
+    display:flex;
+   ;
+    min-height:35vh;
+
+
 
 }
 
@@ -166,13 +176,10 @@
     object-fit: cover;
     margin-left: 14px;
     width: calc(100% / 3);
-    /* filter: opacity(#660d48, 0.5%); */
 }
 
-
-
 .carousel-cards img:first-child {
-    margin-left: 0px;
+
 }
 
 
@@ -187,12 +194,13 @@
     .carousel-cards img {
         width: 100%;
     }
-}
+} */
+
 
 .carousel-cards a:hover{
     height: 300px;
     width: 300px;
-    background-color: #660d48 !important;
+
     opacity: 0.5;
     /* filter: opacity(#660d48, 0.5%); */
 }
