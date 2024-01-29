@@ -21,23 +21,23 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label  class="form-label">Username *</label>
-                        <input required type="text" name="name" value="{{old('name')}}"  class="form-control" id="exampleInputPassword1" @error('name') is-invalid @enderror>
+                        <label  class="form-label mb-0">Nome e Cognome *</label>
+                        <input required type="text" name="name" value="{{old('name')}}"  class="form-control" @error('name') is-invalid @enderror>
                         @error('name')
                         {{$message}}
                         @enderror
                     </div>
 
                     <div class="mb-3">
-                        <label  class="form-label">Phone</label>
-                        <input type="text" name="phone" value="{{old('phone')}}"  class="form-control @error('phone') is-invalid @enderror" id="exampleInputPassword1">
+                        <label  class="form-label mb-0">Phone</label>
+                        <input type="text" name="phone" value="{{old('phone')}}"  class="form-control @error('phone') is-invalid @enderror" >
                         @error('phone')
                         {{$message}}
                         @enderror
                     </div>
 
                     <div class="mb-3">
-                        <label  class="form-label">Email address *</label>
+                        <label  class="form-label mb-0">Email address *</label>
                         <input required type="email" name="email" value="{{old('email')}} "class="form-control" @error('email') is-invalid @enderror >
                         @error('email')
                         {{$message}}
@@ -45,16 +45,29 @@
                     </div>
 
                     <div class="mb-3">
-                        <label  class="form-label">Password *</label>
-                        <input required type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword1">
+                        <label for="password" class="form-label mb-0 ms-2">Password *</label>
+                        <div class="input-group">
+                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password">
+                        <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="tooglepsw-button" role="button"></i></span>
+                        </div>
+                        <div id="emailHelp" class="form-text small opacity-50">La password deve contentere almeno 8 caratteri</div>
+                        {{-- <label  class="form-label">Password *</label>
+                        <input required type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror">
+                        <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="tooglepsw-button" role="button"></i></span> --}}
                         @error('password')
                         {{$message}}
                         @enderror
                     </div>
 
                     <div class="mb-3">
-                        <label  class="form-label">Password Confirmation *</label>
-                        <input required type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" id="exampleInputPassword1">
+                        <label for="confirm_password" class="form-label mb-0 ms-2">Password Confirmation *</label>
+                        <div class="input-group">
+                        <input type="password" name="password_confirmation" class="form-control" id="confirm_password" placeholder="Password">
+                        <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="toogle-confirm-psw-button" role="button"></i></span>
+                        </div>
+                        {{-- <label  class="form-label">Password Confirmation *</label>
+                        <input required type="password" id="confirm_password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror">
+                        <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="tooglepsw-button" role="button"></i></span> --}}
                     </div>
 
                     <div class="input-group mb-3">

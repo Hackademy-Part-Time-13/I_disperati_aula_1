@@ -31,7 +31,7 @@
                         @csrf
                         
                         <div class="mb-3">
-                            <label  class="form-label">Email address</label>
+                            <label  class="form-label mb-0">Email</label>
                             <input type="email" name="email" value="{{old('email')}} "class="form-control @error('email') is-invalid @enderror" >
                             @error('email')
                             {{$message}}
@@ -39,8 +39,13 @@
                         </div>
                         
                         <div class="mb-3">
-                            <label  class="form-label">Password</label>
-                            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword1">
+                            <label for="password" class="form-label mb-0 ms-2">Password</label>
+                            <div class="input-group">
+                            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password">
+                            <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="tooglepsw-button" role="button"></i></span>
+                            </div> 
+                            {{-- <label  class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword1"> --}}
                             @error('password')
                             {{$message}}
                             @enderror

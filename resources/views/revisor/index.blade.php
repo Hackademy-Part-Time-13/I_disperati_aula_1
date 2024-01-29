@@ -81,15 +81,16 @@
         
       </div>  
       
+      {{-- parte da sistemare con semafori --}}
       <div class="col-6">
         <div class="row p-2">
-          <div class="col-12 col-md-6">
+          {{-- <div class="col-12 col-md-6">
           <img src="{{$image->getUrl(300,300)}}" class="img-fluid p-3 rounded" alt="...">
-          </div>
+          </div> --}}
           <div class="col-md-3 border-end">
           <h5 class="tc-accent mt-3">Tags</h5>
           <div class="p-2">
-          
+          @dd($announcement_to_check->images->labels)
           @if ($image->labels)
           @foreach ($image->labels as $label)
           <p class="d-inline">{{$label}},</p>

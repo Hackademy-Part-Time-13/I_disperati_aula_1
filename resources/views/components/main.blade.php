@@ -8,6 +8,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+    {{-- favicon ??? --}}
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32x32.png">
+
     <title>{{ $title ?? 'Presto.it' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
