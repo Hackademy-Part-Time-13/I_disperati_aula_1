@@ -101,7 +101,7 @@
 
     </section> --}}
 
-    <div class="swiper mySwiper" style="background-color: #e3f2fd;;">
+    <div class="swiper mySwiper mt-4" >
         <div class="swiper-wrapper" >
 
             <div class="swiper-slide">
