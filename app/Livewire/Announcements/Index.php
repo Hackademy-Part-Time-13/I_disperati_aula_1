@@ -16,4 +16,11 @@ class Index extends Component
         $announcements = Announcement::orderBy('created_at', 'DESC')->paginate(8);
         return view('livewire.announcements.index', compact('announcements'));
     }
+
+    public function edit(Announcement $announcement){
+        $this->dispatch('edit', $announcement)->to('announcements.create');
+
+    }
+
+
 }

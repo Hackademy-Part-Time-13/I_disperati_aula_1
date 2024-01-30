@@ -46,7 +46,7 @@ return [
     //pagina di ricerca//
 
     'filtri_di_ricerca' => 'Filtros de búsqueda',
-    'annunci_trovati' => 'Anuncios encontrados para esta categoría',
+    'annunci_trovati' => 'Anuncios encontrados para esta categoría :',
     'errore_ricerca' => 'No hay anuncios para esta búsqueda. Intentar otra vez.',
 
      //pagina crea annuncio//

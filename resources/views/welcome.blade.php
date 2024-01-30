@@ -100,6 +100,7 @@
         </div>
 
     </section> --}}
+<div class="container">
 
     <div class="swiper mySwiper mt-4" >
         <div class="swiper-wrapper" >
@@ -148,10 +149,11 @@
         </div>
         <div class="swiper-pagination"></div>
         </div>
+    </div>
 
       <!-- Swiper JS -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+      {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> --}}
+{{--
       <script>
         var swiper = new Swiper(".mySwiper", {
           slidesPerView: 3,
@@ -162,7 +164,7 @@
           },
         });
       </script>
-
+ --}}
 
 
 

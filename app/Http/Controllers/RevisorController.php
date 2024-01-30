@@ -27,7 +27,7 @@ class RevisorController extends Controller
       }
       public function rejectAnnouncement(Announcement $announcement){
          $announcement->setAccepted(false);
-         return redirect()->back()->with('error', 'Complimenti, hai rifiutato l\'annuncio');
+         return redirect()->back()->with('success', 'Complimenti, hai rifiutato l\'annuncio');
       }
 
 
@@ -35,7 +35,7 @@ class RevisorController extends Controller
       public function becomeRevisor(){
          $message = 'Sistem message: Quick application';
          $user= User::where('id',auth()->user()->id);
-         
+
          if (auth()->user()->is_revisor) {
             return redirect()->back()->with('error','Attenzione, sei già revisore!');
          } elseif (auth()->user()->is_ongoing) {
@@ -46,7 +46,7 @@ class RevisorController extends Controller
          return redirect()->back()->with('message', 'La tua richiesta per diventare Revisore è stata inviata correttamente');
          }
 
-         
+
       }
 
       // per rendere revisore
@@ -60,7 +60,7 @@ class RevisorController extends Controller
       public function lavoraSave(User $user){
 
          $user= User::where('id',auth()->user()->id);
-      
+
          if (auth()->user()->is_revisor) {
             return redirect()->back()->with('error','Attenzione! Sei già revisore!');
          } elseif (auth()->user()->is_ongoing) {
@@ -71,7 +71,7 @@ class RevisorController extends Controller
             $user->update(['is_ongoing'=>true,]);
             return redirect()->back()->with('message', 'La tua richiesta per diventare Revisore è stata inviata correttamente');
          }
-       
+
       }
 
 }

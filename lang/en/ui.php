@@ -46,7 +46,7 @@ return [
     //pagina di ricerca//
 
     'filtri_di_ricerca' => 'Search filters',
-    'annunci_trovati' => 'Ads found for this category',
+    'annunci_trovati' => 'Ads found for this category :',
     'errore_ricerca' => 'There are no ads for this search. Try again.',
 
      //pagina crea annuncio//

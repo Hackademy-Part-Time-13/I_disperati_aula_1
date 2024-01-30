@@ -1,12 +1,12 @@
 <x-main>
-  
+
   <div class="container mt-5">
-    
+
     <h2 class="mt-5 mb-5">Crea una categoria</h2>
-    
+
     <div class="row">
       <div class="col-md-12">
-        <div class="card p-5">
+        <div class="carde p-5">
 
   <form action="{{route('categories.store')}}" method="POST">
       @csrf
@@ -21,7 +21,7 @@
   </form>
 
 </div>
-      
+
 </div>
 </div>
 </div>

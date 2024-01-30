@@ -44,7 +44,7 @@ return [
     //pagina di ricerca//
 
     'filtri_di_ricerca' => 'Filtri di ricerca',
-    'annunci_trovati' => 'Annunci trovati',
+    'annunci_trovati' => 'Annunci trovati per :',
     'errore_ricerca' => 'Non ci sono annunci per questa ricerca. Riprova.',
 
     //pagina crea annuncio//

@@ -1,6 +1,8 @@
-function togglePsw(pswInput, togglePswButton) {
+if(location.href.includes('/register')|| location.href.includes('/login')){
 
-    togglePswButton.addEventListener('click', function() {
+    function togglePsw(pswInput, togglePswButton) {
+
+        togglePswButton.addEventListener('click', function() {
 
         if(pswInput.type == 'password'){
             pswInput.type = 'text';
@@ -12,9 +14,9 @@ function togglePsw(pswInput, togglePswButton) {
             togglePswButton.classList.remove('fa-eye');
             togglePswButton.classList.add('fa-eye-slash');
         }
-       
-    });   
-    
+
+    });
+
 }
 
 let pswinput = document.getElementById('password');
@@ -26,3 +28,5 @@ let confirmPswinput = document.getElementById('confirm_password');
 let toggleConfirmPswButton = document.getElementById('toogle-confirm-psw-button');
 
 togglePsw(confirmPswinput, toggleConfirmPswButton);
+
+    }

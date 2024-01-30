@@ -1,29 +1,29 @@
-<x-main title="dashboard revisore ">
-  
+<x-main title="Dashboard revisore ">
+
   <div class="container my-4">
     {{-- prima sezione --}}
     <h1 class="display-6 text-center"> {{$announcement_to_check ? 'Ecco gli annunci da revisionare' : 'Non ci sono annunci da revisionare per questo utente'}}</h1>
     {{-- <h1>{{$announcement->title}}</h1> --}}
-    
-    
+
+
     {{-- @if(session()->has('success'))
     <div class="alert alert-success" role="alert">
       {{session('success')}}
     </div>
     @endif --}}
-    
+
     {{-- @if(session()->has('error'))
     <div class="alert alert-success" role="alert">
       {{session('error')}}
     </div>
     @endif --}}
-    
+
     @if($announcement_to_check)
-    
+
     {{-- seconda sezione --}}
     <div class="row">
       <div class="col-6">
-        
+
         {{-- carosello --}}
         @if (!$announcement_to_check->images->isEmpty())
         <div class="my-5">
@@ -37,7 +37,7 @@
             <div class="carousel-inner">
               @foreach ($announcement_to_check->images as $image)
               <div class="carousel-item @if($loop->first) active @endif">
-                <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                <img src="{{$image->getUrl(300,300)}}" class="d-block w-100" alt="...">
               </div>
               @endforeach
             </div>
@@ -76,11 +76,11 @@
               </button>
             </div>
       </div>
-        
+
         @endif
-        
-      </div>  
-      
+
+      </div>
+
       {{-- parte da sistemare con semafori --}}
       <div class="col-6">
         <div class="row p-2">
@@ -90,7 +90,7 @@
           <div class="col-md-3 border-end">
           <h5 class="tc-accent mt-3">Tags</h5>
           <div class="p-2">
-          @dd($announcement_to_check->images->labels)
+          {{-- @dd($announcement_to_check->images->labels) --}}
           @if ($image->labels)
           @foreach ($image->labels as $label)
           <p class="d-inline">{{$label}},</p>
@@ -98,7 +98,7 @@
           @endif
           </div>
           </div>
-          
+
           <div class="col-md-3">
           <div class="card-body">
           <h5 class="tc-accent">Revisione Immagini</h5>
@@ -110,17 +110,17 @@
           </div>
           </div>
       </div>
-    
+
       <div class="col-6 my-5">
         <div class="card-body">
           <h5 class="card-title fw-bold mt-5 mb-5 fs-2 text-center text-uppercase">{{ $announcement_to_check->title }}</h5>
           <p class="card-title fs-6 btn btn-primary mb-2" style="background-color:#e3f2fd; border:none"><a class="text-black a-category" href="{{route('categories.show', $announcement_to_check->category)}}">{{$announcement_to_check->category->name}}</a></p>
           <p class="card-text fs-6 my-4 " style="text-align: justify">{{  $announcement_to_check->description}}</p>
-          
+
           <div class="d-flex justify-content-between">
             <p class="card-text text-start fw-bold fs-4"><em>€ {{number_format($announcement_to_check->price, 2)}}</em></p>
           </div>
-          
+
           <p class="card-text text-end mt-3">
             Annuncio creato: {{\Carbon\Carbon::parse($announcement_to_check->created_at)->format('d/m/Y')}}
             <br> da
@@ -130,13 +130,13 @@
               </em>
             </span>
           </p>
-          
-          
+
+
           {{-- <p class="card-text text-end">{{$announcement->user->name}}</p> --}}
         </div>
       </div>
     </div>
-    
+
     {{-- terza sezione con i maledetti bottoni --}}
     <div class="row">
       <div class="col-12 col-md-6">
@@ -146,7 +146,7 @@
           <button type="submit" class="btn btn-success shadow">Accetta</button>
         </form>
       </div>
-      
+
       <div class="col-12 col-md-6 text-end">
         <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
           @csrf
@@ -157,8 +157,8 @@
     </div>
     @endif
   </div>
-  
-  
+
+
 
 </x-main>
 

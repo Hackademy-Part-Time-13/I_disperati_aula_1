@@ -1,4 +1,4 @@
-<x-main>
+<x-main title="{{ $category->name }}">
     <div class="container my-4">
         <h1 class="a-category">{{$category->name}}</h1>
         <div class="row ">
@@ -34,7 +34,7 @@
                                     @guest
                                     <div class="text-center">
                                         <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
-                                        
+
                                     </div>
                                     @endguest
                                     @auth
@@ -43,7 +43,7 @@
                                         <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
                                         {{-- Like --}}
                                         <livewire:likes :announcement="$announcement"/>
-                                           
+
                                     </div>
                                     @endauth
                         </div>

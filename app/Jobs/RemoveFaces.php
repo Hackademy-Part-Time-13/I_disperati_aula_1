@@ -4,18 +4,19 @@ namespace App\Jobs;
 
 use App\Models\Image;
 use Illuminate\Bus\Queueable;
+use Spatie\Image\Manipulations;
 use Illuminate\Queue\SerializesModels;
+use Spatie\Image\Image as SpatieImage;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
-use Spatie\Image\Image as SpatieImage;
 
 class RemoveFaces implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-    
+
 
     private $announcement_image_id;
     public function __construct($announcement_image_id )
@@ -33,7 +34,8 @@ class RemoveFaces implements ShouldQueue
         if (!$i) {
             return;
         }
-        $image = file_get_contents(storage_path('app/public/' . $i->path));
+        $srcPath = storage_path('app/public/' . $i->path);
+        $image = file_get_contents($srcPath);
 
         putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
@@ -56,7 +58,7 @@ class RemoveFaces implements ShouldQueue
             $image = SpatieImage::load($srcPath);
 
             // coso per coprire le facce
-            $image->watermark(base_path('resources/img/smile.png'))
+            $image->watermark(storage_path('app/public/image-logo/03.png'))
                 ->watermarkPosition('top-left')
                 ->watermarkPadding($bounds[0][0], $bounds[0][1])
                 ->watermarkWidth($w, Manipulations::UNIT_PIXELS)

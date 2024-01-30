@@ -35,7 +35,8 @@
                 <td>€ {{number_format($announcement->price, 2)}}</td>
                 <td>
                   <div class="d-flex gap-2">
-                    <a href="{{-- {{route('announcements.edit',$announcement)}} --}}" class="btn btn-primary">Modifica</a>
+                    <a href="{{-- {{route('announcements.edit',$announcement)}} --}}" wire:click="edit({{ $announcement }})" class="btn btn-primary">Modifica</a>
+
                     <form action="{{-- {{route('categories.destroy', $announcement)}} --}}" method="POST">
                     @method('DELETE')
                       @csrf
@@ -51,7 +52,7 @@
                 <td>{{$announcement->title}}</td>
                 <td><a href="{{route('categories.show', $announcement->category)}}" class="text-black a-category"><em>{{$announcement->category->name}}</em></a></td>
                 <td>{{Illuminate\Support\Str::limit($announcement->description, 30)}}</td>
-                
+
                 <td>€ {{number_format($announcement->price, 2)}}</td>
             </tr>
           @endif

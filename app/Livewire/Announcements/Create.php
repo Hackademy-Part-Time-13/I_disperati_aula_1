@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Announcements;
 
+use App\Jobs\AddWatermark;
 use Livewire\Component;
 use App\Jobs\RemoveFaces;
 
@@ -13,6 +14,7 @@ use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Livewire\Attributes\On;
 
 class Create extends Component
 {
@@ -94,10 +96,10 @@ class Create extends Component
             // }
             if(count($this->images)){
                 foreach ($this->images as $image) {
-                
+
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
-               
+
                 // dispatch(new ResizeImage($newImage->path , 300 , 300));
 
                 // dispatch(new GoogleVisionSafeSearch($newImage->id));
@@ -106,11 +108,12 @@ class Create extends Component
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path , 300 , 300),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id)
-                    
+                    new GoogleVisionLabelImage($newImage->id),
+                    // new AddWatermark($newImage->id)
+
                     ])->dispatch($newImage->id);
                 }
-                
+
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
             }
@@ -119,6 +122,12 @@ class Create extends Component
         $this->reset();
     }
     }
+
+    #[On('edit')]
+    public function edit(Announcement $announcement){
+    }
+
+
 
     public function updated($propertyName){
         $this->validateOnly($propertyName);

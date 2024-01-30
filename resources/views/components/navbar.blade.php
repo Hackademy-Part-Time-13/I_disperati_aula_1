@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg px-4 py-3" style="background-color: #e3f2fd;">
   <div class="container-fluid">
-      <a class="navbar-brand" style="color:#F3B61F " href="{{ route('home') }}">Presto.it</a>
+      <img style="width: 25px" src="{{ asset('storage/image-logo/02.png') }}" alt="">
+      <a class="navbar-brand" style="color:#F3B61F " href="{{ route('home') }}">resto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

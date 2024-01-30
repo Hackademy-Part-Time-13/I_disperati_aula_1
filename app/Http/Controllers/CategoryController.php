@@ -20,7 +20,7 @@ class CategoryController extends Controller
     public function index()
     {
         if(!Auth::user()->is_admin){
-           abort(403); 
+           abort(403);
         }
         $categories=Category::all();
         // dd($categories);
@@ -34,7 +34,7 @@ class CategoryController extends Controller
     public function create()
     {
         if(!Auth::user()->is_admin){
-           abort(403); 
+           abort(403);
         }
         return view('categories.create');
     }
@@ -45,7 +45,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
      if(!Auth::user()->is_admin){
-           abort(403); 
+           abort(403);
         }
        $request->validate([
             'name' =>'required|max:50|unique:categories',
@@ -65,7 +65,7 @@ class CategoryController extends Controller
     {
 
         $announcements = Announcement::orderBy('created_at', 'DESC')->where('is_accepted', true)->get(); //TODO: aggiustare pagination!
-    
+
         return view('categories.show', compact('category', 'announcements'));
     }
 
@@ -75,7 +75,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
      if(!Auth::user()->is_admin){
-           abort(403); 
+           abort(403);
         }
         return view('categories.edit', compact('category'));
     }
@@ -86,7 +86,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
      if(!Auth::user()->is_admin){
-           abort(403); 
+           abort(403);
         }
          $request->validate([
             'name' =>'required|max:50|unique:categories',
@@ -104,9 +104,13 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
      if(!Auth::user()->is_admin){
-           abort(403); 
+           abort(403);
         }
-         $category->delete();
+        if($category->announcements->count()>0){
+            return redirect()->back()->with(['error'=>'Questa categoria non può essere eliminata']);
+        }else{
+            $category->delete();
+        }
 
         return redirect()->route('categories.index')->with(['success'=>'Categoria eliminata correttamente']);
     }
