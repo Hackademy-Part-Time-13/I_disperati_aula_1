@@ -10,7 +10,7 @@
     @endif
     
     <h2 class="mt-5 mb-5">Categorie</h2>
-    
+
     <div class="row">
       <div class="col-md-12">
         <div class="card">
@@ -27,7 +27,7 @@
                 
                 @foreach ($categories as $category)
                 <td>
-                  <h5 class="font-medium mb-0 ps-4">{{$category->id}}</h5>
+                  <h5 class="font-medium mb-0">{{$category->id}}</h5>
                 </td>
                 <td>
                   <span class="text-muted">{{$category->name}}</span><br>
@@ -42,18 +42,25 @@
                   </form>
                 </td>
                 
-                @endforeach
-                
-                
-              </tbody>
-            </table>
-          </div>
+              </tr>
+              @endforeach
+              
+              
+              
+              
+              
+              
+              
+            </tbody>
+          </table>
         </div>
       </div>
-      
-      
-      
-      
     </div>
+    
+    
+    
+    
   </div>
+</div>
+
 </x-main>
