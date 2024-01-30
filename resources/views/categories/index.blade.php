@@ -1,35 +1,59 @@
 <x-main>
+  
+  <div class="container mt-5 mb-5">
+    
+    
     @if (session()->has('success'))
-      <div class="alert alert-success" role="alert">
-         {{session('success')}}
-        </div>
-      @endif
-      <table class="table">
-          <thead class="bg-dark">
-            <tr>
-              <th scope="col" class="bg-dark text-white">#Id</th>
-              <th scope="col" class="bg-dark text-white">Name</th>
-              <th scope="col" class="bg-dark text-white">Azioni</th>
-            </tr>
-          </thead>
-          <tbody>
-              @foreach ($categories as $category)
+    <div class="alert alert-success" role="alert">
+      {{session('success')}}
+    </div>
+    @endif
+    
+    <h2 class="mt-5 mb-5">Categorie</h2>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="table-responsive">
+            <table class="table no-wrap mb-0">
+              <thead>
                 <tr>
-              <th scope="row" class="">{{$category->id}}</th>
-              <td class="">{{$category->name}}</td>
-              <td class="">
-                  <a href="{{route('categories.show',$category)}}" class="btn btn-info">Show</a>
-                  <a href="{{route('categories.edit',$category)}}" class="btn btn-primary">Edit</a>
+                  <th scope="col" class="border-0 text-uppercase font-medium ps-4">#</th>
+                  <th scope="col" class="border-0 text-uppercase font-medium">Category</th>
+                  <th scope="col" class="border-0 text-uppercase font-medium">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                @foreach ($categories as $category)
+                <td>
+                  <h5 class="font-medium mb-0 ps-4">{{$category->id}}</h5>
+                </td>
+                <td>
+                  <span class="text-muted">{{$category->name}}</span><br>
+                </td>
+                <td class="d-flex justify-content-around actions">
+                  <a href="{{route('categories.show',$category)}}" class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa-regular fa-eye"></i></a>
+                  <a href="{{route('categories.edit',$category)}}" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa-regular fa-pen-to-square"></i></a>
                   <form action="{{route('categories.destroy', $category)}}" method="POST">
-                  @method('DELETE')
+                    @method('DELETE')
                     @csrf
-                  <button type="submit" class="btn btn-danger m-1">Delete</button>
+                    <button type="submit" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa-regular fa-trash-can"></i></button>
                   </form>
-              </td>
-            </tr>
-              @endforeach
-  
-  
-          </tbody>
-        </table>
-  </x-main>
+                </td>
+                
+                @endforeach
+                
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+    </div>
+  </div>
+</x-main>
