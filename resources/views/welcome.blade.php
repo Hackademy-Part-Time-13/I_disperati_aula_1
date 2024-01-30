@@ -100,7 +100,7 @@
         </div>
 
     </section> --}}
-<div class="container">
+{{-- <div class="container"> --}}
 
     <div class="swiper mySwiper m-5" >
         <div class="swiper-wrapper" >
@@ -147,9 +147,11 @@
             </div>
 
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="mt-5">
+            <div class="swiper-pagination "></div>
         </div>
-    </div>
+        </div>
+    {{-- </div> --}}
 
       <!-- Swiper JS -->
       {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> --}}

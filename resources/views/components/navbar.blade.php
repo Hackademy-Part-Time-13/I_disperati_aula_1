@@ -122,13 +122,13 @@
           </a>
 
           <ul class="dropdown-menu text-center menus forme">
-            <li class="nav-item ">
+            <li class="nav-item formen">
               <x-_locale lang='it' nation='it'/>
             </li>
-            <li class="nav-item">
+            <li class="nav-item formen">
               <x-_locale lang='en' nation='gb'/>
             </li>
-            <li class="nav-item">
+            <li class="nav-item formen">
               <x-_locale lang='es' nation='es'/>
             </li>
           </ul>
