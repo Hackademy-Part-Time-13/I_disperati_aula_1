@@ -11,8 +11,8 @@ import 'swiper/css/bundle';
 
 // init Swiper:
 const swiper = new Swiper('.mySwiper',{
-    slidesPerView: 4,
-    spaceBetween: 20,
+    slidesPerView: 3,
+    spaceBetween:15,
 
     pagination: {
         el: ".swiper-pagination",
