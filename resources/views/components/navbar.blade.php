@@ -121,7 +121,7 @@
             <i class="fa-solid fa-earth-americas" style="background-color:#e3f2fd;"></i>
           </a>
 
-          <ul class="dropdown-menu text-center menus ">
+          <ul class="dropdown-menu text-center menus forme">
             <li class="nav-item ">
               <x-_locale lang='it' nation='it'/>
             </li>

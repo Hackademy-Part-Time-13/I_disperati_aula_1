@@ -329,7 +329,7 @@ section {
 
 .menus[data-bs-popper]{
     width: 100%;
-    left: -110%;
+    left: -117%;
 
 }
 
@@ -349,3 +349,6 @@ section {
     color: #F3B61F;
     background-color: #e3f2fd;
 }
+
+
+

@@ -247,4 +247,8 @@
 /* width: 150px; */
 /* transition: 1s ease; */
 
-
+.forme{
+    height:115px ;
+    width: 5px;
+    padding: 0;
+}

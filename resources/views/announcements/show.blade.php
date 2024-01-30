@@ -177,7 +177,8 @@
                 {{__('ui.aggiungi_carrello')}} <i class="fa-solid fa-cart-shopping"></i>
               </button>
     
-              <button type="button" class="btn">{{__('ui.aggiungi_preferiti')}} <i class="fa-regular fa-heart"></i></button>
+              <button type="button" class="btn d-flex">{{__('ui.aggiungi_preferiti')}} <i class="ps-2"> <livewire:likes :announcement="$announcement"/> </i></button>
+             
     
             </div>
     
