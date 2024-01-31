@@ -1,5 +1,5 @@
 // // javascript per la galleria immagini //
-if (location.href.includes('http://127.0.0.1:8000/announcement/')) {
+if (location.href.includes('http://127.0.0.1:8000/announcement/')){
     let productImg = document.getElementById("productImg");
     let smallImg = document.getElementsByClassName("small-img");
 

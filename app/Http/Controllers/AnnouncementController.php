@@ -13,4 +13,17 @@ class AnnouncementController extends Controller
     public function userAnn(){
         return view('announcements.user-ann');
     }
+
+    public function edit(){
+
+    }
+
+    public function update(){
+
+    }
+
+    public function destroy(){
+
+    }
+
 }

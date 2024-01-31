@@ -20,6 +20,18 @@ const swiper = new Swiper('.mySwiper', {
   },
 });
 
-
+if (location.href.includes('http://127.0.0.1:8000/revisor/home')){
+    console.log('ciao');
+       new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+}
 
 

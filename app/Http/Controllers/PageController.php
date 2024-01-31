@@ -26,7 +26,8 @@ class PageController extends Controller
     }
 
     public function show(Announcement $announcement){
-        return view('announcements.show', compact('announcement'));
+        $last_announcements = Announcement::where('is_accepted',true)->latest()->take(4)->get();
+        return view('announcements.show', compact('announcement' , 'last_announcements'));
     }
 
     //pagina Lavora con noi con form

@@ -50,58 +50,6 @@
     <x-services/>
 
 
-    {{-- sezione categorie: DA SISTEMARE --}}
-
-    <!-- Swiper -->
-  {{-- <div class="ciao">
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-  </div> --}}
-
-     {{-- ------------------------------------ Carosello categorie ----------------------------------  --}}
-
-    {{-- <section class="categories">
-
-        <h1 class="text-center mb-5">Sfoglia le nostre categorie</h1>
-
-        <div class="categories-cards">
-
-
-            <div class="wrapper">
-                <i id="left" class="fa-solid fa-angle-left"></i>
-                <div class="carousel-cards">
-
-
-
-
-
-
-
-
-
-
-                </div>
-
-                <i id="right" class="fa-solid fa-angle-right"></i>
-            </div>
-
-        </div>
-
-    </section> --}}
-{{-- <div class="container"> --}}
-
     <div class="swiper mySwiper m-5" >
         <div class="swiper-wrapper" >
 
@@ -151,29 +99,13 @@
             <div class="swiper-pagination "></div>
         </div>
         </div>
-    {{-- </div> --}}
-
-      <!-- Swiper JS -->
-      {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> --}}
-{{--
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-      </script>
- --}}
 
 
 
 
 
             {{-- sezione ultimi annunci --}}
-            <div class="text-center my-4 py-4" style="background-color:#e3f2fd;">
+            <div class="text-center  py-4" style="background-color:#e3f2fd;">
                 <h2>Ultimi annunci</h2>
 
                 <div class="container">

@@ -100,7 +100,7 @@
     height: 350px;
     width: 350px;
     display: flex;
-    
+
     box-sizing:border-box;
     margin:auto;
     padding: 50px;
@@ -206,7 +206,7 @@
 }
 
 .bho:hover{
-    height: 256px;
+   
     color: #F3B61F;
 }
 

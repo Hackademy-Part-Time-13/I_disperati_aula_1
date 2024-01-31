@@ -97,14 +97,12 @@ class Create extends Component
             if(count($this->images)){
                 foreach ($this->images as $image) {
 
+
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
-                // dispatch(new ResizeImage($newImage->path , 300 , 300));
+               
 
-                // dispatch(new GoogleVisionSafeSearch($newImage->id));
-
-                // dispatch(new GoogleVisionLabelImage($newImage->id));
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path , 300 , 300),
                     new GoogleVisionSafeSearch($newImage->id),

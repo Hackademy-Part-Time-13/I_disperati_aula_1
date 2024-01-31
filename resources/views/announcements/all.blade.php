@@ -28,21 +28,9 @@
                     </div> --}}
 
                     <div class="left">
-                        <div class="sidebar">
-                            {{-- tipologia --}}
-                            {{-- <h6>{{__('ui.tipologia')}}</h6>
-                            <div class="filter">
-                                <input type="checkbox"> <p>{{__('ui.nuovo')}}</p> <span>(0)</span>
-                            </div>
-                            <div class="filter">
-                                <input type="checkbox"> <p>{{__('ui.usato')}}</p> <span>(0)</span>
-                            </div>
-                            <div class="filter">
-                                <input type="checkbox"> <p>{{__('ui.consegna')}}</p> <span>(0)</span>
-                            </div>
-                            <div class="filter">
-                                <input type="checkbox"> <p>{{__('ui.spedizione')}}</p> <span>(0)</span>
-                            </div> --}}
+                        <div class="sidebar" style="background-color: #e3f2fd">
+                           
+
 
                             {{-- categorie --}}
                             <h6>Categorie</h6>

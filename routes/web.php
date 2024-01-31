@@ -1,13 +1,14 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\GithubController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AnnouncementController;
-use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,9 @@ Route::get('/my-announcements', [AnnouncementController::class, 'userAnn'])->nam
 // ricerca annunci
 Route::get('/ricerca/annuncio', [PageController::class, 'searchAnnouncements'])->name('announcements.search');
 
+// sezione User
+Route::get('/user/edit',[UserController::class, 'edit'])->name('user.edit');
+Route::put('/user/update',[UserController::class, 'update'])->name('user.update');
 
 // ------------------ Login/Register ------------------
 //rotte per login con social
@@ -61,4 +65,3 @@ Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rej
 
 // Cambio lingua
 Route::get('/lingua/{lang}', [PageController::class, 'setLanguage'])->name('set_language_locale');
-
