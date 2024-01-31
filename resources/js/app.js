@@ -10,14 +10,14 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 // init Swiper:
-const swiper = new Swiper('.mySwiper',{
-    slidesPerView: 4,
-    spaceBetween:15,
+const swiper = new Swiper('.mySwiper', {
+  slidesPerView: 4,
+  spaceBetween: 15,
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
 

@@ -1,16 +1,16 @@
 <div class="my-4">
 
-    @if(session()->has('success'))
+    {{-- @if(session()->has('success'))
     <div class="alert alert-success" role="alert">
         {{session('success')}}
     </div>
-    @endif
+    @endif --}}
 
-    @if(session()->has('error'))
+    {{-- @if(session()->has('error'))
     <div class="alert alert-danger" role="alert">
         {{session('error')}}
     </div>
-    @endif
+    @endif --}}
 
     <form class="mb-5" wire:submit.prevent="store">
         <div class="row">

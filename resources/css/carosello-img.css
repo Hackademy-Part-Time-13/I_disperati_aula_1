@@ -75,7 +75,7 @@ img {
 .purchase-info input,
 .purchase-info .btn {
     border: 1.5px solid #ddd;
-    text-align:center;
+    text-align: center;
     padding: 0.20rem 0.8rem;
     outline: 0;
     margin-right: 0.15rem;
@@ -89,7 +89,7 @@ img {
 .purchase-info .btn {
     cursor: pointer;
     color: #fff;
-    align-items: end;
+    align-items: center;
 }
 
 .purchase-info .btn:first-of-type {
@@ -106,4 +106,8 @@ img {
 
 .related-products {
     margin-top: 10%;
+}
+
+.btnlike {
+    padding: 5px 5px;
 }

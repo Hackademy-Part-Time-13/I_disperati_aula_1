@@ -43,7 +43,7 @@ class RevisorController extends Controller
          } else {
             Mail::to('administrator@gmail.com')->send(new becomeRevisor(Auth::user(), $message));
          $user->update(['is_ongoing'=>true,]);
-         return redirect()->back()->with('message', 'La tua richiesta per diventare Revisore è stata inviata correttamente');
+         return redirect()->back()->with('success', 'La tua richiesta per diventare Revisore è stata inviata correttamente');
          }
 
 

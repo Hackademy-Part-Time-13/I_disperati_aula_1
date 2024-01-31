@@ -73,7 +73,7 @@
         <div class="box-user">
             <img src="https://demos.creative-tim.com/paper-kit-2-pro/assets/img/image_placeholder.jpg" class="image">
                 <p class="user-detail"><strong>Nome</strong>: {{$user->name}}</p>
-                <p class="user-detail"><strong>Telefono</strong>: {{$user->phone}}</p>
+                {{-- <p class="user-detail"><strong>Telefono</strong>: {{$user->phone}}</p> --}}
                 <p class="user-detail"><strong>Email</strong>: {{$user->email}}</p>
 
         </div>
