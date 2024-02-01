@@ -1,0 +1,24 @@
+.img-thumbnail {
+    padding: .30rem;
+    border: 1px solid #0D3B66;
+    border-radius: .25rem;
+    width: 60%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: 23%;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #F3B61F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F3B61F;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 1.3rem;
+}
