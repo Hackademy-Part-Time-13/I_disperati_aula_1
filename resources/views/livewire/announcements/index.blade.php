@@ -10,9 +10,9 @@
         </div>
     @endif
 
-    <div>
-        <h2>Articoli accettati</h2>
-        <table class="table table-striped">
+    <div class="my-5">
+        <h2>Annunci accettati</h2>
+        <table class="table {{-- table-striped --}}">
             <thead>
                 <tr>
                     {{-- <th scope="col">ID</th> --}}
@@ -26,12 +26,14 @@
             <tbody>
                 @foreach ($acceptedAnnouncements as $announcement)
                     <tr>
-                        <td>{{ $announcement->title }}</td>
-                        <td><a href="{{ route('categories.show', $announcement->category) }}"
+                        <td style="background-color: #e3f2fd;">{{ $announcement->title }}</td>
+                        <td style="background-color: #e3f2fd;"><a
+                                href="{{ route('categories.show', $announcement->category) }}"
                                 class="text-black a-category"><em>{{ $announcement->category->name }}</em></a></td>
-                        <td>{{ Illuminate\Support\Str::limit($announcement->description, 30) }}</td>
-                        <td>€ {{ number_format($announcement->price, 2) }}</td>
-                        <td>
+                        <td style="background-color: #e3f2fd;">
+                            {{ Illuminate\Support\Str::limit($announcement->description, 30) }}</td>
+                        <td style="background-color: #e3f2fd;">€ {{ number_format($announcement->price, 2) }}</td>
+                        <td style="background-color: #e3f2fd;">
                             <div class="d-flex gap-2">
                                 <button type="submit" wire:click="destroy({{ $announcement }})"
                                     class="btn btn-outline-danger">Delete</button>
@@ -45,9 +47,11 @@
         {{ $acceptedAnnouncements->links() }}
     </div>
 
-    <div>
-        <h2>Articoli rifiutati</h2>
-        <table class="table table-striped">
+    <hr>
+
+    <div class="my-5">
+        <h2>Annunci rifiutati</h2>
+        <table class="table">
             <thead>
                 <tr>
                     {{-- <th scope="col">ID</th> --}}
@@ -80,8 +84,10 @@
         {{ $rejectedAnnouncements->links() }}
     </div>
 
-    <div>
-        <h2>Articoli in stato di revisione</h2>
+    <hr>
+
+    <div class="my-5">
+        <h2>Annunci in stato di revisione</h2>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -96,12 +102,14 @@
             <tbody>
                 @foreach ($pendingAnnouncements as $announcement)
                     <tr>
-                        <td>{{ $announcement->title }}</td>
-                        <td><a href="{{ route('categories.show', $announcement->category) }}"
+                        <td style="background-color: #e3f2fd;">{{ $announcement->title }}</td>
+                        <td style="background-color: #e3f2fd;"><a
+                                href="{{ route('categories.show', $announcement->category) }}"
                                 class="text-black a-category"><em>{{ $announcement->category->name }}</em></a></td>
-                        <td>{{ Illuminate\Support\Str::limit($announcement->description, 30) }}</td>
-                        <td>€ {{ number_format($announcement->price, 2) }}</td>
-                        <td>
+                        <td style="background-color: #e3f2fd;">
+                            {{ Illuminate\Support\Str::limit($announcement->description, 30) }}</td>
+                        <td style="background-color: #e3f2fd;">€ {{ number_format($announcement->price, 2) }}</td>
+                        <td style="background-color: #e3f2fd;">
                             <div class="d-flex gap-2">
                                 <button type="submit" wire:click="destroy({{ $announcement }})"
                                     class="btn btn-outline-danger">Delete</button>
