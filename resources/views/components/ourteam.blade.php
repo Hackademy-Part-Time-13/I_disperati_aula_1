@@ -2,7 +2,7 @@
     <div class="row mb-4">
         <div class="col-lg-12 text-center">
             <h2 class="fs-1 font-weight-bold">Our team</h2>
-            <p class="font-italic text-muted fs-5">Quei poveri disperati che stanno dietro a sto casino di codice.</p>
+            <p class="font-italic text-muted fs-5">Quei poveri disperati che stanno dietro a sto casino di sito.</p>
         </div>
     </div>
 

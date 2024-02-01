@@ -36,8 +36,8 @@
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
                         <h2 class="fw-bolder display-6 mb-4">{{ __('ui.caption') }}</h2>
-                        <p class="lead fs-5 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis
-                            dolor neque, aspernatur commodi tempore.</p>
+                        <p class="lead fs-5 mb-5">Unisciti ai nostri venditori, dai una seconda vita alle cose che non
+                            usi più. Carica il tuo annuncio e lascia che il team di Presto.it faccia tutto il resto.</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                             <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{ route('announcements') }}"
                                 style="background-color: #F3B61F">{{ __('ui.crea_il_tuo_annuncio') }}</a>
@@ -210,8 +210,8 @@
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-end">
                         <h2 class="fw-bolder display-6 mb-4 text-center text-xl-end">{{ __('ui.collabora') }}</h2>
-                        <p class="lead fs-5 mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nobis
-                            dolor neque, aspernatur commodi tempore.</p>
+                        <p class="lead fs-5 mb-5">Inizia a guadagnare, contribuisci allo sviluppo della piattaforma e
+                            clicca il pulsante qui sotto per saperne di più.</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-end">
                             <a class="btn btn-lg px-4 me-sm-3 fw-semibold fs-5" href="{{ route('lavoraConNoi') }}"
                                 style="background-color: #F3B61F">{{ __('ui.diventa_revisore') }}</a>
