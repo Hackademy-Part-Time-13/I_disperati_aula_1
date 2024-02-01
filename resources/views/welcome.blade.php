@@ -54,74 +54,77 @@
     {{-- sezione Services --}}
     <x-services />
 
+    <div class="col-sm-12 d-none d-xl-block">
 
-    <div class="swiper mySwiper m-5">
-        <div class="swiper-wrapper">
 
-            <div class="swiper-slide">
-                <a href="/categories/1"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/4841166/pexels-photo-4841166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
+        <div class="swiper mySwiper m-5">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <a href="/categories/1"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/4841166/pexels-photo-4841166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="/categories/2"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/8170126/pexels-photo-8170126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="/categories/3"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/9704415/pexels-photo-9704415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <a href="/categories/4"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="/categories/5"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/17264276/pexels-photo-17264276/free-photo-of-legno-casa-modello-finestra.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="/categories/6"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/212185/pexels-photo-212185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="/categories/7"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/11118765/pexels-photo-11118765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="/categories/8"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/5693891/pexels-photo-5693891.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="/categories/9"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/4147623/pexels-photo-4147623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="/categories/10"><img class="image-bho p-1"
+                            src="https://images.pexels.com/photos/1983037/pexels-photo-1983037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="img"></a>
+                </div>
+
             </div>
-
-            <div class="swiper-slide">
-                <a href="/categories/2"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/8170126/pexels-photo-8170126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
+            <div class="mt-5">
+                <div class="swiper-pagination "></div>
             </div>
-
-            <div class="swiper-slide">
-                <a href="/categories/3"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/9704415/pexels-photo-9704415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
-            </div>
-
-
-            <div class="swiper-slide">
-                <a href="/categories/4"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
-            </div>
-
-            <div class="swiper-slide">
-                <a href="/categories/5"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/17264276/pexels-photo-17264276/free-photo-of-legno-casa-modello-finestra.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
-            </div>
-
-            <div class="swiper-slide">
-                <a href="/categories/6"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/212185/pexels-photo-212185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
-            </div>
-
-            <div class="swiper-slide">
-                <a href="/categories/7"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/11118765/pexels-photo-11118765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
-            </div>
-
-            <div class="swiper-slide">
-                <a href="/categories/8"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/5693891/pexels-photo-5693891.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
-            </div>
-
-            <div class="swiper-slide">
-                <a href="/categories/9"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/4147623/pexels-photo-4147623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
-            </div>
-
-            <div class="swiper-slide">
-                <a href="/categories/10"><img class="image-bho p-1"
-                        src="https://images.pexels.com/photos/1983037/pexels-photo-1983037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="img"></a>
-            </div>
-
-        </div>
-        <div class="mt-5">
-            <div class="swiper-pagination "></div>
         </div>
     </div>
 

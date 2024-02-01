@@ -76,7 +76,7 @@
 
 
                     <div class="purchase-info">
-                        <input type="number" min="0" value="1">
+                        {{-- <input type="number" min="0" value="1"> --}}
 
                         <button type="button" class ="btn">
                             {{ __('ui.aggiungi_carrello') }} <i class="fa-solid fa-cart-shopping"></i>

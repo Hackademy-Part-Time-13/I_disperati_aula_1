@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{App::getLocale()}}">
+<html lang="{{ App::getLocale() }}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,34 +15,35 @@
     <title>{{ $title ?? 'Presto.it' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
+
 <body>
 
     <main class="d-flex flex-column vh-100">
         <div class="sticky-top">
-            <x-navbar/>
+            <x-navbar />
         </div>
 
-        @if(session()->has('message'))
-        <div class="alert m-3" role="alert">
-        {{session('message')}}
-        </div>
+        @if (session()->has('message'))
+            <div class="alert m-3" role="alert">
+                {{ session('message') }}
+            </div>
         @endif
-        @if(session()->has('success'))
-        <div class="alert alert-success m-3" role="alert">
-        {{session('success')}}
-        </div>
-        @endif
-
-        @if(session()->has('error'))
-        <div class="alert alert-danger m-3" role="alert">
-        {{session('error')}}
-        </div>
+        @if (session()->has('success'))
+            <div class="alert alert-success m-3" role="alert">
+                {{ session('success') }}
+            </div>
         @endif
 
-        @if(session()->has('access.denied'))
-        <div class="alert alert-danger m-3" role="alert">
-        {{session('access.denied')}}
-        </div>
+        @if (session()->has('error'))
+            <div class="alert alert-danger m-3" role="alert">
+                {{ session('error') }}
+            </div>
+        @endif
+
+        @if (session()->has('access.denied'))
+            <div class="alert alert-danger m-3" role="alert">
+                {{ session('access.denied') }}
+            </div>
         @endif
 
 
@@ -53,9 +55,10 @@
 
 
         <div class="mt-auto">
-            <x-footer/>
+            <x-footer />
         </div>
     </main>
 
 </body>
+
 </html>
