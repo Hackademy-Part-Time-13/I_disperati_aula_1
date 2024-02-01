@@ -9,68 +9,109 @@
             {{ session('error') }}
         </div>
     @endif
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                {{-- <th scope="col">ID</th> --}}
-                <th scope="col">Titolo</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Descrizione</th>
-                <th scope="col">Prezzo</th>
-                <th scope="col">Azioni</th>
-                <th scope="col">Stato articolo</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($announcements as $announcement)
-                {{-- if: mostra solo annunci approvati --}}
-                @if ($announcement->is_accepted || !$announcement->is_accepted)
-                    {{-- mostra solo annunci dell'autore --}}
-                    @if (auth()->user()->id == $announcement->user_id)
-                        <tr>
-                            {{-- <th scope="row">{{$announcement->id}}</th> --}}
-                            <td>{{ $announcement->title }}</td>
-                            <td><a href="{{ route('categories.show', $announcement->category) }}"
-                                    class="text-black a-category"><em>{{ $announcement->category->name }}</em></a></td>
-                            <td>{{ Illuminate\Support\Str::limit($announcement->description, 30) }}</td>
-                            <td>€ {{ number_format($announcement->price, 2) }}</td>
-                            <td>
-                                <div class="d-flex gap-2">
-                                    <a href="{{-- {{route('announcements.edit',$announcement)}} --}}" wire:click="edit({{ $announcement }})"
-                                        class="btn btn-primary">Modifica</a>
 
-                                    <form action="{{-- {{route('categories.destroy', $announcement)}} --}}" method="POST">
-                                        @method('DELETE')
-                                        @csrf
-                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                    </form>
-                                </div>
-                            </td>
-                            <div class="text-start">
-
-                                @if($announcement->is_accepted)
-                                <td>Accettato</td>
-                                @elseif(!$announcement->is_accepted)
-                                <td>In revisione</td>
-                                @elseif($announcement->is_accepted == 0)
-                                <td>rifiutatohih</td>
-                                @endif
-                    </tr>
-                    {{-- se ADMIN, mostra tutti gli annunci --}}
-                @elseif(auth()->user()->is_admin)
+    <div>
+        <h2>Articoli accettati</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    {{-- <th scope="col">ID</th> --}}
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Prezzo</th>
+                    <th scope="col">Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($acceptedAnnouncements as $announcement)
                     <tr>
-                        {{-- <th scope="row">{{$announcement->id}}</th> --}}
                         <td>{{ $announcement->title }}</td>
                         <td><a href="{{ route('categories.show', $announcement->category) }}"
                                 class="text-black a-category"><em>{{ $announcement->category->name }}</em></a></td>
                         <td>{{ Illuminate\Support\Str::limit($announcement->description, 30) }}</td>
                         <td>€ {{ number_format($announcement->price, 2) }}</td>
-                        {{-- <td>{{($announcement->is_accepted)}}</td> --}}
+                        <td>
+                            <div class="d-flex gap-2">
+                                <button type="submit" wire:click="destroy({{ $announcement }})"
+                                    class="btn btn-outline-danger">Delete</button>
+                            </div>
+                        </td>
+                        <div class="text-start">
                     </tr>
-                @endif
-            @endif
-            @endforeach
-        </tbody>
-    </table>
-    {{ $announcements->links() }}
+                @endforeach
+            </tbody>
+        </table>
+        {{ $acceptedAnnouncements->links() }}
+    </div>
+
+    <div>
+        <h2>Articoli rifiutati</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    {{-- <th scope="col">ID</th> --}}
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Prezzo</th>
+                    <th scope="col">Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($rejectedAnnouncements as $announcement)
+                    <tr>
+                        <td>{{ $announcement->title }}</td>
+                        <td><a href="{{ route('categories.show', $announcement->category) }}"
+                                class="text-black a-category"><em>{{ $announcement->category->name }}</em></a></td>
+                        <td>{{ Illuminate\Support\Str::limit($announcement->description, 30) }}</td>
+                        <td>€ {{ number_format($announcement->price, 2) }}</td>
+                        <td>
+                            <div class="d-flex gap-2">
+                                <button type="submit" wire:click="destroy({{ $announcement }})"
+                                    class="btn btn-outline-danger">Delete</button>
+                            </div>
+                        </td>
+                        <div class="text-start">
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+        {{ $rejectedAnnouncements->links() }}
+    </div>
+
+    <div>
+        <h2>Articoli in stato di revisione</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    {{-- <th scope="col">ID</th> --}}
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Prezzo</th>
+                    <th scope="col">Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($pendingAnnouncements as $announcement)
+                    <tr>
+                        <td>{{ $announcement->title }}</td>
+                        <td><a href="{{ route('categories.show', $announcement->category) }}"
+                                class="text-black a-category"><em>{{ $announcement->category->name }}</em></a></td>
+                        <td>{{ Illuminate\Support\Str::limit($announcement->description, 30) }}</td>
+                        <td>€ {{ number_format($announcement->price, 2) }}</td>
+                        <td>
+                            <div class="d-flex gap-2">
+                                <button type="submit" wire:click="destroy({{ $announcement }})"
+                                    class="btn btn-outline-danger">Delete</button>
+                            </div>
+                        </td>
+                        <div class="text-start">
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+        {{ $pendingAnnouncements->links() }}
+    </div>
 </div>

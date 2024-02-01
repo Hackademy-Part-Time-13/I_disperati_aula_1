@@ -71,8 +71,20 @@
                                         <div class="col-6">
                                             @foreach ($image->labels as $label)
                                                 <p class="d-inline">{{ $label }}</p>
-                                            @endforeach
-                                        </div>
+                                                @endforeach
+
+                                                <div class="col-md-5">
+                                                    <div class="card-body">
+                                                        <h5 class="tc-accent">Revisione Immagini</h5>
+                                                        <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                                        <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                                        <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+                                                        <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+                                                        <p>Contenuto ammiccante: <span class="{{ $image->racy }}"></span></p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
 
                                     </div>
                                 </div>
@@ -84,9 +96,11 @@
                         <div class="swiper-pagination"></div>
                     </div>
 
+
                 </div>
 
                 {{-- parte da sistemare con semafori --}}
+
 
 
 
