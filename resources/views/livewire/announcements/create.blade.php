@@ -79,7 +79,7 @@
                     </div>
                     <label class="form-label text-uppercase fw-semibold">{{ __('ui.immagini_prodotto') }}</label>
 
-                    
+
 
                     @if (!empty($images))
                         <div class="row">
@@ -101,6 +101,8 @@
                     @endif
                     <input class="form-control @error('temporary_images.*') is-invalid @enderror" name='image'
                         wire:model.blur="temporary_images" multiple type="file" id="formFile">
+{{-- 
+                        <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow-sm @error('temporary_images') is-invalid @enderror"> --}}
                 </div>
                 @error('temporary_images.*')
                     {{ $message }}
