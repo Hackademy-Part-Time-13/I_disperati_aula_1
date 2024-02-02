@@ -57,9 +57,9 @@ class DatabaseSeeder extends Seeder
             'is_revisor' => true,
         ]);
 
-        $this->call([
-            AnnouncementSeeder::class
-        ]);
+        // $this->call([
+        //     AnnouncementSeeder::class
+        // ]);
         
     }
 }

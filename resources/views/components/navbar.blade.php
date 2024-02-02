@@ -36,6 +36,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('announcements') }}">{{ __('ui.crea_il_tuo_annuncio') }}</a>
                     </li>
+                    @if(auth()->user()->is_admin)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('categories.index') }}">Mod.categorie</a>
+                    </li>
+                    @endif
                 @endauth
 
             </ul>

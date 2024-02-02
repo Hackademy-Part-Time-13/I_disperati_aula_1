@@ -14,43 +14,43 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::create([
-            'name' => 'libri',
+            'name' => 'Libri',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'musica',
+            'name' => 'Musica',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'console',
+            'name' => 'Console',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'elettronica & informatica',
+            'name' => 'Informatica',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'arredamento',
+            'name' => 'Arredamento',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'giardino',
+            'name' => 'Giardino',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'bellezza & salute',
+            'name' => 'Bellezza',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'abbigliamento',
+            'name' => 'Abbigliamento',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'auto & moto',
+            'name' => 'Auto & Moto',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
         Category::create([
-            'name' => 'oggettistica',
+            'name' => 'Oggettistica',
             'description' => ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium doloribus odio minima expedita. Voluptatem totam tempore fuga natus. Quas, reprehenderit!',
         ]);
     }

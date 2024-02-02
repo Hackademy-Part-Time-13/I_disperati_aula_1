@@ -206,7 +206,7 @@
 }
 
 .bho:hover{
-   
+
     color: #F3B61F;
 }
 
@@ -252,3 +252,14 @@
     width: 5px;
     padding: 0;
 }
+
+.categor:hover{
+    background-color: #F3B61F;
+
+}
+.catego:hover{
+    background-color:#0D3B66
+
+
+}
+

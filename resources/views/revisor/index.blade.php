@@ -1,6 +1,6 @@
 <x-main title="Dashboard revisore ">
 
-    <div class="container my-4">
+    <div class="container my-4 ">
         {{-- prima sezione --}}
         <h1 class="display-6 text-center">
             {{ $announcement_to_check ? 'Ecco gli annunci da revisionare' : 'Non ci sono annunci da revisionare per questo utente' }}
@@ -23,7 +23,7 @@
         @if ($announcement_to_check)
 
             {{-- seconda sezione --}}
-            <div class="row">
+            <div class="row mb-5">
 
                 <div class="col-12 my-5">
                     <div class="card-body">
@@ -106,9 +106,12 @@
 
             </div>
 
-            {{-- terza sezione con i maledetti bottoni --}}
-            <div class="row">
-                <div class="col-12 col-md-6">
+            <div class="container ">
+
+
+                {{-- terza sezione con i maledetti bottoni --}}
+                <div class="row">
+                <div class="col-6 col-md-6">
                     <form
                         action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
                         method="POST">
@@ -118,7 +121,7 @@
                     </form>
                 </div>
 
-                <div class="col-12 col-md-6 text-end">
+                <div class="col-6 col-md-6 text-end">
                     <form
                         action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
                         method="POST">
@@ -128,7 +131,8 @@
                     </form>
                 </div>
             </div>
-        @endif
+            @endif
+        </div>
     </div>
 
 
