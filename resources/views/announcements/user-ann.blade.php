@@ -14,7 +14,7 @@
                                     <h4>{{ Auth::user()->name }}</h4>
                                     <p class="text-secondary mb-1">{{ Auth::user()->email }}</p>
 
-                                    <button class="btn btn-outline-primary">Message</button>
+                                   
                                 </div>
                             </div>
                         </div>
