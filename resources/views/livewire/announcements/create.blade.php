@@ -16,9 +16,7 @@
         <div class="row">
             @csrf
 
-            {{-- colonna con l'inserimento dell'immagine, scelta categoria e select da implementare NUOVO/USATO --}}
             <div class="col-md-12">
-
                 <div class="mb-4">
                     <label class="form-label text-uppercase fw-semibold">{{ __('ui.titolo') }}</label>
                     <input type="text" required placeholder="Inserisci un titolo..."
@@ -27,7 +25,6 @@
                         {{ $message }}
                     @enderror
                 </div>
-
 
                 <div class="mb-4">
                     <label class="form-label text-uppercase fw-semibold">{{ __('ui.categoria') }}</label>
@@ -45,13 +42,8 @@
                         {{ $message }}
                     @enderror
                 </div>
-                {{-- select da implementare NUOVO/USATO --}}
-
-
-
 
                 <div class="col-md-12">
-
                     <div class="mb-4">
                         <label class="form-label text-uppercase fw-semibold">{{ __('ui.descrizione') }}</label>
                         <textarea class="form-control  @error('description') is-invalid @enderror" required
@@ -79,8 +71,7 @@
                     </div>
                     <label class="form-label text-uppercase fw-semibold">{{ __('ui.immagini_prodotto') }}</label>
 
-
-
+                    {{-- Preview immagine --}}
                     @if (!empty($images))
                         <div class="row">
                             <div class="col-12">
@@ -101,8 +92,6 @@
                     @endif
                     <input class="form-control @error('temporary_images.*') is-invalid @enderror" name='image'
                         wire:model.blur="temporary_images" multiple type="file" id="formFile">
-{{-- 
-                        <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow-sm @error('temporary_images') is-invalid @enderror"> --}}
                 </div>
                 @error('temporary_images.*')
                     {{ $message }}

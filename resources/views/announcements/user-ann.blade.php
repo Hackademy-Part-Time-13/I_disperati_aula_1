@@ -2,8 +2,7 @@
     <div class="container my-4">
 
         <div class="main-body">
-
-
+            {{-- card utente --}}
             <div class="row gutters-sm">
                 <div class="col-md-4 mb-3">
                     <div class="card-profiles">
@@ -13,20 +12,18 @@
                                 <div class="mt-3">
                                     <h4>{{ Auth::user()->name }}</h4>
                                     <p class="text-secondary mb-1">{{ Auth::user()->email }}</p>
-
-                                   
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
+                {{-- Sezione con i dati dell'utente --}}
                 <div class="col-md-8">
                     <div class="card-profile mb-3">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Nome & Cognome</h6>
+                                    <h6 class="mb-0">Nome e Cognome</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                     {{ Auth::user()->name }}
@@ -71,25 +68,20 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                 </div>
             </div>
+
             {{-- lista degli annunci creati --}}
             <div class="mt-5 mb-5">
                 <livewire:announcements.index />
             </div>
-
         </div>
+
+
         {{-- Lista articoli preferiti dell'utente --}}
-
-
         <h2 class="pt-4">Annunci salvati</h2>
         <div class="row ">
-
+            {{-- card annuncio --}}
             @foreach (App\Models\Like::where('user_id', auth()->user()->id)->get() as $like)
                 <div class=" col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 p-3 ">
                     <div class="card" style="width: 18rem;">

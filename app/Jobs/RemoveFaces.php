@@ -57,17 +57,14 @@ class RemoveFaces implements ShouldQueue
 
             $image = SpatieImage::load($srcPath);
 
-            // coso per coprire le facce
+            // job per coprire le facce
             $image->watermark(storage_path('app/public/image-logo/coprivolto.jpg'))
                 ->watermarkPosition('top-left')
                 ->watermarkPadding($bounds[0][0], $bounds[0][1])
                 ->watermarkWidth($w, Manipulations::UNIT_PIXELS)
                 ->watermarkHeight($h, Manipulations::UNIT_PIXELS)
                 ->watermarkFit(Manipulations::FIT_STRETCH);
-
-
             $image->save($srcPath);
-
         }
 
         $imageAnnotator->close();

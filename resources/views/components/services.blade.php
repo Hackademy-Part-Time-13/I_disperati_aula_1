@@ -3,7 +3,7 @@
     <section class="features-icons text-center" style="background-color: #e3f2fd;">
         <div class="container p-5">
             <div class="row">
-
+                {{-- Servizio 1 --}}
                 <h1 class="mb-5">{{__('ui.affidati_a_noi')}}:</h1>
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 bho">
@@ -12,6 +12,7 @@
                         <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
+                {{-- Servizio 2 --}}
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 bho">
                         <div class="features-icons-icon mt-3 text-ca "><i class="fa-solid fa-comments"></i></div>
@@ -19,6 +20,7 @@
                         <p class="lead mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
+                {{-- Servizio 3 --}}
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-0 mb-lg-3 bho">
                         <div class="features-icons-icon mt-3"><i class="fa-solid fa-award"></i></div>

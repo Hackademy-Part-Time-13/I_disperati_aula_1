@@ -1,13 +1,10 @@
 <x-main title="Register">
 
-{{-- Container principale del register --}}
 <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
 
-    {{-- Container Login --}}
     <div class="row border rounded-5 p-3 bg-white shadow box-area-register">
 
         {{-- Box a sinistra --}}
-
         <div class="col-md-6 right-box">
             <div class="row align-items-center ms-2">
                 <div class="header-text mb-4">
@@ -51,9 +48,6 @@
                         <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="tooglepsw-button" role="button"></i></span>
                         </div>
                         <div id="emailHelp" class="form-text small opacity-50">La password deve contentere almeno 8 caratteri</div>
-                        {{-- <label  class="form-label">Password *</label>
-                        <input required type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror">
-                        <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="tooglepsw-button" role="button"></i></span> --}}
                         @error('password')
                         {{$message}}
                         @enderror
@@ -65,9 +59,7 @@
                         <input type="password" name="password_confirmation" class="form-control" id="confirm_password" placeholder="Password">
                         <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="toogle-confirm-psw-button" role="button"></i></span>
                         </div>
-                        {{-- <label  class="form-label">Password Confirmation *</label>
-                        <input required type="password" id="confirm_password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror">
-                        <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="tooglepsw-button" role="button"></i></span> --}}
+                    
                     </div>
 
                     <div class="input-group mb-3">

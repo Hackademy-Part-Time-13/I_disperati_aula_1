@@ -31,7 +31,6 @@ class Create extends Component
     public $description;
 
     #[Validate('required', message: 'Inserisci una categoria valida')]
-    // #[Validate('selected', message: 'Inserisci una categoria valido')]
     #[Validate('gt:0', message: 'Seleziona una categoria valida')]
     public $category_id;
 
@@ -67,11 +66,6 @@ class Create extends Component
         }
     }
 
-
-
-
-
-
     public function store(){
 
         $this->dispatch('refreshAnnouncements')->to('announcements.index');
@@ -89,31 +83,19 @@ class Create extends Component
                 'user_id' => auth()->user()->id,
             ]);
 
-            // if(count($this->images)){
-            //     foreach ($this->images as $image){
-            //         $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
-            //     }
-            // }
             if(count($this->images)){
                 foreach ($this->images as $image) {
-
 
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
-               
-
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path , 300 , 300),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id),
-                    // new AddWatermark($newImage->id)
-
+                    // new GoogleVisionLabelImage($newImage->id),
                     ])->dispatch($newImage->id);
                 }
-
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
-
             }
 
         session()->flash('success','Annuncio creato correttamente, sarà pubblicato dopo la revisione');

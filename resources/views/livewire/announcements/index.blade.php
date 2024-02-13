@@ -10,12 +10,12 @@
         </div>
     @endif
 
+    {{-- tabella annunci accettati --}}
     <div class="my-5">
         <h2>Annunci accettati</h2>
-        <table class="table {{-- table-striped --}}">
+        <table class="table">
             <thead>
                 <tr>
-                    {{-- <th scope="col">ID</th> --}}
                     <th scope="col">Titolo</th>
                     <th scope="col">Categoria</th>
                     <th scope="col">Descrizione</th>
@@ -49,12 +49,12 @@
 
     <hr>
 
+    {{-- tabella annunci rifiutati --}}
     <div class="my-5">
         <h2>Annunci rifiutati</h2>
         <table class="table">
             <thead>
                 <tr>
-                    {{-- <th scope="col">ID</th> --}}
                     <th scope="col">Titolo</th>
                     <th scope="col">Categoria</th>
                     <th scope="col">Descrizione</th>
@@ -86,12 +86,12 @@
 
     <hr>
 
+    {{-- tabella annunci in revisione --}}
     <div class="my-5">
         <h2>Annunci in stato di revisione</h2>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    {{-- <th scope="col">ID</th> --}}
                     <th scope="col">Titolo</th>
                     <th scope="col">Categoria</th>
                     <th scope="col">Descrizione</th>

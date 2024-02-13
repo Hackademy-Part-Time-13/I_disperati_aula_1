@@ -8,12 +8,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            {{-- sezione a sx --}}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{ route('home') }}">{{ __('ui.home') }}</a>
                 </li>
-
-
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -27,37 +26,24 @@
                         @endforeach
                     </ul>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('all.announcements') }}">{{ __('ui.annunci') }}</a>
                 </li>
-
                 @auth
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('announcements') }}">{{ __('ui.crea_il_tuo_annuncio') }}</a>
                     </li>
+                    {{-- se Admin: rotta per index e modifica CATEGORIE --}}
                     @if(auth()->user()->is_admin)
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('categories.index') }}">Mod.categorie</a>
                     </li>
                     @endif
+                    {{-- fine --}}
                 @endauth
-
             </ul>
 
-
-
-
-            {{-- barra ricerca annunci --}}
-
-            {{-- <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-                  <input name="searched" class="form-control me-2" type="search"  aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Cerca</button>
-                  </form> --}}
-
-            {{-- fine barra di ricerca --}}
-
-
+            {{-- sezione a dx --}}
             @guest
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
@@ -80,26 +66,20 @@
                             {{ __('ui.ciao') }} {{ Auth::user()->name }}
                             @if (Auth::user()->is_revisor)
                                 @if (App\Models\Announcement::toBeRevisionedCount())
-                                    {{-- @dd(App\Models\Announcement::all()->id) --}}
-                                    {{-- @if (App\Models\Announcement::all() != Auth::user()->id) --}}
                                     <span
                                         class="badge rounded-pill bg-danger">{{ App\Models\Announcement::toBeRevisionedCount() }}
                                         <span class="visually-hidden">Unread messages
                                         </span>
                                     </span>
                                 @endif
-                                {{-- @endif --}}
                             @endif
                         </a>
 
                         <ul class="dropdown-menu dropdown-menu-end">
-                            {{-- creare vista UTENTE con anche la lista degli annunci creatiE ACCETTATI --}}
                             <li>
                                 <a class="dropdown-item" href="{{ route('user.announcements') }}">Profilo</a>
                             </li>
-
-                            {{-- ------------------------- AGGIUNGERE ROTTA E VISTA ------------------------------ --}}
-
+                            {{-- vista se revisore --}}
                             @if (Auth::user()->is_revisor)
                                 <li>
                                     <a class="dropdown-item position-relative"
@@ -112,12 +92,10 @@
                                             </span>
                                         @endif
                                     </a>
-
                                 </li>
                             @endif
+                            {{-- fine vista se revisore --}}
 
-
-                            {{-- ------------------------------------------------------------------------------- --}}
                             <li><a class="dropdown-item" href="{{ route('logout') }}"class="nav-link text-primary"
                                     onclick="event.preventDefault();getElementById('form-logout').submit();">{{ __('ui.esci') }}</a>
                                 <form action="/logout" method="POST" class="d_none" id="form-logout">
@@ -129,12 +107,12 @@
                 </ul>
             @endauth
 
+            {{-- bandiere per multilingua --}}
             <div class="dropdown">
                 <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <i class="fa-solid fa-earth-americas" style="background-color:#e3f2fd;"></i>
                 </a>
-
                 <ul class="dropdown-menu text-center menus forme">
                     <li class="nav-item formen">
                         <x-_locale lang='it' nation='it' />
@@ -146,10 +124,7 @@
                         <x-_locale lang='es' nation='es' />
                     </li>
                 </ul>
-
             </div>
-
-
         </div>
     </div>
 </nav>

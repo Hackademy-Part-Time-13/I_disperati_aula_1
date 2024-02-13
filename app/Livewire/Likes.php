@@ -22,14 +22,12 @@ class Likes extends Component
     // togliere Like
     public function deleteLike(){
         $announcements = Like::where('announcement_id', $this->announcement->id)->where('user_id', auth()->user()->id)->get();
-
         foreach($announcements as $announcement){
             $announcement->delete();
         }
     }
 
 
-    
     public function render()
     {
         return view('livewire.likes');

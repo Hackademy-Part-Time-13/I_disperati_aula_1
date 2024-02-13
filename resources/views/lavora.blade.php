@@ -10,25 +10,6 @@
     </div>
     {{-- fine immagine --}}
 
-    {{--  main  --}}
-    {{-- @if(session()->has('message'))
-        <div class="alert alert-success" role="alert">
-            {{session('message')}}
-        </div> --}}
-   
-    {{-- @elseif ($errors->any())
-        @foreach ($errors->all() as $error) 
-        <div class="ms-auto me-auto text-center col-6 my-2 alert alert-danger">
-            <li>{{$error}}</li>
-        </div>
-        @endforeach             --}}
-
-    {{-- @elseif (session('error'))
-    <div class="ms-auto me-auto text-center col-6 my-2 alert alert-danger">
-        {{ session('error') }}
-    </div>
-    @endif --}}
-
     <div class="container my-5">
         <div class="row">
             {{-- parte sx: contatti --}}
@@ -41,14 +22,12 @@
                     <p class="mb-5 fs-5">Clicca ora su Diventa un revisore</p>
                     
                 </div>
-               
-               
             </div>
 
             {{-- parte dx: FORM --}}
             <div class="col-md-6 col-lg-7 col-xl-7 mt-4 mx-auto text-white p-5" style="background-color: #0D3B66; border-radius:2%">
                 <h4 class="text-uppercase fw-bold">Diventa un revisore</h4>
-                {{-- form contatti --}}
+                {{-- form contatti automatico --}}
                 <form method="POST" action="{{route('lavora.save')}}">
                     @csrf
                     <ul>
@@ -62,6 +41,7 @@
                     <p>Accedi per diventare revisore</p>
                     @endguest
                     
+                    {{-- btn diventa revisore / Accedi --}}
                     @auth
                     <button type="submit" class="btn mt-4 fw-semibold fs-5" style="background-color: #F3B61F">Diventa un revisore</button>
                     @endauth
@@ -72,27 +52,6 @@
                   </form>
             </div>
         </div>
-
     </div>
 
-        {{-- Vecchio form --}}
-
-                {{-- <div class="mb-3">
-                      <label class="form-label">Nome</label>
-                      <input type="text" required name="name" @error('name') is-invalid @enderror placeholder="Nome Cognome" class="form-control" value="{{old('name')}}">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Telefono</label>
-                      <input type="text" required  name="phone" @error('phone') is-invalid @enderror placeholder="+39 123 456 789" class="form-control" value="{{old('phone')}}">
-                    </div> --}}
-                    {{-- <div class="mb-3">
-                      <label class="form-label">Email</label>
-                      <input type="email" required  name="email" @error('email') is-invalid @enderror placeholder="email@example.it" class="form-control" value="{{old('email')}}">
-                    </div> --}}
-                    {{-- <div class="col-4 d-none">
-                        <label class="form-label">Utente</label>
-                        <input name="user" type="text" class="form-control" value="{{auth()->user()->id}}">                
-                    </div> --}}
-
-    
 </x-main>

@@ -1,11 +1,7 @@
 <x-main title="Login">
-    
-    
-    
-    {{-- Container principale del Login --}}
+
     <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
-        
-        {{-- Container Login --}}
+
         <div class="row border rounded-5 p-3 bg-white shadow box-area-login">
             
             {{-- Box a sinistra --}}
@@ -16,7 +12,6 @@
                     <p class="text-white text-wrap text-center">{{__('ui.esperienza')}}</p>
                 </div>
             </div>
-            
             
             {{-- Box a destra --}}
             <div class="col-md-6 right-box">
@@ -44,8 +39,6 @@
                             <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password">
                             <span class="input-group-text eye-psw-button"><i class="fa-regular fa-eye-slash mx-auto" id="tooglepsw-button" role="button"></i></span>
                             </div> 
-                            {{-- <label  class="form-label">Password</label>
-                            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword1"> --}}
                             @error('password')
                             {{$message}}
                             @enderror
@@ -57,7 +50,6 @@
                                 <input type="checkbox" class="form-check-input" id="formCheck">
                                 <label for="formCheck" class="form-check-label text-secondary"><small>{{__('ui.ricordami')}}</small></label>
                             </div>
-                            
                             <div class="forgot">
                                 <small><a href="/forgot-password">{{__('ui.password_dimenticata')}}</a></small>
                             </div>

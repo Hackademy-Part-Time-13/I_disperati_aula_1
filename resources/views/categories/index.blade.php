@@ -1,14 +1,6 @@
 <x-main>
 
   <div class="container mt-2 mb-2">
-
-
-    @if (session()->has('success'))
-    <div class="alert alert-success" role="alert">
-      {{session('success')}}
-    </div>
-    @endif
-
     <h2 class="mt-1 mb-1">Categorie</h2>
 
     <div class="row">
@@ -19,8 +11,8 @@
               <thead>
                 <tr>
                   <th scope="col" class="border-0 text-uppercase font-medium ps-4">#</th>
-                  <th scope="col" class="border-0 text-uppercase font-medium">Category</th>
-                  <th scope="col" class="border-0 text-uppercase font-medium">Actions</th>
+                  <th scope="col" class="border-0 text-uppercase font-medium">Categoria</th>
+                  <th scope="col" class="border-0 text-uppercase font-medium">Azioni</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,21 +37,11 @@
               </tr>
               @endforeach
 
-
-
-
-
-
-
             </tbody>
           </table>
         </div>
       </div>
     </div>
-
-
-
-
   </div>
 </div>
 

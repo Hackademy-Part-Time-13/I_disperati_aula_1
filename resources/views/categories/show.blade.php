@@ -3,17 +3,11 @@
         <h1 class="a-category">{{$category->name}}</h1>
         <div class="row ">
 
-            {{-- @if($category->count() == 0)
-                <h3>Non ci sono annunci disponibili</h3> --}}
-
-
                 @foreach($announcements as $announcement)
                 @if($announcement->category->id == $category->id)
                 @if($announcement->is_accepted)
                 <div class="  d-sm-flex justify-content-center col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3">
-
                     <div class="card p-0 m-4" style="width: 18rem;">
-
                         <div>
                             <img style="max-height:210px; object-fit:cover" src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/300/220' }}" class="card-img-top" alt="...">
                         </div>
@@ -22,7 +16,6 @@
                             <h5 class="card-title">{{$announcement->title}}</h5>
 
                             <p class="card-title "><a class="a-category text-black" href="{{route('categories.show', $announcement->category)}}">{{$announcement->category->name}}</a></p>
-
 
                             <p class="card-text">{{Illuminate\Support\Str::limit($announcement->description, 90)}}</p>
                             <div class="d-flex justify-content-between">
@@ -34,7 +27,6 @@
                                     @guest
                                     <div class="text-center">
                                         <a href="{{route('show.announcement', $announcement)}}" class="btn fs-6" style="background-color: #F3B61F">Visualizza annuncio</a>
-
                                     </div>
                                     @endguest
                                     @auth
@@ -53,10 +45,6 @@
                 @endif
 
                 @endforeach
-                {{-- AGGIUSTARE PAGINATE --}}
-                {{-- {{ $announcements->links() }}  --}}
-
-
             </div>
 
         </div>
