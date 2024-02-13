@@ -7,64 +7,64 @@
     </div>
 
     <div class="row text-center">
-        <!-- Team item-->
+        <!-- Team item: Silvio Francesco di Gregorio-->
         <div class="col-xl-3 col-sm-6 mb-5">
             <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://media.licdn.com/dms/image/C4E03AQHbEF5R4EgoPQ/profile-displayphoto-shrink_800_800/0/1635081288981?e=1712188800&v=beta&t=WwONplUFZXTEYpTP4LnQ7m1azWS09m-VM57NJ7914iM" alt=""
                     width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Silvio F. Di Gregorio</h5><span class="small text-uppercase text-muted">Junior
                     FullStack Web Developer</span>
                 <ul class="social mb-0 list-inline mt-3">
-                    <li class="list-inline-item"><a href="#" class="social-link"><i
+                    <li class="list-inline-item"><a href="https://github.com/Silviodg98" class="social-link"><i
                                 class="fa-brands fa-github"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="social-link"><i
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/full-stack-developer-silvio-francesco-di-gregorio-/" class="social-link"><i
                                 class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
         <!-- End-->
 
-        <!-- Team item-->
+        <!-- Team item: Silvia Trentin -->
         <div class="col-xl-3 col-sm-6 mb-5">
             <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://media.licdn.com/dms/image/D4E03AQHX5wKlfnKLbA/profile-displayphoto-shrink_800_800/0/1697306250311?e=1712188800&v=beta&t=ZivfBxh2u-nlxAKioeRapS8SBRYMS9gWvHVNdB5BChQ" alt=""
                     width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Silvia Trentin</h5><span class="small text-uppercase text-muted">Junior FullStack Web
                     Developer</span>
                 <ul class="social mb-0 list-inline mt-3">
-                    <li class="list-inline-item"><a href="#" class="social-link"><i
+                    <li class="list-inline-item"><a href="https://github.com/SilviaT1317" class="social-link"><i
                                 class="fa-brands fa-github"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="social-link"><i
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/silvia-trentin-675070296/" class="social-link"><i
                                 class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
         <!-- End-->
 
-        <!-- Team item-->
+        <!-- Team item: Emanuela Amato -->
         <div class="col-xl-3 col-sm-6 mb-5">
             <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://media.licdn.com/dms/image/D4D03AQEe-L_k-udqUg/profile-displayphoto-shrink_800_800/0/1687458243336?e=1712188800&v=beta&t=sJyz14qcMIYykGtYi0z-YMQX_5kO1iAcF7xWIRsoMQA" alt=""
                     width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Emanuela Amato</h5><span class="small text-uppercase text-muted">Junior FullStack Web
                     Developer</span>
                 <ul class="social mb-0 list-inline mt-3">
-                    <li class="list-inline-item"><a href="#" class="social-link"><i
+                    <li class="list-inline-item"><a href="https://github.com/EmanuelaEmi" class="social-link"><i
                                 class="fa-brands fa-github"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="social-link"><i
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/emanuelaamatowebdev/" class="social-link"><i
                                 class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
         <!-- End-->
 
-        <!-- Team item-->
+        <!-- Team item: Matteo Stazi-->
         <div class="col-xl-3 col-sm-6 mb-5">
             <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://media.licdn.com/dms/image/D4D03AQHhX-jaQYjjhA/profile-displayphoto-shrink_800_800/0/1706824089272?e=1712188800&v=beta&t=BMRi3I3RD_NJ4-canpa8RYzqJus_qCx-4OFObKes-1g" alt=""
                     width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
                 <h5 class="mb-0">Matteo Stazi</h5><span class="small text-uppercase text-muted">Junior FullStack Web
                     Developer</span>
                 <ul class="social mb-0 list-inline mt-3">
-                    <li class="list-inline-item"><a href="#" class="social-link"><i
+                    <li class="list-inline-item"><a href="https://github.com/Matteo9419" class="social-link"><i
                                 class="fa-brands fa-github"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="social-link"><i
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/matteo-stazi-a9a2a7295/" class="social-link"><i
                                 class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
